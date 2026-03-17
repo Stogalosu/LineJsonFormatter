@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from "node:path";
 import gpxParser from 'gpxparser';
 import { loadEnvFile } from 'node:process';
-import mysql from 'mysql';
+import mysql from 'mysql2';
 import { input } from '@inquirer/prompts';
 import { select } from '@inquirer/prompts';
 import { checkbox } from '@inquirer/prompts';
@@ -36,25 +36,18 @@ db.connect(function(err) {
     });
 });
 
-// function getLastId() {
-//     let idQuery;
-//     db.query("SELECT id FROM pathways ORDER BY id DESC LIMIT 1", function (err, result) {
-//         idQuery = result;
-//     });
-//     if(idQuery === undefined) return -1;
-//     return idQuery;
-//
-// }
+async function getLastId() {
+    const idQuery = await db.promise().query("SELECT id FROM pathways ORDER BY id DESC LIMIT 1");
+    console.log(idQuery);
+    if(idQuery[0][0].id === undefined) return -1;
+    return idQuery[0][0].id;
+}
 
 async function getNextOrderNumber(line) {
-    const queryResult = await db.query("SELECT MAX(path_order) as highest_path_order FROM pathways WHERE path_lines = ?", [line]);
-    console.log(queryResult);
-    if(queryResult[0].highest_path_order === undefined) return 1;
-    return queryResult[0].highest_path_order+1;
+    const queryResult = await db.promise().query("SELECT MAX(path_order) as highest_path_order FROM pathways WHERE path_lines = ?", [line]);
 
-    // queryResult.forEach((obj) => {
-    //     if(obj.contains(line)) return
-    // });
+    if(queryResult[0][0].highest_path_order === undefined) return 1;
+    return queryResult[0][0].highest_path_order+1;
 }
 
 function findClosestStop(targetLat, targetLon) {
@@ -85,6 +78,9 @@ for(const file of files) {
     var gpx = new gpxParser();
     gpx.parse(fs.readFileSync(file, 'utf8'));
     const json = gpx.toGeoJSON();
+
+    console.log(i + "  "+ json.features[0].geometry.coordinates[0][1]);
+    console.log(json.features[0].geometry);
 
     const coords = json.features[0].geometry.coordinates;
     const startStop = findClosestStop(coords[0][1], coords[0][0]).obj;
@@ -124,8 +120,8 @@ if(multipleLines) {
         {
             message: 'Enter the main line (that corresponds to all input files):',
             required: true,
-            pattern: RegExp('[1-9][0-9]*'),
-            patternError: 'Please enter a number!'
+            pattern: RegExp('[MN]*[1-9][0-9]*B*'),
+            patternError: 'Please enter a valid line!'
         }
     )
     for(let j=0; j<i; j++) {
@@ -156,8 +152,8 @@ if(multipleLines) {
         const line = await input({
             message: `Enter line no ${j+1}:`,
             required: true,
-            pattern: RegExp('[1-9][0-9]*'),
-            patternError: 'Please enter a number!'
+            pattern: RegExp('[MN]*[1-9][0-9]*B*'),
+            patternError: 'Please enter a valid line!'
         });
         for(let k=start; k<=end; k++) {
             lines[k]=lines[k] + "," + line;
@@ -167,8 +163,8 @@ if(multipleLines) {
     const line = await input({
         message: `Enter the line:`,
         required: true,
-        pattern: RegExp('[1-9][0-9]*'),
-        patternError: 'Please enter a number!'
+        pattern: RegExp('[MN]*[1-9][0-9]*B*'),
+        patternError: 'Please enter a valid line!'
     });
     for(let j=0; j<i; j++) {
         lines[j]=line;
@@ -215,7 +211,7 @@ for(const file of files) {
 
     const coords = json1.features[0].geometry.coordinates;
 
-    // const id = getLastId()+1;
+    const id = await getLastId()+1;
     const path_order = await getNextOrderNumber(lines[i]);
     const startId = findClosestStop(coords[0][1], coords[0][0]).obj.id;
     const endId = findClosestStop(coords[coords.length-1][1], coords[coords.length-1][0]).obj.id;
@@ -223,7 +219,7 @@ for(const file of files) {
     const path_direction = getPathDirection(i, directions);
     const path_length = gpx1.tracks[0].distance.total.toFixed(3);
 
-    // json1.features[0].properties.id = id;
+    json1.features[0].properties.id = id;
     json1.features[0].properties.path_order = path_order;
     json1.features[0].properties.startId = startId;
     json1.features[0].properties.endId = endId;
@@ -237,9 +233,9 @@ for(const file of files) {
     db.query("INSERT INTO pathways (id, path_order, startId, endId, path_lines, path_direction, path_length) VALUES (?)", [values], function (err, result) {
         if(err) throw err;
     });
-    db.query("SELECT * FROM pathways", function (err, result) {
-        console.log(result);
-    });
+    // db.query("SELECT * FROM pathways", function (err, result) {
+    //     console.log(result);
+    // });
 
     const outputFile = "output/" + file.split("/")[1].split(".")[0] + ".geojson";
     console.log("Writing " + outputFile + "...");
