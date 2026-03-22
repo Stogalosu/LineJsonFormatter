@@ -17,4 +17,5 @@ Path length is calculated using a npm module.
 I thought that instead of doing this task manually, it's faster to make a script. This way, I also practice JavaScript.
 
 ## Demo video
-[Screencast_20260322_231915.webm](https://github.com/user-attachments/assets/863b6159-2c13-4cef-8c38-9e0ca7bffbb7)
+[Screencast_20260322_232538.webm](https://github.com/user-attachments/assets/37a75bbc-a608-472f-8423-5155ba38299b)
+
