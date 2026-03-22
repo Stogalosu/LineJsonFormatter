@@ -1,7 +1,7 @@
 # Line JSON Formatter
 
 ## What is this?
-It's a weird tool that I made to help me with a specific task while creating my app, STB Logger. I'll use it to convert and format multiple GPX files that I created. They represent every path between two public transport stops in Bucharest. This tool helps me convert them into GeoJSON and add properties (lines, id, length).
+It's a weird tool that I made to help me with a specific task while creating my app, STB Logger. I'll use it to convert and format multiple GPX files that I created. They represent every path between two public transport stops in Bucharest. This tool helps me convert them into GeoJSON, add properties (lines, id, length) and save them all in a MySQL database.
 
 ## How does it work?
 It uses a database with all the stops in Bucharest to find the closest stops to the start and end of each path and saves the ids in the json's properties.
