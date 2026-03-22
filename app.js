@@ -5,7 +5,6 @@ import { loadEnvFile } from 'node:process';
 import mysql from 'mysql2';
 import { input } from '@inquirer/prompts';
 import { select } from '@inquirer/prompts';
-import { checkbox } from '@inquirer/prompts';
 
 const folderPath = "./input"
 
@@ -38,8 +37,7 @@ db.connect(function(err) {
 
 async function getLastId() {
     const idQuery = await db.promise().query("SELECT id FROM pathways ORDER BY id DESC LIMIT 1");
-    console.log(idQuery);
-    if(idQuery[0][0].id === undefined) return -1;
+    if(idQuery[0][0] === undefined) return -1;
     return idQuery[0][0].id;
 }
 
@@ -75,12 +73,10 @@ function getPathDirection(pathId, directions) {
 let paths = [];
 let i=0;
 for(const file of files) {
+    console.log("Processing file " + file);
     var gpx = new gpxParser();
     gpx.parse(fs.readFileSync(file, 'utf8'));
     const json = gpx.toGeoJSON();
-
-    console.log(i + "  "+ json.features[0].geometry.coordinates[0][1]);
-    console.log(json.features[0].geometry);
 
     const coords = json.features[0].geometry.coordinates;
     const startStop = findClosestStop(coords[0][1], coords[0][0]).obj;
@@ -170,7 +166,6 @@ if(multipleLines) {
         lines[j]=line;
     }
 }
-console.log(lines);
 
 let directions = [];
 // directions[0] = Number(prompt("Enter id of first path in direction 0: "));
@@ -195,6 +190,7 @@ directions[1] = await select({
 });
 
 
+let lastStopId=0;
 i=0;
 for(const file of files) {
     var gpx1 = new gpxParser();
@@ -213,32 +209,73 @@ for(const file of files) {
 
     const id = await getLastId()+1;
     const path_order = await getNextOrderNumber(lines[i]);
-    const startId = findClosestStop(coords[0][1], coords[0][0]).obj.id;
+    let startId = findClosestStop(coords[0][1], coords[0][0]).obj.id;
     const endId = findClosestStop(coords[coords.length-1][1], coords[coords.length-1][0]).obj.id;
     const path_lines = lines[i];
     const path_direction = getPathDirection(i, directions);
     const path_length = gpx1.tracks[0].distance.total.toFixed(3);
+    let skip = 0;
+
+    if(lastStopId !== 0 && lastStopId !== startId) {
+        skip = await select({
+            message: `Stops of paths ${i-1} and ${i} don't correspond. Is this a mistake?\n${paths[i-1]}\n${paths[i]}`,
+            choices: [
+                {
+                    name: 'No',
+                    value: 1
+                },
+                {
+                    name: 'Yes',
+                    value: 0
+                }
+            ]
+        });
+        if(!skip) {
+            const keepThis = await select({
+                message: `Which stop should be kept as the correct one?`,
+                choices: [
+                    {
+                        name: lastStopId.toString(),
+                        value: 0
+                    },
+                    {
+                        name: startId.toString(),
+                        value: 1
+                    }
+                ]
+            });
+            if(keepThis)
+                await db.promise().query("UPDATE pathways SET endId = ? WHERE id = ?", [startId, i-1]);
+            else
+                startId = lastStopId;
+        }
+    }
 
     json1.features[0].properties.id = id;
     json1.features[0].properties.path_order = path_order;
+    json1.features[0].properties.skip = skip;
     json1.features[0].properties.startId = startId;
     json1.features[0].properties.endId = endId;
     json1.features[0].properties.path_lines = path_lines;
     json1.features[0].properties.path_direction = path_direction;
     json1.features[0].properties.path_length = path_length;
 
-    console.log(json1.features[0]);
-
-    const values = [0, path_order, startId, endId, path_lines, path_direction, path_length];
-    db.query("INSERT INTO pathways (id, path_order, startId, endId, path_lines, path_direction, path_length) VALUES (?)", [values], function (err, result) {
+    const values = [0, path_order, startId, endId, path_lines, path_direction, path_length, skip];
+    db.query("INSERT INTO pathways (id, path_order, startId, endId, path_lines, path_direction, path_length, skip) VALUES (?)", [values], function (err, result) {
         if(err) throw err;
     });
-    // db.query("SELECT * FROM pathways", function (err, result) {
-    //     console.log(result);
-    // });
 
     const outputFile = "output/" + file.split("/")[1].split(".")[0] + ".geojson";
     console.log("Writing " + outputFile + "...");
     fs.writeFileSync(outputFile, JSON.stringify(json1));
+    lastStopId = endId;
     i++;
 }
+
+db.end((error) => {
+    if (error) {
+        console.error('Error closing MySQL connection:', error);
+        return;
+    }
+    console.log('MySQL connection closed.');
+});
