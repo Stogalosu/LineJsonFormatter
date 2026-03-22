@@ -16,6 +16,8 @@ Path length is calculated using a npm module.
 ## Why?
 I thought that instead of doing this task manually, it's faster to make a script. This way, I also practice JavaScript.
 
+## AI Usage
+I used AI to help me with the closest distance algorithm.
+
 ## Demo video
 [Screencast_20260322_232538.webm](https://github.com/user-attachments/assets/37a75bbc-a608-472f-8423-5155ba38299b)
-
