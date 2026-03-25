@@ -31,7 +31,6 @@ db.connect(function(err) {
     console.log("Connected!");
     db.query("USE stb_pathways", function (err, result) {
         if (err) throw err;
-        console.log("Database selected!");
     });
 });
 
@@ -49,14 +48,27 @@ async function getNextOrderNumber(line) {
 }
 
 function findClosestStop(targetLat, targetLon) {
-    const stops = JSON.parse(fs.readFileSync('stb-stops.json', 'utf8'));
-    return stops.reduce((closest, obj) => {
+    const stopsJSON = JSON.parse(fs.readFileSync('stb-stops.json', 'utf8'));
+    return stopsJSON.reduce((closest, obj) => {
         const diff = Math.sqrt(
             Math.pow(obj.latitude - targetLat, 2) +
             Math.pow(obj.longitude - targetLon, 2)
         );
         return diff < closest.diff ? { obj, diff } : closest;
     }, { obj: null, diff: Infinity });
+}
+
+function getStopsInRange(lat, lon, range) {
+    const stopsJSON = JSON.parse(fs.readFileSync('stb-stops.json', 'utf8'));
+    let result = [];
+    stopsJSON.forEach((stop) => {
+        const dist = Math.sqrt(
+            Math.pow(stop.latitude - lat, 2) +
+            Math.pow(stop.longitude - lon, 2)
+        );
+        if(dist < range) result.push(stop);
+    });
+    return result;
 }
 
 function getPathDirection(pathId, directions) {
@@ -69,8 +81,9 @@ function getPathDirection(pathId, directions) {
     }
 }
 
-//Store path stops and ids
+//Store paths and stops for console visualization
 let paths = [];
+let stops = [];
 let i=0;
 for(const file of files) {
     console.log("Processing file " + file);
@@ -82,13 +95,103 @@ for(const file of files) {
     const startStop = findClosestStop(coords[0][1], coords[0][0]).obj;
     const endStop = findClosestStop(coords[coords.length-1][1], coords[coords.length-1][0]).obj;
 
-    paths[i] = `${i}: ${startStop.name} (${startStop.id})  ->  ${endStop.name} (${endStop.id})`;
+    const startStopObject = {
+        id: startStop.id,
+        name: `${startStop.name} (${startStop.id})`,
+        latitude: startStop.latitude,
+        longitude: startStop.longitude
+    };
+    const endStopObject = {
+        id: endStop.id,
+        name: `${endStop.name} (${endStop.id})`,
+        latitude: endStop.latitude,
+        longitude: endStop.longitude
+    };
+    paths[i] = `${i}: ${startStopObject.name} -> ${endStopObject.name}`;
+
+    const tempStops = stops.map((stop) => (stop.name));
+    if(!tempStops.includes(startStopObject.name)) stops.push(startStopObject);
+    if(!tempStops.includes(endStopObject.name)) stops.push(endStopObject);
+
     i++;
+}
+
+// Ask if there are any mistakes in the stop ids
+console.log(paths);
+
+let mistake = await select({
+   message: 'Are the stop names and ids correct?',
+   choices: [
+       {
+           name: 'Yes',
+           value: false
+       },
+       {
+           name: 'No',
+           value: true
+       }
+   ]
+});
+
+let mistakes = [];
+
+// Correct mistakes
+while(mistake) {
+    const stopToModify = await select({
+        message: 'Choose the stop that needs to be modified',
+        choices: stops.map((stop) => ({
+            name: stop.name,
+            value: stop
+        }))
+    });
+
+    let otherStops = getStopsInRange(stopToModify.latitude, stopToModify.longitude, 0.000450); /* About 50 meters */
+    otherStops = otherStops.map((stop) => ({
+        id: stop.id,
+        name: `${stop.name} (${stop.id})`,
+        latitude: stop.latitude,
+        longitude: stop.longitude
+    }));
+
+    const newStop = await select({
+        message: 'Choose the correct stop',
+        choices: otherStops.map((stop) => ({
+            name: stop.name,
+            value: stop
+        }))
+    });
+
+    // Store mistake to correct them later
+    mistakes.push({
+        oldStop: stopToModify,
+        newStop: newStop
+    });
+    console.log(mistakes);
+
+    // Correct mistake only in console output
+    paths = paths.map(path => path.replace(stopToModify.name, newStop.name))
+    for(let stop of stops)
+        stop.name = stop.name.replace(stopToModify.name, newStop.name);
+    console.log(paths);
+
+    // Ask if there are still any mistakes
+    mistake = await select({
+        message: 'Are there any other mistakes?',
+        choices: [
+            {
+                name: 'Yes',
+                value: true
+            },
+            {
+                name: 'No',
+                value: false
+            }
+        ]
+    });
 }
 
 //Read lines and directions from keyboard
 let lines = [];
-// const multipleLines = Number(prompt("Do these paths correspond to multiple lines? 0/1 "));
 const multipleLines = await select({
     message: 'Do these paths correspond to multiple lines?',
     choices: [
@@ -103,7 +206,6 @@ const multipleLines = await select({
     ]
 });
 if(multipleLines) {
-    // const noLines = Number(prompt("Enter the number of lines: "));
     const noLines = Number(await input(
         {
             message: 'Enter the number of lines:',
@@ -111,7 +213,6 @@ if(multipleLines) {
             pattern: RegExp('[2-9][0-9]*'),
             patternError: 'Please enter any number other than 1!'
         }));
-    // const mainLine = prompt("Enter the main line (that corresponds to all input files): ");
     const mainLine = await input(
         {
             message: 'Enter the main line (that corresponds to all input files):',
@@ -124,7 +225,6 @@ if(multipleLines) {
         lines[j]=mainLine;
     }
     for(let j=0; j<noLines-1; j++) {
-        // const start = Number(prompt(`Enter the start of range no ${j}: `));
         const start = await select({
             message: `Select the first path of range ${j+1}`,
             choices: paths.map((name, index) => ({
@@ -134,7 +234,6 @@ if(multipleLines) {
             pageSize: 10,
             required: true
         });
-        // const end = Number(prompt(`Enter the end of range no ${j}: `));
         const end = await select({
             message: `Select the last path of range ${j+1}`,
             choices: paths.map((name, i) => ({
@@ -144,7 +243,6 @@ if(multipleLines) {
             pageSize: 10,
             required: true
         });
-        // const line = prompt(`Enter line no ${j}: `);
         const line = await input({
             message: `Enter line no ${j+1}:`,
             required: true,
@@ -168,7 +266,6 @@ if(multipleLines) {
 }
 
 let directions = [];
-// directions[0] = Number(prompt("Enter id of first path in direction 0: "));
 directions[0] = await select({
     message: `Select the first path in direction 0`,
     choices: paths.map((name, index) => ({
@@ -178,7 +275,6 @@ directions[0] = await select({
     pageSize: 10,
     required: true
 });
-// directions[1] = Number(prompt("Enter id of first path in direction 1: "));
 directions[1] = await select({
     message: `Select the first path in direction 1`,
     choices: paths.map((name, index) => ({
@@ -197,6 +293,7 @@ for(const file of files) {
     gpx1.parse(fs.readFileSync(file, 'utf8'));
     const json1 = gpx1.toGeoJSON();
 
+    delete json1.properties;
     delete json1.features[0].properties.name;
     delete json1.features[0].properties.cmt;
     delete json1.features[0].properties.desc;
@@ -210,12 +307,27 @@ for(const file of files) {
     const id = await getLastId()+1;
     const path_order = await getNextOrderNumber(lines[i]);
     let startId = findClosestStop(coords[0][1], coords[0][0]).obj.id;
-    const endId = findClosestStop(coords[coords.length-1][1], coords[coords.length-1][0]).obj.id;
+    let endId = findClosestStop(coords[coords.length-1][1], coords[coords.length-1][0]).obj.id;
     const path_lines = lines[i];
     const path_direction = getPathDirection(i, directions);
     const path_length = gpx1.tracks[0].distance.total.toFixed(3);
     let skip = 0;
 
+    // Correct mistakes
+    let modified = false;
+    mistakes.forEach((mis) => {
+        if(!modified) {
+            if (mis.oldStop.id === startId) {
+                startId = mis.newStop.id;
+                modified = true;
+            } else if (mis.oldStop.id === endId) {
+                endId = mis.newStop.id;
+                modified = true;
+            }
+        }
+    });
+
+    // Make sure that consecutive paths that don't have corresponding stops are correct
     if(lastStopId !== 0 && lastStopId !== startId) {
         skip = await select({
             message: `Stops of paths ${i-1} and ${i} don't correspond. Is this a mistake?\n${paths[i-1]}\n${paths[i]}`,
@@ -260,6 +372,7 @@ for(const file of files) {
     json1.features[0].properties.path_direction = path_direction;
     json1.features[0].properties.path_length = path_length;
 
+    // Insert path in the database and write the JSON to a file
     const values = [0, path_order, startId, endId, path_lines, path_direction, path_length, skip];
     db.query("INSERT INTO pathways (id, path_order, startId, endId, path_lines, path_direction, path_length, skip) VALUES (?)", [values], function (err, result) {
         if(err) throw err;
