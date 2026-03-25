@@ -1,8 +1,25 @@
 {
-  "name": "linejsonformatter",
-  "version": "0.1",
+  "name": "line-json-formatter",
+  "version": "1.0.0",
+  "description": "A weirdly specific tool designed to help me build my app.",
+  "keywords": [
+    "gpx",
+    "geojson",
+    "json",
+    "public-transport"
+  ],
+  "homepage": "https://github.com/Stogalosu/LineJsonFormatter#readme",
+  "bugs": {
+    "url": "https://github.com/Stogalosu/LineJsonFormatter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stogalosu/LineJsonFormatter.git"
+  },
+  "license": "ISC",
+  "author": "stecker",
+  "type": "module",
   "main": "app.js",
-  "private": true,
   "scripts": {
     "start": "node ./app.js"
   },
@@ -13,5 +30,6 @@
     "mysql": "^2.18.1",
     "mysql2": "^3.20.0",
     "xmldom": "0.6.0"
-  }
+  },
+  "devDependencies": {}
 }

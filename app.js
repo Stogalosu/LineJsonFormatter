@@ -6,7 +6,7 @@ import mysql from 'mysql2';
 import { input } from '@inquirer/prompts';
 import { select } from '@inquirer/prompts';
 
-export const LineJSONFormatter = async (inputPath, outputPath, stopJSONPath) => {
+export const LineJSONFormatter = async (inputPath, stopJSONPath) => {
 
     loadEnvFile();
 
