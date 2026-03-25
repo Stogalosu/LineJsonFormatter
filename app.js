@@ -15,10 +15,10 @@ const isFile = fileName => {
 };
 const files =
     fs.readdirSync(folderPath)
-    .map(fileName => {
-        return path.join(folderPath, fileName);
-    })
-    .filter(isFile);
+        .map(fileName => {
+            return path.join(folderPath, fileName);
+        })
+        .filter(isFile);
 
 let db = mysql.createConnection({
     host: process.env.DB_HOST,
@@ -120,17 +120,17 @@ for(const file of files) {
 console.log(paths);
 
 let mistake = await select({
-   message: 'Are the stop names and ids correct?',
-   choices: [
-       {
-           name: 'Yes',
-           value: false
-       },
-       {
-           name: 'No',
-           value: true
-       }
-   ]
+    message: 'Are the stop names and ids correct?',
+    choices: [
+        {
+            name: 'Yes',
+            value: false
+        },
+        {
+            name: 'No',
+            value: true
+        }
+    ]
 });
 
 let mistakes = [];
@@ -192,6 +192,7 @@ while(mistake) {
 
 //Read lines and directions from keyboard
 let lines = [];
+let mainLine = "";
 const multipleLines = await select({
     message: 'Do these paths correspond to multiple lines?',
     choices: [
@@ -213,7 +214,7 @@ if(multipleLines) {
             pattern: RegExp('[2-9][0-9]*'),
             patternError: 'Please enter any number other than 1!'
         }));
-    const mainLine = await input(
+    const localMainLine = await input(
         {
             message: 'Enter the main line (that corresponds to all input files):',
             required: true,
@@ -221,8 +222,9 @@ if(multipleLines) {
             patternError: 'Please enter a valid line!'
         }
     )
+    mainLine = localMainLine;
     for(let j=0; j<i; j++) {
-        lines[j]=mainLine;
+        lines[j]=localMainLine;
     }
     for(let j=0; j<noLines-1; j++) {
         const start = await select({
@@ -287,6 +289,7 @@ directions[1] = await select({
 
 
 let lastStopId=0;
+let finalJSON = {};
 i=0;
 for(const file of files) {
     var gpx1 = new gpxParser();
@@ -308,7 +311,8 @@ for(const file of files) {
     const path_order = await getNextOrderNumber(lines[i]);
     let startId = findClosestStop(coords[0][1], coords[0][0]).obj.id;
     let endId = findClosestStop(coords[coords.length-1][1], coords[coords.length-1][0]).obj.id;
-    const path_lines = lines[i];
+    const path_lines_JSON = lines[i].split(",");
+    const path_lines_db = lines[i];
     const path_direction = getPathDirection(i, directions);
     const path_length = gpx1.tracks[0].distance.total.toFixed(3);
     let skip = 0;
@@ -368,22 +372,29 @@ for(const file of files) {
     json1.features[0].properties.skip = skip;
     json1.features[0].properties.startId = startId;
     json1.features[0].properties.endId = endId;
-    json1.features[0].properties.path_lines = path_lines;
+    json1.features[0].properties.path_lines = path_lines_JSON;
     json1.features[0].properties.path_direction = path_direction;
     json1.features[0].properties.path_length = path_length;
 
     // Insert path in the database and write the JSON to a file
-    const values = [0, path_order, startId, endId, path_lines, path_direction, path_length, skip];
+    const values = [0, path_order, startId, endId, path_lines_db, path_direction, path_length, skip];
     db.query("INSERT INTO pathways (id, path_order, startId, endId, path_lines, path_direction, path_length, skip) VALUES (?)", [values], function (err, result) {
         if(err) throw err;
     });
 
-    const outputFile = "output/" + file.split("/")[1].split(".")[0] + ".geojson";
-    console.log("Writing " + outputFile + "...");
-    fs.writeFileSync(outputFile, JSON.stringify(json1));
+    if(i === 0) {
+        finalJSON = json1;
+    } else {
+        finalJSON.features.push(json1.features[0]);
+    }
+
     lastStopId = endId;
     i++;
 }
+
+console.log("Writing file that contains all paths...");
+const outputFile = "output/" + mainLine + ".geojson";
+fs.writeFileSync(outputFile, JSON.stringify(finalJSON));
 
 db.end((error) => {
     if (error) {
