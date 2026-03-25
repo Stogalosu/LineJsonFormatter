@@ -1,6 +1,7 @@
 {
   "name": "linejsonformatter",
   "version": "0.1",
+  "main": "app.js",
   "private": true,
   "scripts": {
     "start": "node ./app.js"
