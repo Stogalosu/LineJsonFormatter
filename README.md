@@ -26,7 +26,7 @@ Link to npm module:
 ```
 import { LineJSONFormatter } from 'line-json-formatter';
 
-const formattedJSON = await LineJSONFormatter("input/", "output/", "stops.json");
+const formattedJSON = await LineJSONFormatter("input/", "stops.json");
 ```
 
 ## Documentation
