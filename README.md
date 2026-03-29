@@ -45,7 +45,7 @@ The function `LineJSONFormatter` has 2 parameters:
 | inputPath    | String   | The path where input gpx files are situated |
 | stopJSONFile | String   | The JSON file that contains formatted stops |
 
-The function `SubwayJSONFormatter' has 3 parameters:
+The function `SubwayJSONFormatter` has 3 parameters:
 
 | **Argument** | **Type** | **Required**               | **Description**                                                      |
 | ------------ | -------- |----------------------------|----------------------------------------------------------------------|
@@ -153,6 +153,9 @@ I used AI to help me with the closest distance algorithm.
 
 ## Demo videos
 **LineJSONFormatter**
+
 [Screencast_20260322_232538.webm](https://github.com/user-attachments/assets/37a75bbc-a608-472f-8423-5155ba38299b)
+
 **SubwayJSONFormatter**
+
 [Screencast_20260329_213430.webm](https://github.com/user-attachments/assets/cc97e6ae-b287-4d69-a25d-1fc346d8c219)
