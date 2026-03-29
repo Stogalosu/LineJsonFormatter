@@ -89,34 +89,36 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
     let stops = [];
     let i = 0;
     for (const file of files) {
-        console.log("Processing file " + file);
-        var gpx = new gpxParser();
-        gpx.parse(fs.readFileSync(file, 'utf8'));
-        const json = gpx.toGeoJSON();
+        if(file.endsWith(".gpx")) {
+            console.log("Processing file " + file);
+            var gpx = new gpxParser();
+            gpx.parse(fs.readFileSync(file, 'utf8'));
+            const json = gpx.toGeoJSON();
 
-        const coords = json.features[0].geometry.coordinates;
-        const startStop = findClosestStop(coords[0][1], coords[0][0], stopJSONFile).obj;
-        const endStop = findClosestStop(coords[coords.length - 1][1], coords[coords.length - 1][0], stopJSONFile).obj;
+            const coords = json.features[0].geometry.coordinates;
+            const startStop = findClosestStop(coords[0][1], coords[0][0], stopJSONFile).obj;
+            const endStop = findClosestStop(coords[coords.length - 1][1], coords[coords.length - 1][0], stopJSONFile).obj;
 
-        const startStopObject = {
-            id: startStop.id,
-            name: `${startStop.name} (${startStop.id})`,
-            latitude: startStop.latitude,
-            longitude: startStop.longitude
-        };
-        const endStopObject = {
-            id: endStop.id,
-            name: `${endStop.name} (${endStop.id})`,
-            latitude: endStop.latitude,
-            longitude: endStop.longitude
-        };
-        paths[i] = `${i}: ${startStopObject.name} -> ${endStopObject.name}`;
+            const startStopObject = {
+                id: startStop.id,
+                name: `${startStop.name} (${startStop.id})`,
+                latitude: startStop.latitude,
+                longitude: startStop.longitude
+            };
+            const endStopObject = {
+                id: endStop.id,
+                name: `${endStop.name} (${endStop.id})`,
+                latitude: endStop.latitude,
+                longitude: endStop.longitude
+            };
+            paths[i] = `${i}: ${startStopObject.name} -> ${endStopObject.name}`;
 
-        const tempStops = stops.map((stop) => (stop.name));
-        if (!tempStops.includes(startStopObject.name)) stops.push(startStopObject);
-        if (!tempStops.includes(endStopObject.name)) stops.push(endStopObject);
+            const tempStops = stops.map((stop) => (stop.name));
+            if (!tempStops.includes(startStopObject.name)) stops.push(startStopObject);
+            if (!tempStops.includes(endStopObject.name)) stops.push(endStopObject);
 
-        i++;
+            i++;
+        }
     }
 
 // Ask if there are any mistakes in the stop ids
@@ -295,109 +297,107 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
     let finalJSON = {};
     i = 0;
     for (const file of files) {
-        var gpx1 = new gpxParser();
-        gpx1.parse(fs.readFileSync(file, 'utf8'));
-        const json1 = gpx1.toGeoJSON();
+        if(file.endsWith(".gpx")) {
+            var gpx1 = new gpxParser();
+            gpx1.parse(fs.readFileSync(file, 'utf8'));
+            const json1 = gpx1.toGeoJSON();
 
-        delete json1.properties;
-        delete json1.features[0].properties.name;
-        delete json1.features[0].properties.cmt;
-        delete json1.features[0].properties.desc;
-        delete json1.features[0].properties.src;
-        delete json1.features[0].properties.number;
-        delete json1.features[0].properties.link;
-        delete json1.features[0].properties.type;
+            delete json1.properties;
+            delete json1.features[0].properties.name;
+            delete json1.features[0].properties.cmt;
+            delete json1.features[0].properties.desc;
+            delete json1.features[0].properties.src;
+            delete json1.features[0].properties.number;
+            delete json1.features[0].properties.link;
+            delete json1.features[0].properties.type;
 
-        const coords = json1.features[0].geometry.coordinates;
+            const coords = json1.features[0].geometry.coordinates;
 
-        const id = await getLastId() + 1;
-        const path_order = await getNextOrderNumber(lines[i]);
-        let startId = findClosestStop(coords[0][1], coords[0][0], stopJSONFile).obj.id;
-        let endId = findClosestStop(coords[coords.length - 1][1], coords[coords.length - 1][0], stopJSONFile).obj.id;
-        const path_lines_JSON = lines[i].split(",");
-        const path_lines_db = lines[i];
-        const path_direction = getPathDirection(i, directions);
-        const path_length = gpx1.tracks[0].distance.total.toFixed(3);
-        let skip = 0;
+            const id = await getLastId() + 1;
+            const path_order = await getNextOrderNumber(lines[i]);
+            let startId = findClosestStop(coords[0][1], coords[0][0], stopJSONFile).obj.id;
+            let endId = findClosestStop(coords[coords.length - 1][1], coords[coords.length - 1][0], stopJSONFile).obj.id;
+            const path_lines_JSON = lines[i].split(",");
+            const path_lines_db = lines[i];
+            const path_direction = getPathDirection(i, directions);
+            const path_length = gpx1.tracks[0].distance.total.toFixed(3);
+            let skip = 0;
 
-        // Correct mistakes
-        let modified = false;
-        mistakes.forEach((mis) => {
-            if (!modified) {
-                if (mis.oldStop.id === startId) {
-                    startId = mis.newStop.id;
-                    modified = true;
-                } else if (mis.oldStop.id === endId) {
-                    endId = mis.newStop.id;
-                    modified = true;
-                }
-            }
-        });
-
-        // Make sure that consecutive paths that don't have corresponding stops are correct
-        if (lastStopId !== 0 && lastStopId !== startId) {
-            skip = await select({
-                message: `Stops of paths ${i - 1} and ${i} don't correspond. Is this a mistake?\n${paths[i - 1]}\n${paths[i]}`,
-                choices: [
-                    {
-                        name: 'No',
-                        value: 1
-                    },
-                    {
-                        name: 'Yes',
-                        value: 0
+            // Correct mistakes
+            let modified = false;
+            mistakes.forEach((mis) => {
+                if (!modified) {
+                    if (mis.oldStop.id === startId) {
+                        startId = mis.newStop.id;
+                        modified = true;
+                    } else if (mis.oldStop.id === endId) {
+                        endId = mis.newStop.id;
+                        modified = true;
                     }
-                ]
+                }
             });
-            if (!skip) {
-                const keepThis = await select({
-                    message: `Which stop should be kept as the correct one?`,
+
+            // Make sure that consecutive paths that don't have corresponding stops are correct
+            if (lastStopId !== 0 && lastStopId !== startId) {
+                skip = await select({
+                    message: `Stops of paths ${i - 1} and ${i} don't correspond. Is this a mistake?\n${paths[i - 1]}\n${paths[i]}`,
                     choices: [
                         {
-                            name: lastStopId.toString(),
-                            value: 0
+                            name: 'No',
+                            value: 1
                         },
                         {
-                            name: startId.toString(),
-                            value: 1
+                            name: 'Yes',
+                            value: 0
                         }
                     ]
                 });
-                if (keepThis)
-                    await db.promise().query("UPDATE pathways SET endId = ? WHERE id = ?", [startId, i - 1]);
-                else
-                    startId = lastStopId;
+                if (!skip) {
+                    const keepThis = await select({
+                        message: `Which stop should be kept as the correct one?`,
+                        choices: [
+                            {
+                                name: lastStopId.toString(),
+                                value: 0
+                            },
+                            {
+                                name: startId.toString(),
+                                value: 1
+                            }
+                        ]
+                    });
+                    if (keepThis)
+                        await db.promise().query("UPDATE pathways SET endId = ? WHERE id = ?", [startId, i - 1]);
+                    else
+                        startId = lastStopId;
+                }
             }
+
+            json1.features[0].properties.id = id;
+            json1.features[0].properties.path_order = path_order;
+            json1.features[0].properties.skip = skip;
+            json1.features[0].properties.startId = startId;
+            json1.features[0].properties.endId = endId;
+            json1.features[0].properties.path_lines = path_lines_JSON;
+            json1.features[0].properties.path_direction = path_direction;
+            json1.features[0].properties.path_length = path_length;
+
+            // Insert path in the database and write the JSON to a file
+            const values = [0, path_order, startId, endId, path_lines_db, path_direction, path_length, skip];
+            db.query("INSERT INTO pathways (id, path_order, startId, endId, path_lines, path_direction, path_length, skip) VALUES (?)", [values], function (err, result) {
+                if (err) throw err;
+            });
+
+            if (i === 0) {
+                finalJSON = json1;
+            } else {
+                finalJSON.features.push(json1.features[0]);
+            }
+
+            lastStopId = endId;
+            i++;
         }
-
-        json1.features[0].properties.id = id;
-        json1.features[0].properties.path_order = path_order;
-        json1.features[0].properties.skip = skip;
-        json1.features[0].properties.startId = startId;
-        json1.features[0].properties.endId = endId;
-        json1.features[0].properties.path_lines = path_lines_JSON;
-        json1.features[0].properties.path_direction = path_direction;
-        json1.features[0].properties.path_length = path_length;
-
-        // Insert path in the database and write the JSON to a file
-        const values = [0, path_order, startId, endId, path_lines_db, path_direction, path_length, skip];
-        db.query("INSERT INTO pathways (id, path_order, startId, endId, path_lines, path_direction, path_length, skip) VALUES (?)", [values], function (err, result) {
-            if (err) throw err;
-        });
-
-        if (i === 0) {
-            finalJSON = json1;
-        } else {
-            finalJSON.features.push(json1.features[0]);
-        }
-
-        lastStopId = endId;
-        i++;
     }
-
-    // console.log("Writing file that contains all paths...");
-    // const outputFile = outputPath + "/" + mainLine + ".geojson";
-    // fs.writeFileSync(outputFile, JSON.stringify(finalJSON));
 
     db.end((error) => {
         if (error) {
@@ -410,7 +410,7 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
     return finalJSON;
 }
 
-export const SubwayJSONFormatter = async (inputFile, stopJSONFile, returnStopJSONFile = false) => {
+export const SubwayJSONFormatter = async (inputFile, stopJSONFile, returnStopJSON = false) => {
 
     await initDatabase();
 
@@ -477,7 +477,7 @@ export const SubwayJSONFormatter = async (inputFile, stopJSONFile, returnStopJSO
         console.log('MySQL connection closed.');
     });
 
-    if(returnStopJSONFile)
+    if(returnStopJSON)
         return { subway: subwayJSON, stops: stopsJSON };
     else
         return subwayJSON;
