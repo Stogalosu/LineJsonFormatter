@@ -313,7 +313,7 @@
   },
   {
     "id": 99090,
-    "name": "Academia militară",
+    "name": "Academia Militară",
     "description": "",
     "latitude": 44.42988,
     "longitude": 26.062666,
@@ -2313,7 +2313,15 @@
   },
   {
     "id": 14704,
-    "name": "Basarab",
+    "name": "Basarab 1",
+    "description": "",
+    "latitude": 44.44998,
+    "longitude": 26.06809,
+    "type": 1
+  },
+  {
+    "id": 147041,
+    "name": "Basarab 2",
     "description": "",
     "latitude": 44.44998,
     "longitude": 26.06809,
@@ -10872,14 +10880,6 @@
     "type": 0
   },
   {
-    "id": 15101,
-    "name": "Dristor",
-    "description": "",
-    "latitude": 44.42037,
-    "longitude": 26.13947,
-    "type": 1
-  },
-  {
     "id": 14713,
     "name": "Dristor 1",
     "description": "",
@@ -11817,7 +11817,15 @@
   },
   {
     "id": 14708,
-    "name": "Eroilor",
+    "name": "Eroilor 1",
+    "description": "",
+    "latitude": 44.43536,
+    "longitude": 26.07446,
+    "type": 1
+  },
+  {
+    "id": 147081,
+    "name": "Eroilor 2",
     "description": "",
     "latitude": 44.43536,
     "longitude": 26.07446,
@@ -13201,7 +13209,7 @@
   },
   {
     "id": 14703,
-    "name": "Gara de Nord 1 (M1)",
+    "name": "Gara de Nord 1",
     "description": "",
     "latitude": 44.44748,
     "longitude": 26.07597,
@@ -13209,7 +13217,7 @@
   },
   {
     "id": 14742,
-    "name": "Gara de Nord 2 (M4)",
+    "name": "Gara de Nord 2",
     "description": "",
     "latitude": 44.44809,
     "longitude": 26.07345,
@@ -24465,7 +24473,15 @@
   },
   {
     "id": 15100,
-    "name": "Piața Unirii",
+    "name": "Piața Unirii 1",
+    "description": "",
+    "latitude": 44.42758,
+    "longitude": 26.1026,
+    "type": 1
+  },
+  {
+    "id": 151001,
+    "name": "Piața Unirii 2",
     "description": "",
     "latitude": 44.42758,
     "longitude": 26.1026,
@@ -24473,7 +24489,15 @@
   },
   {
     "id": 15099,
-    "name": "Piața Victoriei",
+    "name": "Piața Victoriei 1",
+    "description": "",
+    "latitude": 44.45223,
+    "longitude": 26.08636,
+    "type": 1
+  },
+  {
+    "id": 150991,
+    "name": "Piața Victoriei 2",
     "description": "",
     "latitude": 44.45223,
     "longitude": 26.08636,

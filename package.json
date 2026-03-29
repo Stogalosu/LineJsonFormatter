@@ -1,6 +1,6 @@
 {
   "name": "line-json-formatter",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A weirdly specific tool designed to help me build my app.",
   "keywords": [
     "gpx",
@@ -25,11 +25,12 @@
   },
   "dependencies": {
     "@inquirer/prompts": "^8.3.0",
+    "@turf/length": "^7.3.4",
     "debug": "~2.6.9",
     "gpxparser": "^3.0.0",
     "mysql": "^2.18.1",
     "mysql2": "^3.20.0",
+    "string-similarity-js": "^2.1.4",
     "xmldom": "0.6.0"
-  },
-  "devDependencies": {}
+  }
 }

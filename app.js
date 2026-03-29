@@ -5,10 +5,49 @@ import { loadEnvFile } from 'node:process';
 import mysql from 'mysql2';
 import { input } from '@inquirer/prompts';
 import { select } from '@inquirer/prompts';
+import geoJSONLength from '@turf/length';
 
-export const LineJSONFormatter = async (inputPath, stopJSONPath) => {
+let db;
 
+async function initDatabase() {
     loadEnvFile();
+
+    db = await mysql.createConnection({
+        host: process.env.LJF_DB_HOST,
+        user: process.env.LJF_DB_USER,
+        password: process.env.LJF_DB_PASSWORD
+    });
+
+    await db.promise().query("USE stb_pathways");
+}
+
+async function getNextOrderNumber(line) {
+    const queryResult = await db.promise().query("SELECT MAX(path_order) as highest_path_order FROM pathways WHERE path_lines = ?", [line]);
+
+    if (queryResult[0][0].highest_path_order === undefined) return 1;
+    return queryResult[0][0].highest_path_order + 1;
+}
+
+function findClosestStop(targetLat, targetLon, stopJSONFile, subway = 0) {
+    const stopsJSON = JSON.parse(fs.readFileSync(stopJSONFile, 'utf8'));
+    return stopsJSON.reduce((closest, obj) => {
+        const diff = Math.sqrt(
+            Math.pow(obj.latitude - targetLat, 2) +
+            Math.pow(obj.longitude - targetLon, 2)
+        );
+        if (diff >= closest.diff) return closest;
+        if (subway && obj.type !== 1) return closest;
+        return { obj, diff };
+    }, {obj: null, diff: Infinity});
+}
+
+async function getLastId() {
+    const idQuery = await db.promise().query("SELECT id FROM pathways ORDER BY id DESC LIMIT 1");
+    if (idQuery[0][0] === undefined) return -1;
+    return idQuery[0][0].id;
+}
+
+export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
 
     const isFile = fileName => {
         return fs.lstatSync(fileName).isFile();
@@ -20,45 +59,10 @@ export const LineJSONFormatter = async (inputPath, stopJSONPath) => {
             })
             .filter(isFile);
 
-    let db = mysql.createConnection({
-        host: process.env.LJF_DB_HOST,
-        user: process.env.LJF_DB_USER,
-        password: process.env.LJF_DB_PASSWORD
-    });
-
-    db.connect(function (err) {
-        if (err) throw err;
-        db.query("USE stb_pathways", function (err, result) {
-            if (err) throw err;
-        });
-    });
-
-    async function getLastId() {
-        const idQuery = await db.promise().query("SELECT id FROM pathways ORDER BY id DESC LIMIT 1");
-        if (idQuery[0][0] === undefined) return -1;
-        return idQuery[0][0].id;
-    }
-
-    async function getNextOrderNumber(line) {
-        const queryResult = await db.promise().query("SELECT MAX(path_order) as highest_path_order FROM pathways WHERE path_lines = ?", [line]);
-
-        if (queryResult[0][0].highest_path_order === undefined) return 1;
-        return queryResult[0][0].highest_path_order + 1;
-    }
-
-    function findClosestStop(targetLat, targetLon) {
-        const stopsJSON = JSON.parse(fs.readFileSync(stopJSONPath, 'utf8'));
-        return stopsJSON.reduce((closest, obj) => {
-            const diff = Math.sqrt(
-                Math.pow(obj.latitude - targetLat, 2) +
-                Math.pow(obj.longitude - targetLon, 2)
-            );
-            return diff < closest.diff ? {obj, diff} : closest;
-        }, {obj: null, diff: Infinity});
-    }
+    await initDatabase();
 
     function getStopsInRange(lat, lon, range) {
-        const stopsJSON = JSON.parse(fs.readFileSync(stopJSONPath, 'utf8'));
+        const stopsJSON = JSON.parse(fs.readFileSync(stopJSONFile, 'utf8'));
         let result = [];
         stopsJSON.forEach((stop) => {
             const dist = Math.sqrt(
@@ -91,8 +95,8 @@ export const LineJSONFormatter = async (inputPath, stopJSONPath) => {
         const json = gpx.toGeoJSON();
 
         const coords = json.features[0].geometry.coordinates;
-        const startStop = findClosestStop(coords[0][1], coords[0][0]).obj;
-        const endStop = findClosestStop(coords[coords.length - 1][1], coords[coords.length - 1][0]).obj;
+        const startStop = findClosestStop(coords[0][1], coords[0][0], stopJSONFile).obj;
+        const endStop = findClosestStop(coords[coords.length - 1][1], coords[coords.length - 1][0], stopJSONFile).obj;
 
         const startStopObject = {
             id: startStop.id,
@@ -308,8 +312,8 @@ export const LineJSONFormatter = async (inputPath, stopJSONPath) => {
 
         const id = await getLastId() + 1;
         const path_order = await getNextOrderNumber(lines[i]);
-        let startId = findClosestStop(coords[0][1], coords[0][0]).obj.id;
-        let endId = findClosestStop(coords[coords.length - 1][1], coords[coords.length - 1][0]).obj.id;
+        let startId = findClosestStop(coords[0][1], coords[0][0], stopJSONFile).obj.id;
+        let endId = findClosestStop(coords[coords.length - 1][1], coords[coords.length - 1][0], stopJSONFile).obj.id;
         const path_lines_JSON = lines[i].split(",");
         const path_lines_db = lines[i];
         const path_direction = getPathDirection(i, directions);
@@ -404,4 +408,77 @@ export const LineJSONFormatter = async (inputPath, stopJSONPath) => {
     });
 
     return finalJSON;
+}
+
+export const SubwayJSONFormatter = async (inputFile, stopJSONFile, returnStopJSONFile = false) => {
+
+    await initDatabase();
+
+    const stopsJSON = JSON.parse(fs.readFileSync(stopJSONFile, 'utf8'));
+    const subwayJSON = JSON.parse(fs.readFileSync(inputFile, 'utf8'));
+
+    for(const feature of subwayJSON.features) {
+        if(feature.geometry.type === "Point") {
+            const sameStop = stopsJSON.find((stop) => stop.name === feature.properties.name && stop.type === 1);
+            if(sameStop === undefined) console.log(`Couldn't find matching stop for ${feature.properties.name}`);
+            else {
+                feature.properties.id = sameStop.id;
+                feature.properties.description = "";
+                feature.properties.type = 1;
+                feature.properties.lines = feature.properties.line.split("/");
+                delete feature.properties.line;
+
+                const index = stopsJSON.indexOf(sameStop);
+                stopsJSON.splice(index, 1);
+            }
+        }
+    }
+    for(const feature of subwayJSON.features) {
+        if(feature.geometry.type === "LineString") {
+            feature.properties.path_lines = feature.properties.line;
+            delete feature.properties.line;
+            delete feature.properties.end1;
+            delete feature.properties.end2;
+
+            const coords = feature.geometry.coordinates;
+
+            const id = await getLastId() + 1;
+            const path_order = await getNextOrderNumber(feature.properties.path_lines);
+            const startId = findClosestStop(coords[0][1], coords[0][0], stopJSONFile, 1).obj.id;
+            const endId = findClosestStop(coords[coords.length - 1][1], coords[coords.length - 1][0], stopJSONFile, 1).obj.id;
+            const path_lines_db = feature.properties.path_lines;
+            const path_lines_JSON = feature.properties.path_lines.split("/");
+            const path_direction = 10;
+            const path_length = geoJSONLength(feature, { units: 'meters' });
+            let skip = 0;
+            if(endId === 15102 || endId === 14708) skip = 1;
+
+            feature.properties.id = id;
+            feature.properties.path_order = path_order;
+            feature.properties.startId = startId;
+            feature.properties.endId = endId;
+            feature.properties.path_lines = path_lines_JSON;
+            feature.properties.path_direction = path_direction;
+            feature.properties.path_length = path_length;
+            feature.properties.skip = skip;
+
+            const values = [0, path_order, startId, endId, path_lines_db, path_direction, path_length, skip];
+            db.query("INSERT INTO pathways (id, path_order, startId, endId, path_lines, path_direction, path_length, skip) VALUES (?)", [values], function (err, result) {
+                if (err) throw err;
+            });
+        }
+    }
+
+    db.end((error) => {
+        if (error) {
+            console.error('Error closing MySQL connection:', error);
+            return;
+        }
+        console.log('MySQL connection closed.');
+    });
+
+    if(returnStopJSONFile)
+        return { subway: subwayJSON, stops: stopsJSON };
+    else
+        return subwayJSON;
 }
