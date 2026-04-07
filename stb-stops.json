@@ -272,19 +272,19 @@
     "type": 0
   },
   {
-    "id": 10768,
+    "id": 231.1,
     "name": "Abator",
-    "description": "DJ 101B, Ilfov",
-    "latitude": 44.71976,
-    "longitude": 26.270397,
+    "description": "",
+    "latitude": 44.719757,
+    "longitude": 26.270391,
     "type": 0
   },
   {
-    "id": 10777,
+    "id": 239.1,
     "name": "Abator",
-    "description": "DJ 101B, Ilfov",
-    "latitude": 44.719467,
-    "longitude": 26.270649,
+    "description": "",
+    "latitude": 44.719463,
+    "longitude": 26.27066,
     "type": 0
   },
   {
@@ -352,38 +352,6 @@
     "type": 0
   },
   {
-    "id": 3100,
-    "name": "Adesgo",
-    "description": "Calea Serban Voda, Bucuresti",
-    "latitude": 44.41129,
-    "longitude": 26.10034,
-    "type": 0
-  },
-  {
-    "id": 3649,
-    "name": "Adesgo",
-    "description": "Calea Serban Voda, Bucuresti",
-    "latitude": 44.4114,
-    "longitude": 26.100405,
-    "type": 0
-  },
-  {
-    "id": 7277,
-    "name": "Adesgo",
-    "description": "Calea Serban Voda, Bucuresti",
-    "latitude": 44.41114,
-    "longitude": 26.09987,
-    "type": 0
-  },
-  {
-    "id": 7385,
-    "name": "Adesgo",
-    "description": "Calea Serban Voda, Bucuresti",
-    "latitude": 44.411495,
-    "longitude": 26.10074,
-    "type": 0
-  },
-  {
     "id": 8496,
     "name": "Aerodrom",
     "description": "DC 125, Ilfov",
@@ -416,11 +384,19 @@
     "type": 0
   },
   {
+    "id": 12564,
+    "name": "Aeroport Baneasa",
+    "description": "Rond Aeroport Baneasa",
+    "latitude": 44.496593,
+    "longitude": 26.080975,
+    "type": 0
+  },
+  {
     "id": 7022,
     "name": "Aeroport Baneasa",
     "description": "Sos. Bucuresti-Ploiesti, Bucuresti",
-    "latitude": 44.496006,
-    "longitude": 26.078865,
+    "latitude": 44.496002,
+    "longitude": 26.07887,
     "type": 0
   },
   {
@@ -664,22 +640,6 @@
     "type": 0
   },
   {
-    "id": 5301.1,
-    "name": "Aleea Lacului",
-    "description": "",
-    "latitude": 44.45393,
-    "longitude": 26.163568,
-    "type": 0
-  },
-  {
-    "id": 5302.1,
-    "name": "Aleea Lacului",
-    "description": "",
-    "latitude": 44.45482,
-    "longitude": 26.163872,
-    "type": 0
-  },
-  {
     "id": 6757,
     "name": "Aleea Privighetorilor",
     "description": "Sos. Bucuresti-Ploiesti, Bucuresti",
@@ -760,35 +720,11 @@
     "type": 0
   },
   {
-    "id": 3269,
-    "name": "Alexandru Sihleanu",
-    "description": "Calea Calarasilor, Bucuresti",
-    "latitude": 44.432976,
-    "longitude": 26.113699,
-    "type": 0
-  },
-  {
     "id": 6755,
     "name": "Alexandru Sihleanu",
     "description": "Calea Calarasilor, Bucuresti",
     "latitude": 44.43291,
     "longitude": 26.113607,
-    "type": 0
-  },
-  {
-    "id": 3113,
-    "name": "Alexandru cel Bun",
-    "description": "Str. Maica Domnului, Bucuresti",
-    "latitude": 44.45913,
-    "longitude": 26.119904,
-    "type": 0
-  },
-  {
-    "id": 3374,
-    "name": "Alexandru cel Bun",
-    "description": "Str. Maica Domnului, Bucuresti",
-    "latitude": 44.459026,
-    "longitude": 26.119984,
     "type": 0
   },
   {
@@ -896,6 +832,22 @@
     "type": 0
   },
   {
+    "id": 11.1,
+    "name": "Amco",
+    "description": "",
+    "latitude": 44.540993,
+    "longitude": 26.068768,
+    "type": 0
+  },
+  {
+    "id": 123.1,
+    "name": "Amco",
+    "description": "",
+    "latitude": 44.541187,
+    "longitude": 26.068514,
+    "type": 0
+  },
+  {
     "id": 6765,
     "name": "Amurgului",
     "description": "Sos. Salaj, Bucuresti",
@@ -944,41 +896,25 @@
     "type": 0
   },
   {
-    "id": 653.1,
-    "name": "Ancuta Baneasa",
+    "id": 3433.1,
+    "name": "Andronache",
     "description": "",
-    "latitude": 44.469765,
-    "longitude": 26.104021,
+    "latitude": 44.697815,
+    "longitude": 26.335617,
     "type": 0
   },
   {
-    "id": 10917,
+    "id": 3434.1,
     "name": "Andronache",
-    "description": "DC 21A, Ilfov",
-    "latitude": 44.698,
-    "longitude": 26.335337,
-    "type": 0
-  },
-  {
-    "id": 10918,
-    "name": "Andronache",
-    "description": "DC 21A, Ilfov",
-    "latitude": 44.698067,
-    "longitude": 26.335266,
+    "description": "",
+    "latitude": 44.698246,
+    "longitude": 26.334814,
     "type": 0
   },
   {
     "id": 6791,
     "name": "Anghel Alexandru",
     "description": "Sos. Giurgiului, Bucuresti",
-    "latitude": 44.3783,
-    "longitude": 26.091488,
-    "type": 0
-  },
-  {
-    "id": 882.1,
-    "name": "Anghel Alexandru",
-    "description": "",
     "latitude": 44.3783,
     "longitude": 26.091488,
     "type": 0
@@ -1048,9 +984,9 @@
     "type": 0
   },
   {
-    "id": 12396,
+    "id": 6060.2,
     "name": "Ansamblu Rezidential",
-    "description": "Str. Scolii, Ilfov",
+    "description": "",
     "latitude": 44.376408,
     "longitude": 26.009554,
     "type": 0
@@ -1168,11 +1104,19 @@
     "type": 0
   },
   {
-    "id": 7355,
+    "id": 12076,
     "name": "Apicola",
     "description": "Bd. Aerogarii, Bucuresti",
-    "latitude": 44.492695,
-    "longitude": 26.08773,
+    "latitude": 44.492424,
+    "longitude": 26.087967,
+    "type": 0
+  },
+  {
+    "id": 12077,
+    "name": "Apicola",
+    "description": "Bd. Aerogarii, Bucuresti",
+    "latitude": 44.49249,
+    "longitude": 26.087833,
     "type": 0
   },
   {
@@ -1544,19 +1488,19 @@
     "type": 0
   },
   {
-    "id": 8380,
+    "id": 3351.1,
     "name": "Astoria",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.71403,
-    "longitude": 26.192932,
+    "description": "",
+    "latitude": 44.714027,
+    "longitude": 26.192924,
     "type": 0
   },
   {
-    "id": 8582,
+    "id": 3380.1,
     "name": "Astoria",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.714233,
-    "longitude": 26.19354,
+    "description": "",
+    "latitude": 44.714245,
+    "longitude": 26.193579,
     "type": 0
   },
   {
@@ -1573,22 +1517,6 @@
     "description": "",
     "latitude": 44.522297,
     "longitude": 25.997133,
-    "type": 0
-  },
-  {
-    "id": 6111,
-    "name": "Atlasului",
-    "description": "Campinita, Bucuresti",
-    "latitude": 44.506413,
-    "longitude": 26.059803,
-    "type": 0
-  },
-  {
-    "id": 6182,
-    "name": "Atlasului",
-    "description": "Str. Oaspetilor, Bucuresti",
-    "latitude": 44.506584,
-    "longitude": 26.058546,
     "type": 0
   },
   {
@@ -1680,6 +1608,14 @@
     "type": 0
   },
   {
+    "id": "PV19_5197",
+    "name": "Autobaza Militari Bus",
+    "description": "",
+    "latitude": 44.43216,
+    "longitude": 26.002827,
+    "type": 0
+  },
+  {
     "id": 6438,
     "name": "Autobaza Obregia",
     "description": "Bd. Metalurgiei, Bucuresti",
@@ -1701,14 +1637,6 @@
     "description": "DJ 101, Ilfov",
     "latitude": 44.61351,
     "longitude": 26.079454,
-    "type": 0
-  },
-  {
-    "id": 12550,
-    "name": "Autogara Filaret",
-    "description": "Piata Garii Filaret, Bucuresti",
-    "latitude": 44.41585,
-    "longitude": 26.092169,
     "type": 0
   },
   {
@@ -1739,8 +1667,8 @@
     "id": 6719,
     "name": "Autogara Filaret",
     "description": "Str. Dr.Istrati, Bucuresti",
-    "latitude": 44.414555,
-    "longitude": 26.09115,
+    "latitude": 44.415386,
+    "longitude": 26.092363,
     "type": 0
   },
   {
@@ -1896,14 +1824,6 @@
     "type": 0
   },
   {
-    "id": 7606,
-    "name": "Baba Novac",
-    "description": "Sos. Mihai Bravu, Bucuresti",
-    "latitude": 44.425175,
-    "longitude": 26.137697,
-    "type": 0
-  },
-  {
     "id": 7194,
     "name": "Baboi",
     "description": "Sos. T. Vladimirescu-Domnesti, Ilfov",
@@ -1973,14 +1893,6 @@
     "description": "Bd. Basarabia, Bucuresti",
     "latitude": 44.436043,
     "longitude": 26.164585,
-    "type": 0
-  },
-  {
-    "id": 3365,
-    "name": "Baicului",
-    "description": "Sos. Pantelimon, Bucuresti",
-    "latitude": 44.444283,
-    "longitude": 26.143251,
     "type": 0
   },
   {
@@ -2096,62 +2008,6 @@
     "type": 0
   },
   {
-    "id": 3275,
-    "name": "Barajul Iezeru",
-    "description": "Bd. 1 Decembrie 1918, Bucuresti",
-    "latitude": 44.432533,
-    "longitude": 26.172651,
-    "type": 0
-  },
-  {
-    "id": 3282,
-    "name": "Barajul Iezeru",
-    "description": "Bd. 1 Decembrie 1918, Bucuresti",
-    "latitude": 44.43288,
-    "longitude": 26.172476,
-    "type": 0
-  },
-  {
-    "id": 7444,
-    "name": "Barajul Iezeru",
-    "description": "Bd. 1 Decembrie 1918, Bucuresti",
-    "latitude": 44.432175,
-    "longitude": 26.172844,
-    "type": 0
-  },
-  {
-    "id": 7448,
-    "name": "Barajul Iezeru",
-    "description": "Bd. 1 Decembrie 1918, Bucuresti",
-    "latitude": 44.432888,
-    "longitude": 26.172426,
-    "type": 0
-  },
-  {
-    "id": 3279,
-    "name": "Barajul Rovinari",
-    "description": "Bd. 1 Decembrie 1918, Bucuresti",
-    "latitude": 44.430202,
-    "longitude": 26.173483,
-    "type": 0
-  },
-  {
-    "id": 3283,
-    "name": "Barajul Rovinari",
-    "description": "Bd. 1 Decembrie 1918, Bucuresti",
-    "latitude": 44.430347,
-    "longitude": 26.173367,
-    "type": 0
-  },
-  {
-    "id": 9376,
-    "name": "Barajul Rovinari",
-    "description": "Bd. 1 Decembrie 1918, Bucuresti",
-    "latitude": 44.430477,
-    "longitude": 26.17327,
-    "type": 0
-  },
-  {
     "id": 10998,
     "name": "Barajului",
     "description": "Str. Gheorghita Stanciu, Ilfov",
@@ -2256,14 +2112,6 @@
     "type": 0
   },
   {
-    "id": 665.1,
-    "name": "Barbu Vacarescu",
-    "description": "",
-    "latitude": 44.47561,
-    "longitude": 26.10809,
-    "type": 0
-  },
-  {
     "id": 6529,
     "name": "Barca",
     "description": "Str. Margeanului, Bucuresti",
@@ -2365,14 +2213,6 @@
     "description": "Str. Vasile Lascar, Bucuresti",
     "latitude": 44.440475,
     "longitude": 26.108646,
-    "type": 0
-  },
-  {
-    "id": 3195,
-    "name": "Batistei",
-    "description": "Str. Vasile Lascar, Bucuresti",
-    "latitude": 44.439884,
-    "longitude": 26.108757,
     "type": 0
   },
   {
@@ -2485,30 +2325,6 @@
     "description": "Bd. 1 Decembrie 1918, Bucuresti",
     "latitude": 44.41799,
     "longitude": 26.176306,
-    "type": 0
-  },
-  {
-    "id": 9374,
-    "name": "Bd. 1 Decembrie 1918",
-    "description": "Bd. 1 Decembrie 1918, Bucuresti",
-    "latitude": 44.434834,
-    "longitude": 26.172329,
-    "type": 0
-  },
-  {
-    "id": 629.1,
-    "name": "Bd. 1 Decembrie 1918",
-    "description": "",
-    "latitude": 44.436043,
-    "longitude": 26.173872,
-    "type": 0
-  },
-  {
-    "id": 633.1,
-    "name": "Bd. 1 Decembrie 1918",
-    "description": "",
-    "latitude": 44.43655,
-    "longitude": 26.172281,
     "type": 0
   },
   {
@@ -2656,27 +2472,11 @@
     "type": 0
   },
   {
-    "id": 6921,
-    "name": "Bd. Banu Manta",
-    "description": "Sos. N.Titulescu, Bucuresti",
-    "latitude": 44.452763,
-    "longitude": 26.07409,
-    "type": 0
-  },
-  {
     "id": 6922,
     "name": "Bd. Banu Manta",
     "description": "Sos. N.Titulescu, Bucuresti",
     "latitude": 44.452457,
     "longitude": 26.074535,
-    "type": 0
-  },
-  {
-    "id": 12440,
-    "name": "Bd. Basarabia",
-    "description": "Bd. 1 Decembrie 1918",
-    "latitude": 44.435833,
-    "longitude": 26.172798,
     "type": 0
   },
   {
@@ -2781,14 +2581,6 @@
     "description": "Str. Armand Calinescu, Bucuresti",
     "latitude": 44.437172,
     "longitude": 26.110039,
-    "type": 0
-  },
-  {
-    "id": 3210,
-    "name": "Bd. Carol I",
-    "description": "Str. Paleologu, Bucuresti",
-    "latitude": 44.436775,
-    "longitude": 26.110378,
     "type": 0
   },
   {
@@ -2933,14 +2725,6 @@
     "description": "Bd. C.Brancoveanu, Bucuresti",
     "latitude": 44.396885,
     "longitude": 26.109753,
-    "type": 0
-  },
-  {
-    "id": 6806,
-    "name": "Bd. Constantin Brancoveanu",
-    "description": "Sos. Oltenitei, Bucuresti",
-    "latitude": 44.397774,
-    "longitude": 26.110668,
     "type": 0
   },
   {
@@ -3093,22 +2877,6 @@
     "description": "Sos. Mihai Bravu, Bucuresti",
     "latitude": 44.443306,
     "longitude": 26.129858,
-    "type": 0
-  },
-  {
-    "id": 3290,
-    "name": "Bd. Ferdinand",
-    "description": "Sos. Pantelimon, Bucuresti",
-    "latitude": 44.44604,
-    "longitude": 26.135027,
-    "type": 0
-  },
-  {
-    "id": 3396,
-    "name": "Bd. Ferdinand",
-    "description": "Sos. Pantelimon, Bucuresti",
-    "latitude": 44.44641,
-    "longitude": 26.134415,
     "type": 0
   },
   {
@@ -3336,19 +3104,19 @@
     "type": 0
   },
   {
-    "id": 3366,
+    "id": 12092,
     "name": "Bd. Lacul Tei",
-    "description": "Bd. Lacul Tei, Bucuresti",
-    "latitude": 44.46452,
-    "longitude": 26.125973,
+    "description": "Str. Barbu Vacarescu, Bucuresti",
+    "latitude": 44.457527,
+    "longitude": 26.106049,
     "type": 0
   },
   {
-    "id": 3562,
+    "id": 12096,
     "name": "Bd. Lacul Tei",
-    "description": "Str. Maica Domnului, Bucuresti",
-    "latitude": 44.46154,
-    "longitude": 26.119207,
+    "description": "Str. Barbu Vacarescu, Bucuresti",
+    "latitude": 44.456654,
+    "longitude": 26.10582,
     "type": 0
   },
   {
@@ -3357,14 +3125,6 @@
     "description": "Bd. Lacul Tei, Bucuresti",
     "latitude": 44.457134,
     "longitude": 26.106733,
-    "type": 0
-  },
-  {
-    "id": 6262,
-    "name": "Bd. Lacul Tei",
-    "description": "Str. Barbu Vacarescu, Bucuresti",
-    "latitude": 44.458096,
-    "longitude": 26.106342,
     "type": 0
   },
   {
@@ -3453,22 +3213,6 @@
     "description": "Sos. Berceni, Bucuresti",
     "latitude": 44.37148,
     "longitude": 26.141178,
-    "type": 0
-  },
-  {
-    "id": 1358.1,
-    "name": "Bd. Metalurgiei",
-    "description": "",
-    "latitude": 44.371475,
-    "longitude": 26.141172,
-    "type": 0
-  },
-  {
-    "id": 1386.1,
-    "name": "Bd. Metalurgiei",
-    "description": "",
-    "latitude": 44.37029,
-    "longitude": 26.141987,
     "type": 0
   },
   {
@@ -3616,14 +3360,6 @@
     "type": 0
   },
   {
-    "id": 3126,
-    "name": "Bd. Octavian Goga",
-    "description": "Str. Nerva Traian, Bucuresti",
-    "latitude": 44.423492,
-    "longitude": 26.118492,
-    "type": 0
-  },
-  {
     "id": 6508,
     "name": "Bd. Octavian Goga",
     "description": "Str. Nerva Traian, Bucuresti",
@@ -3637,22 +3373,6 @@
     "description": "Str. Nerva Traian, Bucuresti",
     "latitude": 44.423103,
     "longitude": 26.118275,
-    "type": 0
-  },
-  {
-    "id": 3137,
-    "name": "Bd. Pache Protopopescu",
-    "description": "Str. Traian, Bucuresti",
-    "latitude": 44.43926,
-    "longitude": 26.120481,
-    "type": 0
-  },
-  {
-    "id": 3271,
-    "name": "Bd. Pache Protopopescu",
-    "description": "Str. Traian, Bucuresti",
-    "latitude": 44.438354,
-    "longitude": 26.120302,
     "type": 0
   },
   {
@@ -3720,11 +3440,11 @@
     "type": 0
   },
   {
-    "id": 12249,
+    "id": 12561,
     "name": "Bd. Poligrafiei",
     "description": "Bd. Poligrafiei, Bucuresti",
-    "latitude": 44.483555,
-    "longitude": 26.059126,
+    "latitude": 44.4841,
+    "longitude": 26.058578,
     "type": 0
   },
   {
@@ -3765,6 +3485,14 @@
     "description": "Str. Valea Cascadelor, Bucuresti",
     "latitude": 44.432224,
     "longitude": 26.005201,
+    "type": 0
+  },
+  {
+    "id": "PV19_1533",
+    "name": "Bd. Preciziei",
+    "description": "",
+    "latitude": 44.432323,
+    "longitude": 26.005249,
     "type": 0
   },
   {
@@ -3845,6 +3573,38 @@
     "description": "Bd. G-ral Paul Teodorescu, Bucuresti",
     "latitude": 44.427998,
     "longitude": 26.05475,
+    "type": 0
+  },
+  {
+    "id": 3353,
+    "name": "Bd. Timisoara 80",
+    "description": "Bd. Timisoara, Bucuresti",
+    "latitude": 44.424232,
+    "longitude": 26.006508,
+    "type": 0
+  },
+  {
+    "id": 3358,
+    "name": "Bd. Timisoara 80",
+    "description": "Bd. Timisoara, Bucuresti",
+    "latitude": 44.42424,
+    "longitude": 26.00606,
+    "type": 0
+  },
+  {
+    "id": 5987,
+    "name": "Bd. Timisoara 80",
+    "description": "Bd. Timisoara, Bucuresti",
+    "latitude": 44.42411,
+    "longitude": 26.005497,
+    "type": 0
+  },
+  {
+    "id": 6001,
+    "name": "Bd. Timisoara 80",
+    "description": "Bd. Timisoara, Bucuresti",
+    "latitude": 44.424236,
+    "longitude": 26.005236,
     "type": 0
   },
   {
@@ -4144,6 +3904,14 @@
     "type": 0
   },
   {
+    "id": "PV19_1606",
+    "name": "Biserica",
+    "description": "",
+    "latitude": 44.448463,
+    "longitude": 25.987068,
+    "type": 0
+  },
+  {
     "id": 104.1,
     "name": "Biserica",
     "description": "",
@@ -4341,22 +4109,6 @@
     "description": "",
     "latitude": 44.52418,
     "longitude": 26.255312,
-    "type": 0
-  },
-  {
-    "id": 10769,
-    "name": "Biserica Nuci",
-    "description": "DJ101B, Ilfov",
-    "latitude": 44.720455,
-    "longitude": 26.297611,
-    "type": 0
-  },
-  {
-    "id": 10776,
-    "name": "Biserica Nuci",
-    "description": "DJ 101B, ilfov",
-    "latitude": 44.720463,
-    "longitude": 26.296967,
     "type": 0
   },
   {
@@ -5024,6 +4776,22 @@
     "type": 0
   },
   {
+    "id": 3715,
+    "name": "Bucovina",
+    "description": "Str. C.Brancusi, Bucuresti",
+    "latitude": 44.428833,
+    "longitude": 26.155893,
+    "type": 0
+  },
+  {
+    "id": 3877,
+    "name": "Bucovina",
+    "description": "Str. C.Brancusi, Bucuresti",
+    "latitude": 44.428627,
+    "longitude": 26.155573,
+    "type": 0
+  },
+  {
     "id": 221.1,
     "name": "Bucovina",
     "description": "",
@@ -5400,22 +5168,6 @@
     "type": 0
   },
   {
-    "id": 7036,
-    "name": "C.F.R. Constanta",
-    "description": "Sos. Pipera, Bucuresti",
-    "latitude": 44.48672,
-    "longitude": 26.115677,
-    "type": 0
-  },
-  {
-    "id": 7045,
-    "name": "C.F.R. Constanta",
-    "description": "Sos. Pipera, Bucuresti",
-    "latitude": 44.48601,
-    "longitude": 26.113441,
-    "type": 0
-  },
-  {
     "id": 3612,
     "name": "C.F.R. Progresul",
     "description": "Sos. Giurgiului, Bucuresti",
@@ -5440,11 +5192,35 @@
     "type": 0
   },
   {
+    "id": 7598,
+    "name": "C.F.R. Progresul",
+    "description": "Sos. Giurgiului, Bucuresti",
+    "latitude": 44.369263,
+    "longitude": 26.088804,
+    "type": 0
+  },
+  {
     "id": 7635,
     "name": "C.F.R. Progresul",
     "description": "Sos. Giurgiului, Bucuresti",
     "latitude": 44.369686,
     "longitude": 26.089441,
+    "type": 0
+  },
+  {
+    "id": 3281.1,
+    "name": "C.f.r. Balotesti",
+    "description": "",
+    "latitude": 44.586052,
+    "longitude": 26.070513,
+    "type": 0
+  },
+  {
+    "id": 3286.1,
+    "name": "C.f.r. Balotesti",
+    "description": "",
+    "latitude": 44.586143,
+    "longitude": 26.070715,
     "type": 0
   },
   {
@@ -5493,22 +5269,6 @@
     "description": "",
     "latitude": 44.369057,
     "longitude": 26.08885,
-    "type": 0
-  },
-  {
-    "id": 884.1,
-    "name": "C.f.r. Progresul",
-    "description": "",
-    "latitude": 44.37027,
-    "longitude": 26.089375,
-    "type": 0
-  },
-  {
-    "id": 893.1,
-    "name": "C.f.r. Progresul",
-    "description": "",
-    "latitude": 44.36938,
-    "longitude": 26.089363,
     "type": 0
   },
   {
@@ -5632,22 +5392,6 @@
     "type": 0
   },
   {
-    "id": 10770,
-    "name": "Calea Bucuresti",
-    "description": "DJ 101B, Ilfov",
-    "latitude": 44.72074,
-    "longitude": 26.302933,
-    "type": 0
-  },
-  {
-    "id": 10775,
-    "name": "Calea Bucuresti",
-    "description": "DJ 101B, Ilfov",
-    "latitude": 44.720783,
-    "longitude": 26.302368,
-    "type": 0
-  },
-  {
     "id": 8558,
     "name": "Calea Bucuresti",
     "description": "DN1, Ilfov",
@@ -5685,6 +5429,14 @@
     "description": "",
     "latitude": 44.595367,
     "longitude": 26.239197,
+    "type": 0
+  },
+  {
+    "id": 5138.1,
+    "name": "Calea Bucuresti",
+    "description": "",
+    "latitude": 44.72045,
+    "longitude": 26.30386,
     "type": 0
   },
   {
@@ -5832,14 +5584,6 @@
     "type": 0
   },
   {
-    "id": 8841,
-    "name": "Calea Dudesti",
-    "description": "Cal. Dudesti, Bucuresti",
-    "latitude": 44.42053,
-    "longitude": 26.13488,
-    "type": 0
-  },
-  {
     "id": 3543,
     "name": "Calea Ferentari",
     "description": "Calea Rahovei, Bucuresti",
@@ -5893,14 +5637,6 @@
     "description": "Str. Ceaikovski, Bucuresti",
     "latitude": 44.465855,
     "longitude": 26.10298,
-    "type": 0
-  },
-  {
-    "id": 662.1,
-    "name": "Calea Floreasca",
-    "description": "",
-    "latitude": 44.46591,
-    "longitude": 26.101658,
     "type": 0
   },
   {
@@ -6240,11 +5976,11 @@
     "type": 0
   },
   {
-    "id": 12404,
+    "id": 822.2,
     "name": "Campia Libertatii",
-    "description": "Str. Libertatii, Ilfov",
-    "latitude": 44.383156,
-    "longitude": 26.008097,
+    "description": "",
+    "latitude": 44.38319,
+    "longitude": 26.008228,
     "type": 0
   },
   {
@@ -6392,19 +6128,19 @@
     "type": 0
   },
   {
-    "id": 8386,
+    "id": 3352.1,
     "name": "Canton Silvic",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.7088,
-    "longitude": 26.181417,
+    "description": "",
+    "latitude": 44.708782,
+    "longitude": 26.181421,
     "type": 0
   },
   {
-    "id": 8581,
+    "id": 3379.1,
     "name": "Canton Silvic",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.708725,
-    "longitude": 26.181482,
+    "description": "",
+    "latitude": 44.70871,
+    "longitude": 26.181501,
     "type": 0
   },
   {
@@ -6493,6 +6229,22 @@
     "description": "Str. Carpati, Bucuresti",
     "latitude": 44.473797,
     "longitude": 26.046682,
+    "type": 0
+  },
+  {
+    "id": 12567,
+    "name": "Carpati",
+    "description": "Str. Parcului, Bucuresti",
+    "latitude": 44.47742,
+    "longitude": 26.057316,
+    "type": 0
+  },
+  {
+    "id": 12568,
+    "name": "Carpati",
+    "description": "Str. Parcului, Bucuresti",
+    "latitude": 44.476643,
+    "longitude": 26.057722,
     "type": 0
   },
   {
@@ -6597,22 +6349,6 @@
     "description": "Str. Turnu Magurele, Bucuresti",
     "latitude": 44.379753,
     "longitude": 26.133041,
-    "type": 0
-  },
-  {
-    "id": 1384.1,
-    "name": "Cartier Aparatorii Patriei",
-    "description": "",
-    "latitude": 44.379356,
-    "longitude": 26.134989,
-    "type": 0
-  },
-  {
-    "id": 1988.1,
-    "name": "Cartier Aparatorii Patriei",
-    "description": "",
-    "latitude": 44.380527,
-    "longitude": 26.1341,
     "type": 0
   },
   {
@@ -6776,14 +6512,6 @@
     "type": 0
   },
   {
-    "id": 618.1,
-    "name": "Cartier Colentina",
-    "description": "",
-    "latitude": 44.46845,
-    "longitude": 26.143873,
-    "type": 0
-  },
-  {
     "id": 6238,
     "name": "Cartier Confort Urban",
     "description": "Sos. Salaj, Bucuresti",
@@ -6867,16 +6595,16 @@
     "id": 7477,
     "name": "Cartier Fortuna",
     "description": "Str. Diamantului, Ilfov",
-    "latitude": 44.38972,
-    "longitude": 26.00533,
+    "latitude": 44.38971,
+    "longitude": 26.005278,
     "type": 0
   },
   {
     "id": 7582,
     "name": "Cartier Fortuna",
     "description": "Str. Diamantului, Ilfov",
-    "latitude": 44.38981,
-    "longitude": 26.00583,
+    "latitude": 44.389824,
+    "longitude": 26.005836,
     "type": 0
   },
   {
@@ -6947,8 +6675,8 @@
     "id": 12326,
     "name": "Cartier Henri Coanda",
     "description": "Bd. Iuian Mihu",
-    "latitude": 44.4976,
-    "longitude": 26.097342,
+    "latitude": 44.49759,
+    "longitude": 26.097351,
     "type": 0
   },
   {
@@ -7320,6 +7048,14 @@
     "type": 0
   },
   {
+    "id": 12572,
+    "name": "Catedrala Nationala a Romaniei",
+    "description": "Calea 13 Septembrie, Bucuresti",
+    "latitude": 44.4253,
+    "longitude": 26.079002,
+    "type": 0
+  },
+  {
     "id": 10173,
     "name": "Catiche",
     "description": "Sos. A.I.Cuza-Domnesti, Ilfov",
@@ -7376,6 +7112,22 @@
     "type": 0
   },
   {
+    "id": 12088,
+    "name": "Ceaikovski",
+    "description": "Str. Barbu Vacarescu, Bucuresti",
+    "latitude": 44.46555,
+    "longitude": 26.10855,
+    "type": 0
+  },
+  {
+    "id": 12089,
+    "name": "Ceaikovski",
+    "description": "Str. Barbu Vacarescu, Bucuresti",
+    "latitude": 44.464314,
+    "longitude": 26.108208,
+    "type": 0
+  },
+  {
     "id": 6451,
     "name": "Ceaikovski",
     "description": "Str. Barbu Vacarescu, Bucuresti",
@@ -7416,14 +7168,6 @@
     "type": 0
   },
   {
-    "id": 10824,
-    "name": "Centru Medical",
-    "description": "DC 21A, Ilfov",
-    "latitude": 44.711422,
-    "longitude": 26.317938,
-    "type": 0
-  },
-  {
     "id": 3389.1,
     "name": "Centru Medical",
     "description": "",
@@ -7448,11 +7192,11 @@
     "type": 0
   },
   {
-    "id": 8388,
+    "id": 3354.1,
     "name": "Centru Snagov",
-    "description": "DJ 101 B, Ilfov",
+    "description": "",
     "latitude": 44.704636,
-    "longitude": 26.17162,
+    "longitude": 26.171602,
     "type": 0
   },
   {
@@ -7472,19 +7216,19 @@
     "type": 0
   },
   {
-    "id": 12148,
+    "id": 5135.1,
     "name": "Centrul Comercial",
-    "description": "DJ 101B, Ilfov",
-    "latitude": 44.681988,
-    "longitude": 26.161503,
+    "description": "",
+    "latitude": 44.68315,
+    "longitude": 26.16265,
     "type": 0
   },
   {
-    "id": 12149,
+    "id": 5136.1,
     "name": "Centrul Comercial",
-    "description": "DJ 101B, Ilfov",
-    "latitude": 44.68315,
-    "longitude": 26.16265,
+    "description": "",
+    "latitude": 44.681988,
+    "longitude": 26.161503,
     "type": 0
   },
   {
@@ -7531,8 +7275,8 @@
     "id": 3551.1,
     "name": "Cernica",
     "description": "",
-    "latitude": 44.41492,
-    "longitude": 26.282652,
+    "latitude": 44.41433,
+    "longitude": 26.28208,
     "type": 0
   },
   {
@@ -7568,22 +7312,6 @@
     "type": 0
   },
   {
-    "id": 651.1,
-    "name": "Chefalului",
-    "description": "",
-    "latitude": 44.476227,
-    "longitude": 26.11012,
-    "type": 0
-  },
-  {
-    "id": 666.1,
-    "name": "Chefalului",
-    "description": "",
-    "latitude": 44.476654,
-    "longitude": 26.111498,
-    "type": 0
-  },
-  {
     "id": 7559,
     "name": "Chiajna-Militari",
     "description": "Str. Tineretului, Ilfov",
@@ -7605,6 +7333,14 @@
     "description": "Drumul Ciorogarla, Ilfov",
     "latitude": 44.441322,
     "longitude": 25.974459,
+    "type": 0
+  },
+  {
+    "id": "PV19_6214",
+    "name": "Chiajna-militari",
+    "description": "",
+    "latitude": 44.44644,
+    "longitude": 25.982498,
     "type": 0
   },
   {
@@ -7733,14 +7469,6 @@
     "description": "",
     "latitude": 44.353577,
     "longitude": 26.08515,
-    "type": 0
-  },
-  {
-    "id": 3364,
-    "name": "Cimitirul Armenesc",
-    "description": "Sos. Pantelimon, Bucuresti",
-    "latitude": 44.4445,
-    "longitude": 26.140907,
     "type": 0
   },
   {
@@ -7984,22 +7712,6 @@
     "type": 0
   },
   {
-    "id": 5924,
-    "name": "Cimitirul Serban Voda",
-    "description": "Sos. Oltenitei, Bucuresti",
-    "latitude": 44.40102,
-    "longitude": 26.100626,
-    "type": 0
-  },
-  {
-    "id": 5962,
-    "name": "Cimitirul Serban Voda",
-    "description": "Sos. Oltenitei, Bucuresti",
-    "latitude": 44.402393,
-    "longitude": 26.09849,
-    "type": 0
-  },
-  {
     "id": 3659,
     "name": "Cimitirul Sfanta Vineri",
     "description": "Calea Grivitei, Bucuresti",
@@ -8112,19 +7824,19 @@
     "type": 0
   },
   {
-    "id": 8385,
+    "id": 3363.1,
     "name": "Ciofliceni Padure",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.672527,
-    "longitude": 26.101646,
+    "description": "",
+    "latitude": 44.67254,
+    "longitude": 26.101631,
     "type": 0
   },
   {
-    "id": 8574,
+    "id": 3368.1,
     "name": "Ciofliceni Padure",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.672577,
-    "longitude": 26.101856,
+    "description": "",
+    "latitude": 44.67257,
+    "longitude": 26.101864,
     "type": 0
   },
   {
@@ -8440,22 +8152,6 @@
     "type": 0
   },
   {
-    "id": 3534,
-    "name": "Colegiul National Gh. Sincai",
-    "description": "Bd. Gh.Sincai, Bucuresti",
-    "latitude": 44.414536,
-    "longitude": 26.105408,
-    "type": 0
-  },
-  {
-    "id": 3535,
-    "name": "Colegiul National Gh. Sincai",
-    "description": "Bd. Gh.Sincai, Bucuresti",
-    "latitude": 44.414337,
-    "longitude": 26.105034,
-    "type": 0
-  },
-  {
     "id": 3782,
     "name": "Colegiul National Gh. Sincai",
     "description": "Bd. Dimitrie Cantemir, Bucuresti",
@@ -8517,14 +8213,6 @@
     "description": "Calea Dorobanti, Bucuresti",
     "latitude": 44.458256,
     "longitude": 26.095692,
-    "type": 0
-  },
-  {
-    "id": 659.1,
-    "name": "Colegiul National I.l. Caragiale",
-    "description": "",
-    "latitude": 44.45823,
-    "longitude": 26.095657,
     "type": 0
   },
   {
@@ -8603,8 +8291,8 @@
     "id": 6957,
     "name": "Combinatul Fondului Plastic",
     "description": "Str. Baiculesti, Bucuresti",
-    "latitude": 44.483284,
-    "longitude": 26.063322,
+    "latitude": 44.48329,
+    "longitude": 26.063354,
     "type": 0
   },
   {
@@ -8629,22 +8317,6 @@
     "description": "Sos. Berceni, Bucuresti",
     "latitude": 44.375557,
     "longitude": 26.13803,
-    "type": 0
-  },
-  {
-    "id": 1359.1,
-    "name": "Comisani",
-    "description": "",
-    "latitude": 44.375557,
-    "longitude": 26.13803,
-    "type": 0
-  },
-  {
-    "id": 1385.1,
-    "name": "Comisani",
-    "description": "",
-    "latitude": 44.375694,
-    "longitude": 26.137836,
     "type": 0
   },
   {
@@ -8808,30 +8480,6 @@
     "type": 0
   },
   {
-    "id": 12394,
-    "name": "Complex Comercial",
-    "description": "Str. Gliei, Ilfov",
-    "latitude": 44.382915,
-    "longitude": 26.01731,
-    "type": 0
-  },
-  {
-    "id": 6612,
-    "name": "Complex Comercial",
-    "description": "Bd. Constructorilor, Bucuresti",
-    "latitude": 44.45745,
-    "longitude": 26.041624,
-    "type": 0
-  },
-  {
-    "id": 6614,
-    "name": "Complex Comercial",
-    "description": "Bd. Constructorilor, Bucuresti",
-    "latitude": 44.45812,
-    "longitude": 26.04122,
-    "type": 0
-  },
-  {
     "id": 8676,
     "name": "Complex Comercial",
     "description": "DJ 601, Ilfov",
@@ -8856,6 +8504,14 @@
     "type": 0
   },
   {
+    "id": 6058.2,
+    "name": "Complex Comercial",
+    "description": "",
+    "latitude": 44.382915,
+    "longitude": 26.01731,
+    "type": 0
+  },
+  {
     "id": 7310,
     "name": "Complex Comercial Apusului",
     "description": "Str. Apusului, Bucuresti",
@@ -8869,6 +8525,22 @@
     "description": "",
     "latitude": 44.406948,
     "longitude": 26.27723,
+    "type": 0
+  },
+  {
+    "id": 6612,
+    "name": "Complex Constructorilor",
+    "description": "Bd. Constructorilor, Bucuresti",
+    "latitude": 44.45745,
+    "longitude": 26.041624,
+    "type": 0
+  },
+  {
+    "id": 6614,
+    "name": "Complex Constructorilor",
+    "description": "Bd. Constructorilor, Bucuresti",
+    "latitude": 44.45812,
+    "longitude": 26.04122,
     "type": 0
   },
   {
@@ -8893,22 +8565,6 @@
     "description": "Sos. Fundeni, Bucuresti",
     "latitude": 44.446182,
     "longitude": 26.166147,
-    "type": 0
-  },
-  {
-    "id": 6217.1,
-    "name": "Complex Fundeni",
-    "description": "",
-    "latitude": 44.446182,
-    "longitude": 26.166147,
-    "type": 0
-  },
-  {
-    "id": 6218.1,
-    "name": "Complex Fundeni",
-    "description": "",
-    "latitude": 44.446793,
-    "longitude": 26.166351,
     "type": 0
   },
   {
@@ -8981,6 +8637,14 @@
     "description": "",
     "latitude": 44.55065,
     "longitude": 26.117283,
+    "type": 0
+  },
+  {
+    "id": 6400.1,
+    "name": "Complex Rezidential Allegria",
+    "description": "",
+    "latitude": 44.337383,
+    "longitude": 26.240099,
     "type": 0
   },
   {
@@ -9456,6 +9120,22 @@
     "type": 0
   },
   {
+    "id": 3347.1,
+    "name": "Cotinii",
+    "description": "",
+    "latitude": 44.72346,
+    "longitude": 26.241085,
+    "type": 0
+  },
+  {
+    "id": 3384.1,
+    "name": "Cotinii",
+    "description": "",
+    "latitude": 44.722862,
+    "longitude": 26.24085,
+    "type": 0
+  },
+  {
     "id": 6790,
     "name": "Covasna",
     "description": "Bd. C.Brancoveanu, Bucuresti",
@@ -9560,6 +9240,22 @@
     "type": 0
   },
   {
+    "id": 3303.1,
+    "name": "Crangului",
+    "description": "",
+    "latitude": 44.62003,
+    "longitude": 26.069407,
+    "type": 0
+  },
+  {
+    "id": 3307.1,
+    "name": "Crangului",
+    "description": "",
+    "latitude": 44.62021,
+    "longitude": 26.06963,
+    "type": 0
+  },
+  {
     "id": 12333,
     "name": "Cransebes",
     "description": "Str. Caransebes, Bucuresti",
@@ -9581,22 +9277,6 @@
     "description": "Sos. Berceni, Bucuresti",
     "latitude": 44.358395,
     "longitude": 26.151087,
-    "type": 0
-  },
-  {
-    "id": 6279.1,
-    "name": "Creative Residence",
-    "description": "",
-    "latitude": 44.35846,
-    "longitude": 26.15112,
-    "type": 0
-  },
-  {
-    "id": 6283.1,
-    "name": "Creative Residence",
-    "description": "",
-    "latitude": 44.35839,
-    "longitude": 26.151081,
     "type": 0
   },
   {
@@ -9659,16 +9339,16 @@
     "id": 12132,
     "name": "Cristalului",
     "description": "Str. Cristalului, Ilfov",
-    "latitude": 44.392097,
-    "longitude": 26.007395,
+    "latitude": 44.392136,
+    "longitude": 26.00731,
     "type": 0
   },
   {
     "id": 12133,
     "name": "Cristalului",
     "description": "Str. Cristalului, Ilfov",
-    "latitude": 44.3911,
-    "longitude": 26.008255,
+    "latitude": 44.391068,
+    "longitude": 26.00821,
     "type": 0
   },
   {
@@ -9696,25 +9376,25 @@
     "type": 0
   },
   {
-    "id": 12403,
+    "id": 6084.2,
     "name": "Crisul Repede 24",
-    "description": "Str. Crisul Repede, Ilfov",
+    "description": "",
     "latitude": 44.381065,
     "longitude": 26.019033,
     "type": 0
   },
   {
-    "id": 12395,
+    "id": 6059.2,
     "name": "Crisul Repede 40",
-    "description": "Str. Crisul Repede, Ilfov",
-    "latitude": 44.37866,
-    "longitude": 26.014627,
+    "description": "",
+    "latitude": 44.3786,
+    "longitude": 26.014778,
     "type": 0
   },
   {
-    "id": 12392,
-    "name": "Crisul Repede 50A",
-    "description": "Str. Gliei, Ilfov",
+    "id": 6056.2,
+    "name": "Crisul Repede 50a",
+    "description": "",
     "latitude": 44.379784,
     "longitude": 26.010088,
     "type": 0
@@ -9808,22 +9488,6 @@
     "type": 0
   },
   {
-    "id": 3188,
-    "name": "Cutitul de Argint",
-    "description": "Calea Serban Voda, Bucuresti",
-    "latitude": 44.408905,
-    "longitude": 26.097076,
-    "type": 0
-  },
-  {
-    "id": 3640,
-    "name": "Cutitul de Argint",
-    "description": "Calea Serban Voda, Bucuresti",
-    "latitude": 44.408802,
-    "longitude": 26.096897,
-    "type": 0
-  },
-  {
     "id": 7274,
     "name": "Cutitul de Argint",
     "description": "Calea Serban Voda, Bucuresti",
@@ -9856,6 +9520,22 @@
     "type": 0
   },
   {
+    "id": 3348.1,
+    "name": "Cuza Voda",
+    "description": "",
+    "latitude": 44.725098,
+    "longitude": 26.235592,
+    "type": 0
+  },
+  {
+    "id": 3383.1,
+    "name": "Cuza Voda",
+    "description": "",
+    "latitude": 44.725014,
+    "longitude": 26.234993,
+    "type": 0
+  },
+  {
     "id": 3489.1,
     "name": "Cuza Voda",
     "description": "",
@@ -9877,22 +9557,6 @@
     "description": "Calea Bucurestilor, Ilfov",
     "latitude": 44.569057,
     "longitude": 26.069956,
-    "type": 0
-  },
-  {
-    "id": 12193,
-    "name": "DNCB",
-    "description": "",
-    "latitude": 44.33935,
-    "longitude": 26.155886,
-    "type": 0
-  },
-  {
-    "id": 12194,
-    "name": "DNCB",
-    "description": "",
-    "latitude": 44.339508,
-    "longitude": 26.156763,
     "type": 0
   },
   {
@@ -9923,8 +9587,8 @@
     "id": 6707,
     "name": "Dantelei",
     "description": "Str. Dantelei, Bucuresti",
-    "latitude": 44.407333,
-    "longitude": 26.017374,
+    "latitude": 44.407337,
+    "longitude": 26.017357,
     "type": 0
   },
   {
@@ -9939,8 +9603,8 @@
     "id": 8846,
     "name": "Dantelei 34",
     "description": "Str. Dantelei, Ilfov",
-    "latitude": 44.400738,
-    "longitude": 26.0085,
+    "latitude": 44.400723,
+    "longitude": 26.008406,
     "type": 0
   },
   {
@@ -10053,6 +9717,22 @@
     "description": "DJ 101C, Ilfov",
     "latitude": 44.716866,
     "longitude": 26.249687,
+    "type": 0
+  },
+  {
+    "id": 3345.1,
+    "name": "Dealul Morii",
+    "description": "",
+    "latitude": 44.716866,
+    "longitude": 26.249687,
+    "type": 0
+  },
+  {
+    "id": 3386.1,
+    "name": "Dealul Morii",
+    "description": "",
+    "latitude": 44.716366,
+    "longitude": 26.25051,
     "type": 0
   },
   {
@@ -10189,38 +9869,6 @@
     "description": "Bd. Bucurestii Noi, Bucuresti",
     "latitude": 44.47803,
     "longitude": 26.04476,
-    "type": 0
-  },
-  {
-    "id": 3106,
-    "name": "Depoul Dudesti",
-    "description": "Calea Dudesti, Bucuresti",
-    "latitude": 44.4216,
-    "longitude": 26.13175,
-    "type": 0
-  },
-  {
-    "id": 3382,
-    "name": "Depoul Dudesti",
-    "description": "Calea Dudesti, Bucuresti",
-    "latitude": 44.42186,
-    "longitude": 26.13119,
-    "type": 0
-  },
-  {
-    "id": 6659,
-    "name": "Depoul Dudesti",
-    "description": "Calea Dudesti, Bucuresti",
-    "latitude": 44.421474,
-    "longitude": 26.131844,
-    "type": 0
-  },
-  {
-    "id": 6660,
-    "name": "Depoul Dudesti",
-    "description": "Calea Dudesti, Bucuresti",
-    "latitude": 44.42164,
-    "longitude": 26.131697,
     "type": 0
   },
   {
@@ -10496,6 +10144,22 @@
     "type": 0
   },
   {
+    "id": 5330.1,
+    "name": "Dn1 Aeroportul Henri Coanda",
+    "description": "",
+    "latitude": 44.569057,
+    "longitude": 26.069956,
+    "type": 0
+  },
+  {
+    "id": 5331.1,
+    "name": "Dn1 Aeroportul Henri Coanda",
+    "description": "",
+    "latitude": 44.568558,
+    "longitude": 26.069698,
+    "type": 0
+  },
+  {
     "id": 3435.1,
     "name": "Dncb",
     "description": "",
@@ -10744,22 +10408,6 @@
     "type": 0
   },
   {
-    "id": 6349,
-    "name": "Dr. Felix",
-    "description": "Sos. N.Titulescu, Bucuresti",
-    "latitude": 44.452236,
-    "longitude": 26.081263,
-    "type": 0
-  },
-  {
-    "id": 6828,
-    "name": "Dr. Felix",
-    "description": "Sos. N.Titulescu, Bucuresti",
-    "latitude": 44.452034,
-    "longitude": 26.08009,
-    "type": 0
-  },
-  {
     "id": 3157,
     "name": "Dr. Grozovici",
     "description": "Sos. Stefan cel Mare, Bucuresti",
@@ -10773,22 +10421,6 @@
     "description": "Sos. Stefan cel Mare, Bucuresti",
     "latitude": 44.4527,
     "longitude": 26.114717,
-    "type": 0
-  },
-  {
-    "id": 6440,
-    "name": "Dr. Grozovici",
-    "description": "Sos. Stefan cel Mare, Bucuresti",
-    "latitude": 44.452858,
-    "longitude": 26.114271,
-    "type": 0
-  },
-  {
-    "id": 7063,
-    "name": "Dr. Grozovici",
-    "description": "Sos. Stefan cel Mare, Bucuresti",
-    "latitude": 44.452477,
-    "longitude": 26.116228,
     "type": 0
   },
   {
@@ -10878,6 +10510,14 @@
     "latitude": 44.48512,
     "longitude": 26.056728,
     "type": 0
+  },
+  {
+    "id": 15101,
+    "name": "Dristor",
+    "description": "",
+    "latitude": 44.42037,
+    "longitude": 26.13947,
+    "type": 1
   },
   {
     "id": 14713,
@@ -11016,7 +10656,7 @@
     "type": 0
   },
   {
-    "id": 6175.2,
+    "id": "PV19_6175",
     "name": "Drumul Belșugului",
     "description": "",
     "latitude": 44.434048,
@@ -11024,7 +10664,7 @@
     "type": 0
   },
   {
-    "id": 6176.2,
+    "id": "PV19_6176",
     "name": "Drumul Belșugului",
     "description": "",
     "latitude": 44.43429,
@@ -11115,8 +10755,8 @@
     "id": 7017,
     "name": "Drumul Cooperativei",
     "description": "Prel. Ghencea, Bucuresti",
-    "latitude": 44.41358,
-    "longitude": 26.02998,
+    "latitude": 44.41359,
+    "longitude": 26.02996,
     "type": 0
   },
   {
@@ -11189,22 +10829,6 @@
     "description": "Sos. Giurgiului, Bucuresti",
     "latitude": 44.385883,
     "longitude": 26.0921,
-    "type": 0
-  },
-  {
-    "id": 2879.1,
-    "name": "Drumul Gazarului",
-    "description": "",
-    "latitude": 44.38654,
-    "longitude": 26.092299,
-    "type": 0
-  },
-  {
-    "id": 2881.1,
-    "name": "Drumul Gazarului",
-    "description": "",
-    "latitude": 44.38588,
-    "longitude": 26.092052,
     "type": 0
   },
   {
@@ -11309,6 +10933,14 @@
     "description": "Drumul Osiei, Bucuresti",
     "latitude": 44.435825,
     "longitude": 25.987425,
+    "type": 0
+  },
+  {
+    "id": "PV19_1791",
+    "name": "Drumul Osiei",
+    "description": "",
+    "latitude": 44.435997,
+    "longitude": 25.987368,
     "type": 0
   },
   {
@@ -11912,27 +11544,11 @@
     "type": 0
   },
   {
-    "id": 648.1,
-    "name": "Fabrica De Glucoza",
-    "description": "",
-    "latitude": 44.47868,
-    "longitude": 26.124601,
-    "type": 0
-  },
-  {
-    "id": 649.1,
-    "name": "Fabrica De Glucoza 15",
-    "description": "",
-    "latitude": 44.478424,
-    "longitude": 26.121613,
-    "type": 0
-  },
-  {
-    "id": 668.1,
-    "name": "Fabrica De Glucoza 8",
-    "description": "",
-    "latitude": 44.478416,
-    "longitude": 26.122812,
+    "id": 12562,
+    "name": "Fabrica de Chibrituri",
+    "description": "Str. Fabrica de Chibrituri, Bucuresti",
+    "latitude": 44.41398,
+    "longitude": 26.087175,
     "type": 0
   },
   {
@@ -12200,14 +11816,6 @@
     "type": 0
   },
   {
-    "id": 3386,
-    "name": "Faur",
-    "description": "Bd. 1 Decembrie 1918, Bucuresti",
-    "latitude": 44.426907,
-    "longitude": 26.178984,
-    "type": 0
-  },
-  {
     "id": 3387,
     "name": "Faur",
     "description": "Bd. 1 Decembrie 1918, Bucuresti",
@@ -12261,14 +11869,6 @@
     "description": "Bd. 1 Decembrie 1918, Bucuresti",
     "latitude": 44.42624,
     "longitude": 26.17895,
-    "type": 0
-  },
-  {
-    "id": 631.1,
-    "name": "Faur",
-    "description": "",
-    "latitude": 44.434177,
-    "longitude": 26.183819,
     "type": 0
   },
   {
@@ -12496,6 +12096,22 @@
     "type": 0
   },
   {
+    "id": 3302.1,
+    "name": "Fermei",
+    "description": "",
+    "latitude": 44.62284,
+    "longitude": 26.06929,
+    "type": 0
+  },
+  {
+    "id": 3308.1,
+    "name": "Fermei",
+    "description": "",
+    "latitude": 44.62332,
+    "longitude": 26.06945,
+    "type": 0
+  },
+  {
     "id": 9239,
     "name": "Feroviarilor",
     "description": "Calea Grivitei, Bucuresti",
@@ -12515,16 +12131,32 @@
     "id": 6997,
     "name": "Filan",
     "description": "Calea Bucurestilor, Ilfov",
-    "latitude": 44.57406,
-    "longitude": 26.06991,
+    "latitude": 44.5741,
+    "longitude": 26.069925,
     "type": 0
   },
   {
     "id": 7006,
     "name": "Filan",
     "description": "Calea Bucurestilor, Ilfov",
-    "latitude": 44.573643,
-    "longitude": 26.070303,
+    "latitude": 44.573566,
+    "longitude": 26.070297,
+    "type": 0
+  },
+  {
+    "id": 3283.1,
+    "name": "Filan",
+    "description": "",
+    "latitude": 44.57399,
+    "longitude": 26.069904,
+    "type": 0
+  },
+  {
+    "id": 3284.1,
+    "name": "Filan",
+    "description": "",
+    "latitude": 44.57364,
+    "longitude": 26.070253,
     "type": 0
   },
   {
@@ -12645,22 +12277,6 @@
     "description": "Str. Traian, Bucuresti",
     "latitude": 44.44108,
     "longitude": 26.120548,
-    "type": 0
-  },
-  {
-    "id": 3865,
-    "name": "Foisorul de Foc",
-    "description": "Bd. Ferdinand, Bucuresti",
-    "latitude": 44.440426,
-    "longitude": 26.121685,
-    "type": 0
-  },
-  {
-    "id": 3887,
-    "name": "Foisorul de Foc",
-    "description": "Bd. Ferdinand, Bucuresti",
-    "latitude": 44.439827,
-    "longitude": 26.120062,
     "type": 0
   },
   {
@@ -12824,22 +12440,6 @@
     "type": 0
   },
   {
-    "id": 5296.1,
-    "name": "Fundeni",
-    "description": "",
-    "latitude": 44.45743,
-    "longitude": 26.1628,
-    "type": 0
-  },
-  {
-    "id": 5297.1,
-    "name": "Fundeni",
-    "description": "",
-    "latitude": 44.45773,
-    "longitude": 26.162722,
-    "type": 0
-  },
-  {
     "id": 6613,
     "name": "G-ral Alexandru Cernat",
     "description": "Bd. Alex.I.Cuza, Bucuresti",
@@ -12853,22 +12453,6 @@
     "description": "Str. Al.I.Cuza, Ilfov",
     "latitude": 44.450283,
     "longitude": 26.008587,
-    "type": 0
-  },
-  {
-    "id": 6888,
-    "name": "G-ral Ion Bunoaica",
-    "description": "Str. Jandarmeriei, Bucuresti",
-    "latitude": 44.511307,
-    "longitude": 26.070326,
-    "type": 0
-  },
-  {
-    "id": 6889,
-    "name": "G-ral Ion Bunoaica",
-    "description": "Str. Jandarmeriei, Bucuresti",
-    "latitude": 44.511425,
-    "longitude": 26.070847,
     "type": 0
   },
   {
@@ -13112,22 +12696,6 @@
     "type": 0
   },
   {
-    "id": 6150,
-    "name": "Gara Progresul",
-    "description": "Str. Garii Progresul, Bucuresti",
-    "latitude": 44.36602,
-    "longitude": 26.090857,
-    "type": 0
-  },
-  {
-    "id": 6469,
-    "name": "Gara Progresul",
-    "description": "Str. Garii Progresul, Bucuresti",
-    "latitude": 44.36644,
-    "longitude": 26.090647,
-    "type": 0
-  },
-  {
     "id": 3470,
     "name": "Gara de Nord",
     "description": "Bd. Dinicu Golescu, Bucuresti",
@@ -13229,14 +12797,6 @@
     "description": "Str. Ceaikovski, Bucuresti",
     "latitude": 44.465446,
     "longitude": 26.10582,
-    "type": 0
-  },
-  {
-    "id": 663.1,
-    "name": "Garibaldi",
-    "description": "",
-    "latitude": 44.465424,
-    "longitude": 26.105787,
     "type": 0
   },
   {
@@ -13352,14 +12912,6 @@
     "type": 0
   },
   {
-    "id": 5298.1,
-    "name": "George Calinescu",
-    "description": "",
-    "latitude": 44.46176,
-    "longitude": 26.101246,
-    "type": 0
-  },
-  {
     "id": 10986,
     "name": "George Constantinescu",
     "description": "Sos. Fabrica de Glucoza, Bucuresti",
@@ -13373,22 +12925,6 @@
     "description": "Sos. Fabrica de Glucoza, Bucuresti",
     "latitude": 44.47789,
     "longitude": 26.117744,
-    "type": 0
-  },
-  {
-    "id": 650.1,
-    "name": "George Constantinescu",
-    "description": "",
-    "latitude": 44.47787,
-    "longitude": 26.116377,
-    "type": 0
-  },
-  {
-    "id": 667.1,
-    "name": "George Constantinescu",
-    "description": "",
-    "latitude": 44.477924,
-    "longitude": 26.117767,
     "type": 0
   },
   {
@@ -13429,6 +12965,22 @@
     "description": "Calea Bucurestilor, Ilfov",
     "latitude": 44.57994,
     "longitude": 26.070375,
+    "type": 0
+  },
+  {
+    "id": 3282.1,
+    "name": "Geriatrie Otopeni",
+    "description": "",
+    "latitude": 44.57969,
+    "longitude": 26.070185,
+    "type": 0
+  },
+  {
+    "id": 3285.1,
+    "name": "Geriatrie Otopeni",
+    "description": "",
+    "latitude": 44.57994,
+    "longitude": 26.070387,
     "type": 0
   },
   {
@@ -13533,22 +13085,6 @@
     "description": "Bd. Ghencea, Bucuresti",
     "latitude": 44.415237,
     "longitude": 26.04617,
-    "type": 0
-  },
-  {
-    "id": 6996,
-    "name": "Ghencea",
-    "description": "Bd. Ghencea, Bucuresti",
-    "latitude": 44.414837,
-    "longitude": 26.04627,
-    "type": 0
-  },
-  {
-    "id": 6998,
-    "name": "Ghencea",
-    "description": "Bd. Ghencea, Bucuresti",
-    "latitude": 44.414932,
-    "longitude": 26.04608,
     "type": 0
   },
   {
@@ -13707,16 +13243,8 @@
     "id": 10168,
     "name": "Ghidigeni",
     "description": "Str. Dantelei, Bucuresti",
-    "latitude": 44.41096,
-    "longitude": 26.02109,
-    "type": 0
-  },
-  {
-    "id": 12136,
-    "name": "Ghidigeni",
-    "description": "Str. Dantelei, Ilfov",
     "latitude": 44.410957,
-    "longitude": 26.021187,
+    "longitude": 26.0211,
     "type": 0
   },
   {
@@ -13733,6 +13261,22 @@
     "description": "Prel. Ghencea, Bucuresti",
     "latitude": 44.41263,
     "longitude": 26.022575,
+    "type": 0
+  },
+  {
+    "id": 12559,
+    "name": "Ghidigeni Nr. 17",
+    "description": "Str. Ghidigeni, Ilfov",
+    "latitude": 44.404167,
+    "longitude": 26.00806,
+    "type": 0
+  },
+  {
+    "id": 12558,
+    "name": "Ghidigeni Nr. 59",
+    "description": "Str. Ghidigeni, Ilfov",
+    "latitude": 44.401318,
+    "longitude": 26.002718,
     "type": 0
   },
   {
@@ -13784,27 +13328,27 @@
     "type": 0
   },
   {
-    "id": 6378,
+    "id": 12086,
     "name": "Giuseppe Verdi",
     "description": "Str. Barbu Vacarescu, Bucuresti",
-    "latitude": 44.469643,
-    "longitude": 26.10996,
+    "latitude": 44.46926,
+    "longitude": 26.109753,
     "type": 0
   },
   {
-    "id": 7122,
+    "id": 12087,
     "name": "Giuseppe Verdi",
     "description": "Str. Barbu Vacarescu, Bucuresti",
-    "latitude": 44.468445,
-    "longitude": 26.10936,
+    "latitude": 44.46918,
+    "longitude": 26.109682,
     "type": 0
   },
   {
-    "id": 664.1,
-    "name": "Giuseppe Verdi",
-    "description": "",
-    "latitude": 44.469646,
-    "longitude": 26.109955,
+    "id": 12560,
+    "name": "Gladiolelor",
+    "description": "Str. Gladiolelor, Ilfov",
+    "latitude": 44.403458,
+    "longitude": 26.013195,
     "type": 0
   },
   {
@@ -13840,11 +13384,19 @@
     "type": 0
   },
   {
-    "id": 8850,
+    "id": "PV19_1600",
     "name": "Gladiolelor",
-    "description": "Str. Gladiolelor, Ilfov",
-    "latitude": 44.402847,
-    "longitude": 26.013721,
+    "description": "",
+    "latitude": 44.441505,
+    "longitude": 25.9872,
+    "type": 0
+  },
+  {
+    "id": "PV19_1604",
+    "name": "Gladiolelor",
+    "description": "",
+    "latitude": 44.442623,
+    "longitude": 25.987364,
     "type": 0
   },
   {
@@ -13912,19 +13464,19 @@
     "type": 1
   },
   {
-    "id": 8379,
+    "id": 3350.1,
     "name": "Gorunului",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.722706,
-    "longitude": 26.213703,
+    "description": "",
+    "latitude": 44.722702,
+    "longitude": 26.213709,
     "type": 0
   },
   {
-    "id": 8584,
+    "id": 3381.1,
     "name": "Gorunului",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.722706,
-    "longitude": 26.214,
+    "description": "",
+    "latitude": 44.722683,
+    "longitude": 26.214003,
     "type": 0
   },
   {
@@ -14208,6 +13760,14 @@
     "type": 0
   },
   {
+    "id": 6055.2,
+    "name": "Gradinita Nr. 4",
+    "description": "",
+    "latitude": 44.37907,
+    "longitude": 26.004316,
+    "type": 0
+  },
+  {
     "id": 6378.1,
     "name": "Gradinita Nr.3",
     "description": "",
@@ -14269,22 +13829,6 @@
     "description": "Strada Coralilor, Bucuresti",
     "latitude": 44.49169,
     "longitude": 26.05853,
-    "type": 0
-  },
-  {
-    "id": 12390,
-    "name": "Gradinita nr. 4",
-    "description": "Str. Dealului, Ilfov",
-    "latitude": 44.37908,
-    "longitude": 26.004341,
-    "type": 0
-  },
-  {
-    "id": 12398,
-    "name": "Gradinita nr. 4",
-    "description": "Str. Dealului, Ilfov",
-    "latitude": 44.378857,
-    "longitude": 26.004568,
     "type": 0
   },
   {
@@ -14440,22 +13984,6 @@
     "type": 0
   },
   {
-    "id": 6907,
-    "name": "Grigore Alexandru Ghica",
-    "description": "Str. Jandarmeriei, Bucuresti",
-    "latitude": 44.510075,
-    "longitude": 26.065641,
-    "type": 0
-  },
-  {
-    "id": 6909,
-    "name": "Grigore Alexandru Ghica",
-    "description": "Str. Jandarmeriei, Bucuresti",
-    "latitude": 44.5104,
-    "longitude": 26.066875,
-    "type": 0
-  },
-  {
     "id": 5989,
     "name": "Grigore Ionescu",
     "description": "Str. Teiul Doamnei, Bucuresti",
@@ -14469,22 +13997,6 @@
     "description": "Str. Teiul Doamnei, Bucuresti",
     "latitude": 44.460682,
     "longitude": 26.126747,
-    "type": 0
-  },
-  {
-    "id": 6898,
-    "name": "Grigore Marin",
-    "description": "Sos. Oltenitei, Bucuresti",
-    "latitude": 44.383972,
-    "longitude": 26.144453,
-    "type": 0
-  },
-  {
-    "id": 3600,
-    "name": "Grigore Moisil",
-    "description": "Bd. Lacul Tei, Bucuresti",
-    "latitude": 44.46194,
-    "longitude": 26.119349,
     "type": 0
   },
   {
@@ -14536,14 +14048,6 @@
     "type": 1
   },
   {
-    "id": 10820,
-    "name": "Gruiu",
-    "description": "DJ101C, Ilfov",
-    "latitude": 44.71885,
-    "longitude": 26.240616,
-    "type": 0
-  },
-  {
     "id": 11942,
     "name": "Gruiu",
     "description": "DJ 101C, Ilfov",
@@ -14555,8 +14059,40 @@
     "id": 9408,
     "name": "Gruiu",
     "description": "Soseaua Gruiu-Snagov, Ilfov",
+    "latitude": 44.71848,
+    "longitude": 26.240892,
+    "type": 0
+  },
+  {
+    "id": 3346.1,
+    "name": "Gruiu",
+    "description": "",
+    "latitude": 44.71885,
+    "longitude": 26.240616,
+    "type": 0
+  },
+  {
+    "id": 3385.1,
+    "name": "Gruiu",
+    "description": "",
     "latitude": 44.718876,
     "longitude": 26.24052,
+    "type": 0
+  },
+  {
+    "id": 3413.1,
+    "name": "Gruiu Lipia Coborare",
+    "description": "",
+    "latitude": 44.712124,
+    "longitude": 26.27285,
+    "type": 0
+  },
+  {
+    "id": 3414.1,
+    "name": "Gruiu Lipia Urcare",
+    "description": "",
+    "latitude": 44.71212,
+    "longitude": 26.27312,
     "type": 0
   },
   {
@@ -14589,22 +14125,6 @@
     "description": "Bd. Basarabia, Bucuresti",
     "latitude": 44.43528,
     "longitude": 26.178097,
-    "type": 0
-  },
-  {
-    "id": 630.1,
-    "name": "Grup Industrial Titan",
-    "description": "",
-    "latitude": 44.434937,
-    "longitude": 26.17921,
-    "type": 0
-  },
-  {
-    "id": 632.1,
-    "name": "Grup Industrial Titan",
-    "description": "",
-    "latitude": 44.435287,
-    "longitude": 26.178095,
     "type": 0
   },
   {
@@ -14645,38 +14165,6 @@
     "description": "Str. Teius, Bucuresti",
     "latitude": 44.39979,
     "longitude": 26.056047,
-    "type": 0
-  },
-  {
-    "id": 3379,
-    "name": "Hala Traian",
-    "description": "Calea Calarasilor, Bucuresti",
-    "latitude": 44.43307,
-    "longitude": 26.120544,
-    "type": 0
-  },
-  {
-    "id": 3595,
-    "name": "Hala Traian",
-    "description": "Str. Traian, Bucuresti",
-    "latitude": 44.43325,
-    "longitude": 26.120876,
-    "type": 0
-  },
-  {
-    "id": 6519,
-    "name": "Hala Traian",
-    "description": "Str.Traian, Bucuresti",
-    "latitude": 44.433407,
-    "longitude": 26.120838,
-    "type": 0
-  },
-  {
-    "id": 6535,
-    "name": "Hala Traian",
-    "description": "Str.Traian, Bucuresti",
-    "latitude": 44.433395,
-    "longitude": 26.121067,
     "type": 0
   },
   {
@@ -14768,22 +14256,6 @@
     "type": 0
   },
   {
-    "id": 3292,
-    "name": "Horei",
-    "description": "Bd. Ferdinand, Bucuresti",
-    "latitude": 44.44175,
-    "longitude": 26.124538,
-    "type": 0
-  },
-  {
-    "id": 3309,
-    "name": "Horei",
-    "description": "Bd. Ferdinand, Bucuresti",
-    "latitude": 44.44151,
-    "longitude": 26.12416,
-    "type": 0
-  },
-  {
     "id": 6645,
     "name": "Horia Macelariu",
     "description": "Bd. Ficusului, Bucuresti",
@@ -14859,8 +14331,8 @@
     "id": 7544,
     "name": "Hotel Phoenicia",
     "description": "Bd. Aerogarii, Bucuresti",
-    "latitude": 44.49254,
-    "longitude": 26.08776,
+    "latitude": 44.492485,
+    "longitude": 26.087727,
     "type": 0
   },
   {
@@ -14891,8 +14363,8 @@
     "id": 6385,
     "name": "Hristo Botev",
     "description": "Calea Mosilor, Bucuresti",
-    "latitude": 44.43388,
-    "longitude": 26.107515,
+    "latitude": 44.43392,
+    "longitude": 26.107594,
     "type": 0
   },
   {
@@ -14912,30 +14384,6 @@
     "type": 0
   },
   {
-    "id": 5929,
-    "name": "Husi",
-    "description": "Sos. Oltenitei, Bucuresti",
-    "latitude": 44.395565,
-    "longitude": 26.11647,
-    "type": 0
-  },
-  {
-    "id": 5959,
-    "name": "Husi",
-    "description": "Sos. Oltenitei, Bucuresti",
-    "latitude": 44.396347,
-    "longitude": 26.11488,
-    "type": 0
-  },
-  {
-    "id": 6228,
-    "name": "I. C. M. E. Poarta 1",
-    "description": "Drumul Intre Tarlale, Bucuresti",
-    "latitude": 44.42312,
-    "longitude": 26.219639,
-    "type": 0
-  },
-  {
     "id": 6017,
     "name": "I.A.I. Magurele",
     "description": "Sos. Magurele, Ilfov",
@@ -14949,38 +14397,6 @@
     "description": "Sos. Magurele, Ilfov",
     "latitude": 44.376015,
     "longitude": 26.046478,
-    "type": 0
-  },
-  {
-    "id": 6642,
-    "name": "I.N.M.H.",
-    "description": "Str. Jandarmeriei, Bucuresti",
-    "latitude": 44.51344,
-    "longitude": 26.078629,
-    "type": 0
-  },
-  {
-    "id": 6643,
-    "name": "I.N.M.H.",
-    "description": "Str. Jandarmeriei, Bucuresti",
-    "latitude": 44.51325,
-    "longitude": 26.07781,
-    "type": 0
-  },
-  {
-    "id": 3715,
-    "name": "I.O.R.",
-    "description": "Str. C.Brancusi, Bucuresti",
-    "latitude": 44.428833,
-    "longitude": 26.155893,
-    "type": 0
-  },
-  {
-    "id": 3877,
-    "name": "I.O.R.",
-    "description": "Str. C.Brancusi, Bucuresti",
-    "latitude": 44.428627,
-    "longitude": 26.155573,
     "type": 0
   },
   {
@@ -15053,6 +14469,14 @@
     "description": "Drumul Intre Tarlale, Bucuresti",
     "latitude": 44.42354,
     "longitude": 26.219883,
+    "type": 0
+  },
+  {
+    "id": 6228,
+    "name": "ICME",
+    "description": "Drumul Intre Tarlale, Bucuresti",
+    "latitude": 44.42312,
+    "longitude": 26.219639,
     "type": 0
   },
   {
@@ -15144,6 +14568,22 @@
     "type": 0
   },
   {
+    "id": 118.1,
+    "name": "Icsitmua",
+    "description": "",
+    "latitude": 44.55998,
+    "longitude": 26.069492,
+    "type": 0
+  },
+  {
+    "id": 121.1,
+    "name": "Icsitmua",
+    "description": "",
+    "latitude": 44.559666,
+    "longitude": 26.069275,
+    "type": 0
+  },
+  {
     "id": 532.1,
     "name": "Iesire Dimieni",
     "description": "",
@@ -15200,7 +14640,7 @@
     "type": 0
   },
   {
-    "id": 466.2,
+    "id": "PV19_466",
     "name": "Imprimeria Nationala",
     "description": "",
     "latitude": 44.43372,
@@ -15208,7 +14648,7 @@
     "type": 0
   },
   {
-    "id": 469.2,
+    "id": "PV19_469",
     "name": "Imprimeria Nationala",
     "description": "",
     "latitude": 44.43388,
@@ -15384,22 +14824,6 @@
     "type": 0
   },
   {
-    "id": 622.1,
-    "name": "Institutul Oncologic",
-    "description": "",
-    "latitude": 44.46266,
-    "longitude": 26.15618,
-    "type": 0
-  },
-  {
-    "id": 639.1,
-    "name": "Institutul Oncologic",
-    "description": "",
-    "latitude": 44.462948,
-    "longitude": 26.155416,
-    "type": 0
-  },
-  {
     "id": 3459,
     "name": "Institutul Pasteur",
     "description": "Calea Giulesti, Bucuresti",
@@ -15568,9 +14992,9 @@
     "type": 0
   },
   {
-    "id": 12386,
+    "id": 6047.2,
     "name": "Intrarea Diamantului",
-    "description": "Intrarea Diamantului, Ilfov",
+    "description": "",
     "latitude": 44.387207,
     "longitude": 26.004545,
     "type": 0
@@ -15597,22 +15021,6 @@
     "description": "Sos. Fundeni, Bucuresti",
     "latitude": 44.44956,
     "longitude": 26.165813,
-    "type": 0
-  },
-  {
-    "id": 625.1,
-    "name": "Intrarea Fundeni",
-    "description": "",
-    "latitude": 44.44863,
-    "longitude": 26.165981,
-    "type": 0
-  },
-  {
-    "id": 636.1,
-    "name": "Intrarea Fundeni",
-    "description": "",
-    "latitude": 44.44956,
-    "longitude": 26.165783,
     "type": 0
   },
   {
@@ -15888,22 +15296,6 @@
     "type": 0
   },
   {
-    "id": 620.1,
-    "name": "Itcani",
-    "description": "",
-    "latitude": 44.46479,
-    "longitude": 26.150284,
-    "type": 0
-  },
-  {
-    "id": 641.1,
-    "name": "Itcani",
-    "description": "",
-    "latitude": 44.465378,
-    "longitude": 26.149387,
-    "type": 0
-  },
-  {
     "id": 12290,
     "name": "Iuliu Hatieganu",
     "description": "Str. Iuliu Hatieganu, Bucuresti",
@@ -16024,22 +15416,6 @@
     "type": 0
   },
   {
-    "id": 6140,
-    "name": "Jandarmeriei",
-    "description": "Str. Jandarmeriei, Bucuresti",
-    "latitude": 44.509003,
-    "longitude": 26.061539,
-    "type": 0
-  },
-  {
-    "id": 6908,
-    "name": "Jandarmeriei",
-    "description": "Str. Jandarmeriei, Bucuresti",
-    "latitude": 44.50892,
-    "longitude": 26.061106,
-    "type": 0
-  },
-  {
     "id": 6837,
     "name": "Jimbolia",
     "description": "Bd. Bucurestii Noi, Bucuresti",
@@ -16112,9 +15488,9 @@
     "type": 0
   },
   {
-    "id": 12147,
+    "id": 5133.1,
     "name": "La Bacanie",
-    "description": "DJ 101B, Ilfov",
+    "description": "",
     "latitude": 44.679966,
     "longitude": 26.11558,
     "type": 0
@@ -16184,19 +15560,19 @@
     "type": 0
   },
   {
-    "id": 8392,
+    "id": 3359.1,
     "name": "La Cotet",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.689327,
-    "longitude": 26.143381,
+    "description": "",
+    "latitude": 44.689323,
+    "longitude": 26.143383,
     "type": 0
   },
   {
-    "id": 8588,
+    "id": 3372.1,
     "name": "La Cotet",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.68932,
-    "longitude": 26.143948,
+    "description": "",
+    "latitude": 44.68935,
+    "longitude": 26.143944,
     "type": 0
   },
   {
@@ -16216,51 +15592,35 @@
     "type": 0
   },
   {
-    "id": 8383,
+    "id": 3362.1,
     "name": "La Matei",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.68177,
-    "longitude": 26.117702,
+    "description": "",
+    "latitude": 44.6842,
+    "longitude": 26.121008,
     "type": 0
   },
   {
-    "id": 8575,
+    "id": 3369.1,
     "name": "La Matei",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.682842,
-    "longitude": 26.119127,
+    "description": "",
+    "latitude": 44.68429,
+    "longitude": 26.12141,
     "type": 0
   },
   {
-    "id": 8393,
+    "id": 3360.1,
     "name": "La Pinu",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.688335,
-    "longitude": 26.137648,
+    "description": "",
+    "latitude": 44.688343,
+    "longitude": 26.137634,
     "type": 0
   },
   {
-    "id": 8577,
+    "id": 3371.1,
     "name": "La Pinu",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.688416,
-    "longitude": 26.138294,
-    "type": 0
-  },
-  {
-    "id": 10826,
-    "name": "La Troita",
-    "description": "DC 21A, Ilfov",
-    "latitude": 44.69981,
-    "longitude": 26.33063,
-    "type": 0
-  },
-  {
-    "id": 10833,
-    "name": "La Troita",
-    "description": "DC 21A, Ilfov",
-    "latitude": 44.70006,
-    "longitude": 26.330109,
+    "description": "",
+    "latitude": 44.688457,
+    "longitude": 26.138262,
     "type": 0
   },
   {
@@ -16277,6 +15637,22 @@
     "description": "",
     "latitude": 44.26673,
     "longitude": 26.089798,
+    "type": 0
+  },
+  {
+    "id": 3340.1,
+    "name": "La Troita",
+    "description": "",
+    "latitude": 44.70006,
+    "longitude": 26.330109,
+    "type": 0
+  },
+  {
+    "id": 3391.1,
+    "name": "La Troita",
+    "description": "",
+    "latitude": 44.69981,
+    "longitude": 26.33063,
     "type": 0
   },
   {
@@ -16403,8 +15779,8 @@
     "id": 12135,
     "name": "Lavei",
     "description": "Str. Dantelei, Ilfov",
-    "latitude": 44.405937,
-    "longitude": 26.016052,
+    "latitude": 44.4059,
+    "longitude": 26.015995,
     "type": 0
   },
   {
@@ -16437,6 +15813,14 @@
     "description": "",
     "latitude": 44.378685,
     "longitude": 26.22179,
+    "type": 0
+  },
+  {
+    "id": 6062.2,
+    "name": "Libertarii 51a",
+    "description": "",
+    "latitude": 44.38273,
+    "longitude": 26.007195,
     "type": 0
   },
   {
@@ -16496,27 +15880,19 @@
     "type": 0
   },
   {
-    "id": 12400,
+    "id": 6063.2,
     "name": "Libertatii 27",
-    "description": "Str. Libertatii, Ilfov",
+    "description": "",
     "latitude": 44.38447,
     "longitude": 26.01145,
     "type": 0
   },
   {
-    "id": 12389,
+    "id": 6054.2,
     "name": "Libertatii 44",
-    "description": "Str. Libertatii, Ilfov",
-    "latitude": 44.38527,
-    "longitude": 26.01329,
-    "type": 0
-  },
-  {
-    "id": 12399,
-    "name": "Libertatii 51A",
-    "description": "Str. Libertatii, Ilfov",
-    "latitude": 44.38273,
-    "longitude": 26.007195,
+    "description": "",
+    "latitude": 44.385326,
+    "longitude": 26.013262,
     "type": 0
   },
   {
@@ -16544,7 +15920,7 @@
     "type": 0
   },
   {
-    "id": 688.9,
+    "id": 688.2,
     "name": "Liceul Dumitru Dumitrescu",
     "description": "",
     "latitude": 44.571598,
@@ -16552,7 +15928,7 @@
     "type": 0
   },
   {
-    "id": 692.9,
+    "id": 692.2,
     "name": "Liceul Dumitru Dumitrescu",
     "description": "",
     "latitude": 44.57143,
@@ -16848,6 +16224,22 @@
     "type": 0
   },
   {
+    "id": 3343.1,
+    "name": "Lipia Centru",
+    "description": "",
+    "latitude": 44.71422,
+    "longitude": 26.261,
+    "type": 0
+  },
+  {
+    "id": 3388.1,
+    "name": "Lipia Centru",
+    "description": "",
+    "latitude": 44.71383,
+    "longitude": 26.261667,
+    "type": 0
+  },
+  {
     "id": 12010,
     "name": "Litoralului",
     "description": "Str. Gherghitei, Bucuresti",
@@ -17032,14 +16424,6 @@
     "type": 0
   },
   {
-    "id": 6427,
-    "name": "Lizeanu",
-    "description": "Sos. Stefan cel Mare, Bucuresti",
-    "latitude": 44.452343,
-    "longitude": 26.118929,
-    "type": 0
-  },
-  {
     "id": 7234,
     "name": "Lizeanu",
     "description": "Sos. Stefan cel Mare, Bucuresti",
@@ -17216,14 +16600,6 @@
     "type": 0
   },
   {
-    "id": 895.1,
-    "name": "Luica",
-    "description": "",
-    "latitude": 44.377743,
-    "longitude": 26.091597,
-    "type": 0
-  },
-  {
     "id": 6523,
     "name": "Luigi Galvani",
     "description": "Bd. Lacul Tei, Bucuresti",
@@ -17269,22 +16645,6 @@
     "description": "Sos. Oltenitei, Bucuresti",
     "latitude": 44.391384,
     "longitude": 26.126942,
-    "type": 0
-  },
-  {
-    "id": 6910,
-    "name": "Lunca Barzesti",
-    "description": "Sos. Oltenitei, Bucuresti",
-    "latitude": 44.390812,
-    "longitude": 26.12798,
-    "type": 0
-  },
-  {
-    "id": 6931,
-    "name": "Lunca Barzesti",
-    "description": "Sos. Oltenitei, Bucuresti",
-    "latitude": 44.39166,
-    "longitude": 26.126474,
     "type": 0
   },
   {
@@ -17464,22 +16824,6 @@
     "type": 0
   },
   {
-    "id": 6280.1,
-    "name": "M Berceni",
-    "description": "",
-    "latitude": 44.361313,
-    "longitude": 26.14894,
-    "type": 0
-  },
-  {
-    "id": 6320.1,
-    "name": "M Berceni",
-    "description": "",
-    "latitude": 44.361095,
-    "longitude": 26.148914,
-    "type": 0
-  },
-  {
     "id": 6414,
     "name": "M Dimitrie Leonida",
     "description": "Sos. Berceni, Bucuresti",
@@ -17493,22 +16837,6 @@
     "description": "Sos. Berceni, Bucuresti",
     "latitude": 44.36811,
     "longitude": 26.143608,
-    "type": 0
-  },
-  {
-    "id": 6275.1,
-    "name": "M Dimitrie Leonida",
-    "description": "",
-    "latitude": 44.367085,
-    "longitude": 26.14442,
-    "type": 0
-  },
-  {
-    "id": 6276.1,
-    "name": "M Dimitrie Leonida",
-    "description": "",
-    "latitude": 44.36737,
-    "longitude": 26.144293,
     "type": 0
   },
   {
@@ -17584,6 +16912,30 @@
     "type": 0
   },
   {
+    "id": 12139,
+    "name": "M Nicolae Teclu",
+    "description": "Bretea Bd. Theodor Pallady, Bucuresti",
+    "latitude": 44.407074,
+    "longitude": 26.195337,
+    "type": 0
+  },
+  {
+    "id": 12140,
+    "name": "M Nicolae Teclu",
+    "description": "Bretea Bd. Theodor Pallady, Bucuresti",
+    "latitude": 44.40729,
+    "longitude": 26.194017,
+    "type": 0
+  },
+  {
+    "id": 12476,
+    "name": "M Nicolae Teclu",
+    "description": "Bd. Theodor Pallady, Bucuresti",
+    "latitude": 44.406883,
+    "longitude": 26.19658,
+    "type": 0
+  },
+  {
     "id": 6688,
     "name": "M Nicolae Teclu",
     "description": "Bd. Th.Pallady, Bucuresti",
@@ -17597,6 +16949,30 @@
     "description": "Bd. Theodor Pallady, Bucuresti",
     "latitude": 44.40762,
     "longitude": 26.19271,
+    "type": 0
+  },
+  {
+    "id": 6472.1,
+    "name": "M Nicolae Teclu",
+    "description": "",
+    "latitude": 44.407303,
+    "longitude": 26.194036,
+    "type": 0
+  },
+  {
+    "id": 6473.1,
+    "name": "M Nicolae Teclu",
+    "description": "",
+    "latitude": 44.407085,
+    "longitude": 26.195358,
+    "type": 0
+  },
+  {
+    "id": 6479.1,
+    "name": "M Nicolae Teclu",
+    "description": "",
+    "latitude": 44.406845,
+    "longitude": 26.196568,
     "type": 0
   },
   {
@@ -17688,22 +17064,6 @@
     "type": 0
   },
   {
-    "id": 6089.1,
-    "name": "M Republica",
-    "description": "",
-    "latitude": 44.433514,
-    "longitude": 26.185694,
-    "type": 0
-  },
-  {
-    "id": 6094.1,
-    "name": "M Republica",
-    "description": "",
-    "latitude": 44.434036,
-    "longitude": 26.185255,
-    "type": 0
-  },
-  {
     "id": 7772,
     "name": "M Straulesti",
     "description": "Bretea Terminal Straulesti, Bucuresti",
@@ -17792,14 +17152,6 @@
     "type": 0
   },
   {
-    "id": 10830,
-    "name": "Magazin",
-    "description": "DC 21A, Ilfov",
-    "latitude": 44.692696,
-    "longitude": 26.357237,
-    "type": 0
-  },
-  {
     "id": 6062,
     "name": "Magazin",
     "description": "DJ 401A, Ilfov",
@@ -17821,6 +17173,14 @@
     "description": "",
     "latitude": 44.307056,
     "longitude": 26.014463,
+    "type": 0
+  },
+  {
+    "id": 3337.1,
+    "name": "Magazin",
+    "description": "",
+    "latitude": 44.692696,
+    "longitude": 26.357237,
     "type": 0
   },
   {
@@ -17864,6 +17224,22 @@
     "type": 0
   },
   {
+    "id": 12080,
+    "name": "Maguricea",
+    "description": "Str. Cpt. Serbanescu, Bucuresti",
+    "latitude": 44.484554,
+    "longitude": 26.096632,
+    "type": 0
+  },
+  {
+    "id": 12081,
+    "name": "Maguricea",
+    "description": "Str. Cpt. Serbanescu, Bucuresti",
+    "latitude": 44.48475,
+    "longitude": 26.09642,
+    "type": 0
+  },
+  {
     "id": 7095,
     "name": "Maguricea",
     "description": "Str. Cpt. Serbanescu, Bucuresti",
@@ -17877,14 +17253,6 @@
     "description": "Str. Cpt. Serbanescu, Bucuresti",
     "latitude": 44.483284,
     "longitude": 26.098291,
-    "type": 0
-  },
-  {
-    "id": 3158,
-    "name": "Maica Domnului",
-    "description": "Str. Reinvierii, Bucuresti",
-    "latitude": 44.45524,
-    "longitude": 26.121622,
     "type": 0
   },
   {
@@ -18259,16 +17627,24 @@
     "id": 8847,
     "name": "Margelelor",
     "description": "Str. Dantelei, Ilfov",
-    "latitude": 44.398605,
-    "longitude": 26.004524,
+    "latitude": 44.398552,
+    "longitude": 26.004356,
     "type": 0
   },
   {
     "id": 12131,
     "name": "Margelelor 38",
     "description": "Str. Margelelor, Ilfov",
-    "latitude": 44.395657,
-    "longitude": 26.00576,
+    "latitude": 44.39566,
+    "longitude": 26.005772,
+    "type": 0
+  },
+  {
+    "id": 12557,
+    "name": "Margelelor Nr. 5",
+    "description": "Str. Margelelor, Ilfov",
+    "latitude": 44.399372,
+    "longitude": 26.002571,
     "type": 0
   },
   {
@@ -18424,7 +17800,7 @@
     "type": 0
   },
   {
-    "id": 465.2,
+    "id": "PV19_465",
     "name": "Master",
     "description": "",
     "latitude": 44.43368,
@@ -18432,27 +17808,11 @@
     "type": 0
   },
   {
-    "id": 470.2,
+    "id": "PV19_470",
     "name": "Master",
     "description": "",
     "latitude": 44.433853,
     "longitude": 25.997267,
-    "type": 0
-  },
-  {
-    "id": 3267,
-    "name": "Matasari",
-    "description": "Bd. Pache Protopopescu, Bucuresti",
-    "latitude": 44.44033,
-    "longitude": 26.12839,
-    "type": 0
-  },
-  {
-    "id": 3591,
-    "name": "Matasari",
-    "description": "Bd. Pache Protopopescu, Bucuresti",
-    "latitude": 44.440533,
-    "longitude": 26.129398,
     "type": 0
   },
   {
@@ -18525,30 +17885,6 @@
     "description": "",
     "latitude": 44.326668,
     "longitude": 26.088764,
-    "type": 0
-  },
-  {
-    "id": 12361,
-    "name": "Mecet",
-    "description": "Str. Traian, Bucuresti",
-    "latitude": 44.4361,
-    "longitude": 26.121704,
-    "type": 0
-  },
-  {
-    "id": 12363,
-    "name": "Mecet",
-    "description": "Str. Traian, Bucuresti",
-    "latitude": 44.436363,
-    "longitude": 26.121536,
-    "type": 0
-  },
-  {
-    "id": 12364,
-    "name": "Mecet",
-    "description": "Str. Traian, Bucuresti",
-    "latitude": 44.43645,
-    "longitude": 26.121525,
     "type": 0
   },
   {
@@ -18688,7 +18024,7 @@
     "type": 0
   },
   {
-    "id": 463.2,
+    "id": "PV19_463",
     "name": "Metro Militari",
     "description": "",
     "latitude": 44.434452,
@@ -18717,54 +18053,6 @@
     "description": "",
     "latitude": 44.49535,
     "longitude": 26.197111,
-    "type": 0
-  },
-  {
-    "id": 12139,
-    "name": "Metrou Nicolae Teclu",
-    "description": "Bretea BD. Theodor Pallady, Bucuresti",
-    "latitude": 44.407074,
-    "longitude": 26.195337,
-    "type": 0
-  },
-  {
-    "id": 12140,
-    "name": "Metrou Nicolae Teclu",
-    "description": "Bretea Bd. Theodor Pallady, Bucuresti",
-    "latitude": 44.40729,
-    "longitude": 26.194017,
-    "type": 0
-  },
-  {
-    "id": 12476,
-    "name": "Metrou Nicolae Teclu",
-    "description": "Bd. Theodor Pallady, Bucuresti",
-    "latitude": 44.406883,
-    "longitude": 26.19658,
-    "type": 0
-  },
-  {
-    "id": 5124.1,
-    "name": "Metrou Nicolae Teclu",
-    "description": "",
-    "latitude": 44.407303,
-    "longitude": 26.194036,
-    "type": 0
-  },
-  {
-    "id": 5125.1,
-    "name": "Metrou Nicolae Teclu",
-    "description": "",
-    "latitude": 44.407085,
-    "longitude": 26.195358,
-    "type": 0
-  },
-  {
-    "id": 6417.1,
-    "name": "Metrou Nicolae Teclu",
-    "description": "",
-    "latitude": 44.406845,
-    "longitude": 26.196568,
     "type": 0
   },
   {
@@ -18840,11 +18128,11 @@
     "type": 0
   },
   {
-    "id": 10829,
+    "id": 3336.1,
     "name": "Micsunestii Mari",
-    "description": "DC 21A, Ilfov",
-    "latitude": 44.693466,
-    "longitude": 26.359528,
+    "description": "",
+    "latitude": 44.693546,
+    "longitude": 26.359762,
     "type": 0
   },
   {
@@ -18925,14 +18213,6 @@
     "description": "Calea Mosilor, Bucuresti",
     "latitude": 44.443314,
     "longitude": 26.119143,
-    "type": 0
-  },
-  {
-    "id": 3569,
-    "name": "Mihai Eminescu",
-    "description": "Str. Viitorului, Bucuresti",
-    "latitude": 44.446564,
-    "longitude": 26.113146,
     "type": 0
   },
   {
@@ -19168,14 +18448,6 @@
     "type": 0
   },
   {
-    "id": 654.1,
-    "name": "Mircea Eliade",
-    "description": "",
-    "latitude": 44.46553,
-    "longitude": 26.101955,
-    "type": 0
-  },
-  {
     "id": 12055,
     "name": "Mircea Voda",
     "description": "Bd. Mircea Voda, Bucuresti",
@@ -19192,11 +18464,27 @@
     "type": 0
   },
   {
-    "id": 12422,
+    "id": 12200,
+    "name": "Mircea Vulcanescu",
+    "description": "Str. Popa Tatu, Bucuresti",
+    "latitude": 44.443565,
+    "longitude": 26.083738,
+    "type": 0
+  },
+  {
+    "id": 3441,
     "name": "Mircea Vulcanescu",
     "description": "Str. Berzei, Bucuresti",
-    "latitude": 44.443447,
-    "longitude": 26.081228,
+    "latitude": 44.443653,
+    "longitude": 26.081133,
+    "type": 0
+  },
+  {
+    "id": 3442,
+    "name": "Mircea Vulcanescu",
+    "description": "Str. Berzei, Bucuresti",
+    "latitude": 44.443302,
+    "longitude": 26.081062,
     "type": 0
   },
   {
@@ -19240,22 +18528,6 @@
     "type": 0
   },
   {
-    "id": 10825,
-    "name": "Moara",
-    "description": "DC 21A, Ilfov",
-    "latitude": 44.7028,
-    "longitude": 26.326588,
-    "type": 0
-  },
-  {
-    "id": 10834,
-    "name": "Moara",
-    "description": "DC 21A, Ilfov",
-    "latitude": 44.703255,
-    "longitude": 26.326344,
-    "type": 0
-  },
-  {
     "id": 3252.1,
     "name": "Moara",
     "description": "",
@@ -19269,6 +18541,22 @@
     "description": "",
     "latitude": 44.26412,
     "longitude": 26.165932,
+    "type": 0
+  },
+  {
+    "id": 3341.1,
+    "name": "Moara",
+    "description": "",
+    "latitude": 44.703255,
+    "longitude": 26.326344,
+    "type": 0
+  },
+  {
+    "id": 3390.1,
+    "name": "Moara",
+    "description": "",
+    "latitude": 44.7028,
+    "longitude": 26.326588,
     "type": 0
   },
   {
@@ -19333,6 +18621,22 @@
     "description": "",
     "latitude": 44.54169,
     "longitude": 25.977251,
+    "type": 0
+  },
+  {
+    "id": 12566,
+    "name": "Monitorul Oficial",
+    "description": "Str. Parcului, Bucuresti",
+    "latitude": 44.479534,
+    "longitude": 26.0566,
+    "type": 0
+  },
+  {
+    "id": 12569,
+    "name": "Monitorul Oficial",
+    "description": "Str. Parcului, Bucuresti",
+    "latitude": 44.478394,
+    "longitude": 26.057112,
     "type": 0
   },
   {
@@ -19536,19 +18840,27 @@
     "type": 0
   },
   {
+    "id": 12084,
+    "name": "Muzeul Aviatiei",
+    "description": "Str. Barbu Vacarescu, Bucuresti",
+    "latitude": 44.47608,
+    "longitude": 26.10681,
+    "type": 0
+  },
+  {
+    "id": 12085,
+    "name": "Muzeul Aviatiei",
+    "description": "Str. Barbu Vacarescu, Bucuresti",
+    "latitude": 44.475292,
+    "longitude": 26.107172,
+    "type": 0
+  },
+  {
     "id": 6261,
     "name": "Muzeul Aviatiei",
     "description": "Str. Barbu Vacarescu, Bucuresti",
     "latitude": 44.475853,
     "longitude": 26.107037,
-    "type": 0
-  },
-  {
-    "id": 6335,
-    "name": "Muzeul Aviatiei",
-    "description": "Str. Barbu Vacarescu, Bucuresti",
-    "latitude": 44.47451,
-    "longitude": 26.107496,
     "type": 0
   },
   {
@@ -19968,6 +19280,22 @@
     "type": 1
   },
   {
+    "id": 7277,
+    "name": "Nicolae Haralambie",
+    "description": "Calea Serban Voda, Bucuresti",
+    "latitude": 44.41114,
+    "longitude": 26.09987,
+    "type": 0
+  },
+  {
+    "id": 7385,
+    "name": "Nicolae Haralambie",
+    "description": "Calea Serban Voda, Bucuresti",
+    "latitude": 44.411495,
+    "longitude": 26.10074,
+    "type": 0
+  },
+  {
     "id": 605.1,
     "name": "Nicolae Iorga",
     "description": "",
@@ -20200,14 +19528,6 @@
     "type": 0
   },
   {
-    "id": 6189,
-    "name": "Oaspetilor",
-    "description": "Str. Oaspetilor, Bucuresti",
-    "latitude": 44.50295,
-    "longitude": 26.057625,
-    "type": 0
-  },
-  {
     "id": 7469,
     "name": "Oasului",
     "description": "Bd. Laminorului, Bucuresti",
@@ -20248,27 +19568,19 @@
     "type": 1
   },
   {
-    "id": 3886,
-    "name": "Oborul Nou",
-    "description": "Bd. Ferdinand, Bucuresti",
-    "latitude": 44.44291,
-    "longitude": 26.127127,
-    "type": 0
-  },
-  {
-    "id": 8389,
+    "id": 3355.1,
     "name": "Ocolul Silvic",
-    "description": "DJ 101 B, Ilfov",
+    "description": "",
     "latitude": 44.69915,
-    "longitude": 26.169104,
+    "longitude": 26.169094,
     "type": 0
   },
   {
-    "id": 8578,
+    "id": 3376.1,
     "name": "Ocolul Silvic",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.699375,
-    "longitude": 26.169367,
+    "description": "",
+    "latitude": 44.699383,
+    "longitude": 26.169369,
     "type": 0
   },
   {
@@ -20416,23 +19728,7 @@
     "type": 0
   },
   {
-    "id": 5961,
-    "name": "Opris Ilie",
-    "description": "Sos. Oltenitei, Bucuresti",
-    "latitude": 44.400394,
-    "longitude": 26.103577,
-    "type": 0
-  },
-  {
-    "id": 6746,
-    "name": "Opris Ilie",
-    "description": "Sos. Oltenitei, Bucuresti",
-    "latitude": 44.39963,
-    "longitude": 26.10576,
-    "type": 0
-  },
-  {
-    "id": 689.9,
+    "id": 689.2,
     "name": "Oras Buftea",
     "description": "",
     "latitude": 44.57532,
@@ -20440,7 +19736,7 @@
     "type": 0
   },
   {
-    "id": 691.9,
+    "id": 691.2,
     "name": "Oras Buftea",
     "description": "",
     "latitude": 44.57556,
@@ -20480,22 +19776,6 @@
     "type": 0
   },
   {
-    "id": 10827,
-    "name": "Orhideelor",
-    "description": "DC 21A, Ilfov",
-    "latitude": 44.69149,
-    "longitude": 26.345968,
-    "type": 0
-  },
-  {
-    "id": 10832,
-    "name": "Orhideelor",
-    "description": "DC 21A, Ilfov",
-    "latitude": 44.692127,
-    "longitude": 26.345276,
-    "type": 0
-  },
-  {
     "id": 7204,
     "name": "Orhideelor",
     "description": "Sos. Curtea Domneasca-Teghes, Ilfov",
@@ -20509,6 +19789,22 @@
     "description": "Sos. Curtea Domneasca-Teghes, Ilfov",
     "latitude": 44.392204,
     "longitude": 25.896725,
+    "type": 0
+  },
+  {
+    "id": 3339.1,
+    "name": "Orhideelor",
+    "description": "",
+    "latitude": 44.692127,
+    "longitude": 26.345276,
+    "type": 0
+  },
+  {
+    "id": 3392.1,
+    "name": "Orhideelor",
+    "description": "",
+    "latitude": 44.69149,
+    "longitude": 26.345968,
     "type": 0
   },
   {
@@ -20536,9 +19832,9 @@
     "type": 1
   },
   {
-    "id": 12393,
+    "id": 6057.2,
     "name": "Orizontului 36",
-    "description": "Str. Gliei, Ilfov",
+    "description": "",
     "latitude": 44.38122,
     "longitude": 26.0133,
     "type": 0
@@ -20637,6 +19933,14 @@
     "description": "Str. Valea Cascadelor, Ilfov",
     "latitude": 44.432922,
     "longitude": 26.005577,
+    "type": 0
+  },
+  {
+    "id": "PV19_1594",
+    "name": "Pacii",
+    "description": "",
+    "latitude": 44.432808,
+    "longitude": 26.005432,
     "type": 0
   },
   {
@@ -20928,14 +20232,6 @@
     "type": 0
   },
   {
-    "id": 12069,
-    "name": "Pantelimon",
-    "description": "Terminal Pantelimon, Bucuresti",
-    "latitude": 44.44006,
-    "longitude": 26.183601,
-    "type": 0
-  },
-  {
     "id": 12072,
     "name": "Pantelimon",
     "description": "Terminal Pantelimon, Bucuresti",
@@ -21005,22 +20301,6 @@
     "description": "",
     "latitude": 44.43996,
     "longitude": 26.184553,
-    "type": 0
-  },
-  {
-    "id": 3297,
-    "name": "Papazoglu",
-    "description": "Str. Nerva Traian, Bucuresti",
-    "latitude": 44.42118,
-    "longitude": 26.116657,
-    "type": 0
-  },
-  {
-    "id": 3300,
-    "name": "Papazoglu",
-    "description": "Str. Nerva Traian, Bucuresti",
-    "latitude": 44.421276,
-    "longitude": 26.116648,
     "type": 0
   },
   {
@@ -21344,14 +20624,6 @@
     "type": 0
   },
   {
-    "id": 6249.1,
-    "name": "Parcul Motodrom",
-    "description": "",
-    "latitude": 44.467564,
-    "longitude": 26.145565,
-    "type": 0
-  },
-  {
     "id": 7422,
     "name": "Parcul Regele Mihai I",
     "description": "Bd. Aviatorilor, Bucuresti",
@@ -21448,6 +20720,22 @@
     "type": 0
   },
   {
+    "id": 12565,
+    "name": "Parcului",
+    "description": "Str. Parcului, Bucuresti",
+    "latitude": 44.48081,
+    "longitude": 26.063871,
+    "type": 0
+  },
+  {
+    "id": 12570,
+    "name": "Parcului",
+    "description": "Str. Parcului, Bucuresti",
+    "latitude": 44.48078,
+    "longitude": 26.063635,
+    "type": 0
+  },
+  {
     "id": 8521,
     "name": "Parcului",
     "description": "DJ 110 H, Ilfov",
@@ -21464,19 +20752,19 @@
     "type": 0
   },
   {
-    "id": 8848,
-    "name": "Parfumului (Bragadiru)",
-    "description": "Str. Parfumului, Ilfov",
-    "latitude": 44.398342,
-    "longitude": 26.005358,
+    "id": 5489.1,
+    "name": "Park And Ride Berceni",
+    "description": "",
+    "latitude": 44.347034,
+    "longitude": 26.159147,
     "type": 0
   },
   {
-    "id": 8849,
-    "name": "Parfumului 27",
-    "description": "Str. Parfumului, Ilfov",
-    "latitude": 44.400017,
-    "longitude": 26.008484,
+    "id": 6491.1,
+    "name": "Park And Ride Berceni",
+    "description": "",
+    "latitude": 44.34664,
+    "longitude": 26.158857,
     "type": 0
   },
   {
@@ -21517,6 +20805,22 @@
     "description": "DJ 601A, Ilfov",
     "latitude": 44.45578,
     "longitude": 25.953604,
+    "type": 0
+  },
+  {
+    "id": 12078,
+    "name": "Pasaj Baneasa",
+    "description": "Str. Cpt. Serbanescu, Bucuresti",
+    "latitude": 44.48635,
+    "longitude": 26.094046,
+    "type": 0
+  },
+  {
+    "id": 12079,
+    "name": "Pasaj Baneasa",
+    "description": "Str. Cpt. Serbanescu, Bucuresti",
+    "latitude": 44.48642,
+    "longitude": 26.09401,
     "type": 0
   },
   {
@@ -21848,22 +21152,6 @@
     "type": 0
   },
   {
-    "id": 7358,
-    "name": "Pasaj Victoria",
-    "description": "Bd. Iancu de Hunedoara, Bucuresti",
-    "latitude": 44.452553,
-    "longitude": 26.090733,
-    "type": 0
-  },
-  {
-    "id": 7362,
-    "name": "Pasaj Victoria",
-    "description": "Bd. Iancu de Hunedoara, Bucuresti",
-    "latitude": 44.452454,
-    "longitude": 26.09192,
-    "type": 0
-  },
-  {
     "id": 3335,
     "name": "Pasajul Basarab",
     "description": "Pasajul Basarab, Bucuresti",
@@ -21896,6 +21184,22 @@
     "type": 0
   },
   {
+    "id": 7036,
+    "name": "Pasajul Pipera",
+    "description": "Sos. Pipera, Bucuresti",
+    "latitude": 44.48672,
+    "longitude": 26.115677,
+    "type": 0
+  },
+  {
+    "id": 7045,
+    "name": "Pasajul Pipera",
+    "description": "Sos. Pipera, Bucuresti",
+    "latitude": 44.48601,
+    "longitude": 26.113441,
+    "type": 0
+  },
+  {
     "id": 12156,
     "name": "Pasarela",
     "description": "Sos. Vitan Barzesti, Bucuresti",
@@ -21920,16 +21224,16 @@
     "type": 0
   },
   {
-    "id": 6367.1,
-    "name": "Pasarela Metrou Berceni",
+    "id": 6477.1,
+    "name": "Pasarela M Berceni",
     "description": "",
     "latitude": 44.360367,
     "longitude": 26.150993,
     "type": 0
   },
   {
-    "id": 6399.1,
-    "name": "Pasarela Metrou Berceni",
+    "id": 6478.1,
+    "name": "Pasarela M Berceni",
     "description": "",
     "latitude": 44.360374,
     "longitude": 26.150986,
@@ -22264,14 +21568,6 @@
     "type": 0
   },
   {
-    "id": 658.1,
-    "name": "Perla",
-    "description": "",
-    "latitude": 44.45381,
-    "longitude": 26.098278,
-    "type": 0
-  },
-  {
     "id": 8523,
     "name": "Pescari",
     "description": "Str. Antim Irvireanu, Ilfov",
@@ -22496,6 +21792,22 @@
     "type": 0
   },
   {
+    "id": 2587.1,
+    "name": "Petresti",
+    "description": "",
+    "latitude": 44.60193,
+    "longitude": 26.07176,
+    "type": 0
+  },
+  {
+    "id": 3280.1,
+    "name": "Petresti",
+    "description": "",
+    "latitude": 44.600494,
+    "longitude": 26.071465,
+    "type": 0
+  },
+  {
     "id": 9396,
     "name": "Petresti (Mega Image)",
     "description": "DJ101, Ilfov",
@@ -22509,14 +21821,6 @@
     "description": "Sos. Fabrica de Glucoza, Bucuresti",
     "latitude": 44.4786,
     "longitude": 26.12467,
-    "type": 0
-  },
-  {
-    "id": 669.1,
-    "name": "Petricani",
-    "description": "",
-    "latitude": 44.47859,
-    "longitude": 26.12468,
     "type": 0
   },
   {
@@ -22616,27 +21920,11 @@
     "type": 0
   },
   {
-    "id": 7413,
-    "name": "Piata Alba Iulia",
-    "description": "Bd. Unirii, Bucuresti",
-    "latitude": 44.425537,
-    "longitude": 26.127495,
-    "type": 0
-  },
-  {
     "id": 6006,
     "name": "Piata Aparatorii Patriei",
     "description": "Sos. Berceni, Bucuresti",
     "latitude": 44.37871,
     "longitude": 26.135643,
-    "type": 0
-  },
-  {
-    "id": 1360.1,
-    "name": "Piata Aparatorii Patriei",
-    "description": "",
-    "latitude": 44.378693,
-    "longitude": 26.135609,
     "type": 0
   },
   {
@@ -22664,11 +21952,19 @@
     "type": 0
   },
   {
-    "id": 5958,
+    "id": 12074,
     "name": "Piata Baneasa",
     "description": "Bd. Aerogarii, Bucuresti",
-    "latitude": 44.49406,
-    "longitude": 26.083408,
+    "latitude": 44.49393,
+    "longitude": 26.083921,
+    "type": 0
+  },
+  {
+    "id": 12075,
+    "name": "Piata Baneasa",
+    "description": "Bd. Aerogarii",
+    "latitude": 44.493862,
+    "longitude": 26.084242,
     "type": 0
   },
   {
@@ -22680,11 +21976,19 @@
     "type": 0
   },
   {
-    "id": 12423,
+    "id": 3236,
     "name": "Piata Buzesti",
-    "description": "Str. Buzesti, Bucuresti",
-    "latitude": 44.448174,
-    "longitude": 26.082655,
+    "description": "Piata Buzesti, Bucuresti",
+    "latitude": 44.447758,
+    "longitude": 26.082342,
+    "type": 0
+  },
+  {
+    "id": 3388,
+    "name": "Piata Buzesti",
+    "description": "Piata Buzesti, Bucuresti",
+    "latitude": 44.448082,
+    "longitude": 26.082468,
     "type": 0
   },
   {
@@ -22781,14 +22085,6 @@
     "description": "Bd. Unirii, Bucuresti",
     "latitude": 44.427124,
     "longitude": 26.093685,
-    "type": 0
-  },
-  {
-    "id": 3593,
-    "name": "Piata Corneliu Coposu",
-    "description": "Piata Corneliu Coposu, Bucuresti",
-    "latitude": 44.43186,
-    "longitude": 26.11058,
     "type": 0
   },
   {
@@ -22944,14 +22240,6 @@
     "type": 0
   },
   {
-    "id": 660.1,
-    "name": "Piata Dorobanti",
-    "description": "",
-    "latitude": 44.461853,
-    "longitude": 26.094881,
-    "type": 0
-  },
-  {
     "id": 12182,
     "name": "Piata Drumul Taberei",
     "description": "Drumul Taberei, Bucuresti",
@@ -23013,22 +22301,6 @@
     "description": "Sos. Viilor, Bucuresti",
     "latitude": 44.405872,
     "longitude": 26.095287,
-    "type": 0
-  },
-  {
-    "id": 8614,
-    "name": "Piata Eroii Revolutiei",
-    "description": "Sos. Giurgiului, Bucuresti",
-    "latitude": 44.40367,
-    "longitude": 26.096888,
-    "type": 0
-  },
-  {
-    "id": 2880.1,
-    "name": "Piata Eroii Revolutiei",
-    "description": "",
-    "latitude": 44.40359,
-    "longitude": 26.096964,
     "type": 0
   },
   {
@@ -23109,14 +22381,6 @@
     "description": "Calea Floreasca, Bucuresti",
     "latitude": 44.460083,
     "longitude": 26.100882,
-    "type": 0
-  },
-  {
-    "id": 656.1,
-    "name": "Piata Floreasca",
-    "description": "",
-    "latitude": 44.46015,
-    "longitude": 26.100903,
     "type": 0
   },
   {
@@ -23275,8 +22539,8 @@
     "id": 10846,
     "name": "Piata Iancului",
     "description": "Bd. Pache Protopopescu, Bucuresti",
-    "latitude": 44.441055,
-    "longitude": 26.132557,
+    "latitude": 44.44108,
+    "longitude": 26.132492,
     "type": 0
   },
   {
@@ -23312,19 +22576,11 @@
     "type": 0
   },
   {
-    "id": 6369,
-    "name": "Piata Iancului",
-    "description": "Sos. Mihai Bravu, Bucuresti",
-    "latitude": 44.440132,
-    "longitude": 26.134417,
-    "type": 0
-  },
-  {
     "id": 6470,
     "name": "Piata Iancului",
     "description": "Bd. Pache Protopopescu, Bucuresti",
-    "latitude": 44.441074,
-    "longitude": 26.132252,
+    "latitude": 44.441113,
+    "longitude": 26.132362,
     "type": 0
   },
   {
@@ -23432,22 +22688,6 @@
     "type": 0
   },
   {
-    "id": 3508,
-    "name": "Piata Obor",
-    "description": "Str. Ziduri Mosi, Bucuresti",
-    "latitude": 44.451023,
-    "longitude": 26.12981,
-    "type": 0
-  },
-  {
-    "id": 3514,
-    "name": "Piata Obor",
-    "description": "Str. Ziduri Mosi, Bucuresti",
-    "latitude": 44.450897,
-    "longitude": 26.129854,
-    "type": 0
-  },
-  {
     "id": 7157,
     "name": "Piata Obor",
     "description": "Str. Ziduri Mosi, Bucuresti",
@@ -23517,6 +22757,14 @@
     "description": "Alee Parcare Piata Presei",
     "latitude": 44.47869,
     "longitude": 26.072065,
+    "type": 0
+  },
+  {
+    "id": 12571,
+    "name": "Piata Presei",
+    "description": "Bd. Poligrafiei, Bucuresti",
+    "latitude": 44.478306,
+    "longitude": 26.071754,
     "type": 0
   },
   {
@@ -23635,22 +22883,6 @@
     "id": 7437,
     "name": "Piata Progresul",
     "description": "Sos. Giurgiului, Bucuresti",
-    "latitude": 44.393715,
-    "longitude": 26.09432,
-    "type": 0
-  },
-  {
-    "id": 2355.1,
-    "name": "Piata Progresul",
-    "description": "",
-    "latitude": 44.392498,
-    "longitude": 26.093502,
-    "type": 0
-  },
-  {
-    "id": 2360.1,
-    "name": "Piata Progresul",
-    "description": "",
     "latitude": 44.393715,
     "longitude": 26.09432,
     "type": 0
@@ -23888,14 +23120,6 @@
     "type": 0
   },
   {
-    "id": 3406,
-    "name": "Piata Sf. Gheorghe",
-    "description": "Calea Mosilor, Bucuresti",
-    "latitude": 44.43255,
-    "longitude": 26.106363,
-    "type": 0
-  },
-  {
     "id": 3437,
     "name": "Piata Sf. Gheorghe",
     "description": "Calea Mosilor, Bucuresti",
@@ -23907,8 +23131,8 @@
     "id": 6334,
     "name": "Piata Sf. Gheorghe",
     "description": "Calea Mosilor, Bucuresti",
-    "latitude": 44.431778,
-    "longitude": 26.105417,
+    "latitude": 44.43176,
+    "longitude": 26.105453,
     "type": 0
   },
   {
@@ -23944,35 +23168,11 @@
     "type": 0
   },
   {
-    "id": 3273,
-    "name": "Piata Sf. Stefan",
-    "description": "Calea Calarasilor, Bucuresti",
-    "latitude": 44.433296,
-    "longitude": 26.116322,
-    "type": 0
-  },
-  {
     "id": 6753,
     "name": "Piata Sf. Stefan",
     "description": "Calea Calarasilor, Bucuresti",
     "latitude": 44.433323,
     "longitude": 26.116375,
-    "type": 0
-  },
-  {
-    "id": 3334,
-    "name": "Piata Sf. Vineri",
-    "description": "Str. Sfanta Vineri, Bucuresti",
-    "latitude": 44.429344,
-    "longitude": 26.10738,
-    "type": 0
-  },
-  {
-    "id": 3351,
-    "name": "Piata Sf. Vineri",
-    "description": "Str. Sfanta Vineri, Bucuresti",
-    "latitude": 44.42986,
-    "longitude": 26.107536,
     "type": 0
   },
   {
@@ -24101,22 +23301,6 @@
     "description": "Sos. Oltenitei, Bucuresti",
     "latitude": 44.39264,
     "longitude": 26.123737,
-    "type": 0
-  },
-  {
-    "id": 1992.1,
-    "name": "Piata Sudului",
-    "description": "",
-    "latitude": 44.391815,
-    "longitude": 26.123423,
-    "type": 0
-  },
-  {
-    "id": 3237.1,
-    "name": "Piata Sudului",
-    "description": "",
-    "latitude": 44.392372,
-    "longitude": 26.122677,
     "type": 0
   },
   {
@@ -24344,6 +23528,14 @@
     "type": 0
   },
   {
+    "id": 3232,
+    "name": "Piata Victoriei",
+    "description": "Str. Buzesti, Bucuresti",
+    "latitude": 44.451633,
+    "longitude": 26.084515,
+    "type": 0
+  },
+  {
     "id": 6000,
     "name": "Piata Victoriei",
     "description": "Bd. Lascar Catargiu, Bucuresti",
@@ -24424,19 +23616,19 @@
     "type": 0
   },
   {
-    "id": 8641,
+    "id": 3357.1,
     "name": "Piatra Craiului",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.686665,
-    "longitude": 26.150032,
+    "description": "",
+    "latitude": 44.686825,
+    "longitude": 26.14995,
     "type": 0
   },
   {
-    "id": 8642,
+    "id": 3374.1,
     "name": "Piatra Craiului",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.686813,
-    "longitude": 26.149927,
+    "description": "",
+    "latitude": 44.686657,
+    "longitude": 26.150038,
     "type": 0
   },
   {
@@ -24720,19 +23912,19 @@
     "type": 0
   },
   {
-    "id": 8390,
+    "id": 3356.1,
     "name": "Plopilor",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.68281,
-    "longitude": 26.154697,
+    "description": "",
+    "latitude": 44.68282,
+    "longitude": 26.154741,
     "type": 0
   },
   {
-    "id": 8587,
+    "id": 3375.1,
     "name": "Plopilor",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.682682,
-    "longitude": 26.154726,
+    "description": "",
+    "latitude": 44.682697,
+    "longitude": 26.154747,
     "type": 0
   },
   {
@@ -24797,22 +23989,6 @@
     "description": "",
     "latitude": 44.49849,
     "longitude": 26.203827,
-    "type": 0
-  },
-  {
-    "id": 616.1,
-    "name": "Pod Cfr Stefanesti",
-    "description": "",
-    "latitude": 44.511845,
-    "longitude": 26.18779,
-    "type": 0
-  },
-  {
-    "id": 643.1,
-    "name": "Pod Cfr Stefanesti",
-    "description": "",
-    "latitude": 44.511753,
-    "longitude": 26.187975,
     "type": 0
   },
   {
@@ -25304,22 +24480,6 @@
     "type": 0
   },
   {
-    "id": 3111,
-    "name": "Policlinica Vitan",
-    "description": "Calea Dudesti, Bucuresti",
-    "latitude": 44.423454,
-    "longitude": 26.127281,
-    "type": 0
-  },
-  {
-    "id": 3381,
-    "name": "Policlinica Vitan",
-    "description": "Calea Dudesti, Bucuresti",
-    "latitude": 44.42351,
-    "longitude": 26.126753,
-    "type": 0
-  },
-  {
     "id": 14738,
     "name": "Politehnica",
     "description": "",
@@ -25381,14 +24541,6 @@
     "description": "",
     "latitude": 44.481277,
     "longitude": 26.180777,
-    "type": 0
-  },
-  {
-    "id": 12200,
-    "name": "Popa Tatu",
-    "description": "Str. Popa Tatu, Bucuresti",
-    "latitude": 44.443565,
-    "longitude": 26.083738,
     "type": 0
   },
   {
@@ -25528,7 +24680,7 @@
     "type": 0
   },
   {
-    "id": 687.9,
+    "id": 687.2,
     "name": "Posta",
     "description": "",
     "latitude": 44.562576,
@@ -25536,7 +24688,7 @@
     "type": 0
   },
   {
-    "id": 693.9,
+    "id": 693.2,
     "name": "Posta",
     "description": "",
     "latitude": 44.562252,
@@ -25560,19 +24712,19 @@
     "type": 0
   },
   {
-    "id": 8387,
+    "id": 3353.1,
     "name": "Posta Snagov",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.70824,
-    "longitude": 26.174238,
+    "description": "",
+    "latitude": 44.708252,
+    "longitude": 26.174225,
     "type": 0
   },
   {
-    "id": 8580,
+    "id": 3378.1,
     "name": "Posta Snagov",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.708206,
-    "longitude": 26.17448,
+    "description": "",
+    "latitude": 44.70824,
+    "longitude": 26.17447,
     "type": 0
   },
   {
@@ -25864,6 +25016,22 @@
     "type": 0
   },
   {
+    "id": 3301.1,
+    "name": "Primaria Balotesti",
+    "description": "",
+    "latitude": 44.626575,
+    "longitude": 26.06911,
+    "type": 0
+  },
+  {
+    "id": 3309.1,
+    "name": "Primaria Balotesti",
+    "description": "",
+    "latitude": 44.626305,
+    "longitude": 26.069307,
+    "type": 0
+  },
+  {
     "id": 3244.1,
     "name": "Primaria Berceni",
     "description": "",
@@ -25917,14 +25085,6 @@
     "description": "",
     "latitude": 44.50865,
     "longitude": 25.981,
-    "type": 0
-  },
-  {
-    "id": 490.2,
-    "name": "Primaria Chitila",
-    "description": "",
-    "latitude": 44.50867,
-    "longitude": 25.98133,
     "type": 0
   },
   {
@@ -26088,6 +25248,22 @@
     "type": 0
   },
   {
+    "id": 3349.1,
+    "name": "Primaria Gruiu",
+    "description": "",
+    "latitude": 44.725243,
+    "longitude": 26.227482,
+    "type": 0
+  },
+  {
+    "id": 3382.1,
+    "name": "Primaria Gruiu",
+    "description": "",
+    "latitude": 44.725174,
+    "longitude": 26.227474,
+    "type": 0
+  },
+  {
     "id": 7435,
     "name": "Primaria Jilava",
     "description": "Sos. Giurgiului, Ilfov",
@@ -26152,14 +25328,6 @@
     "type": 0
   },
   {
-    "id": 10835,
-    "name": "Primaria Nuci",
-    "description": "DC21A, Ilfov",
-    "latitude": 44.711975,
-    "longitude": 26.317577,
-    "type": 0
-  },
-  {
     "id": 3342.1,
     "name": "Primaria Nuci",
     "description": "",
@@ -26181,6 +25349,22 @@
     "description": "Calea Bucurestilor, Ilfov",
     "latitude": 44.55002,
     "longitude": 26.069057,
+    "type": 0
+  },
+  {
+    "id": 12.1,
+    "name": "Primaria Otopeni",
+    "description": "",
+    "latitude": 44.550003,
+    "longitude": 26.069048,
+    "type": 0
+  },
+  {
+    "id": 122.1,
+    "name": "Primaria Otopeni",
+    "description": "",
+    "latitude": 44.550777,
+    "longitude": 26.06886,
     "type": 0
   },
   {
@@ -26648,27 +25832,19 @@
     "type": 0
   },
   {
-    "id": 8397,
+    "id": 3365.1,
     "name": "Radio",
-    "description": "DJ 101 B, Ilfov",
+    "description": "",
     "latitude": 44.66817,
     "longitude": 26.07822,
     "type": 0
   },
   {
-    "id": 8572,
+    "id": 3366.1,
     "name": "Radio",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.668125,
-    "longitude": 26.07861,
-    "type": 0
-  },
-  {
-    "id": 12421,
-    "name": "Radio Romania",
-    "description": "Str. Berzei, Bucuresti",
-    "latitude": 44.440426,
-    "longitude": 26.081581,
+    "description": "",
+    "latitude": 44.668156,
+    "longitude": 26.078592,
     "type": 0
   },
   {
@@ -26709,30 +25885,6 @@
     "description": "Sos. Fundeni, Bucuresti",
     "latitude": 44.466557,
     "longitude": 26.147196,
-    "type": 0
-  },
-  {
-    "id": 619.1,
-    "name": "Radovanu",
-    "description": "",
-    "latitude": 44.466557,
-    "longitude": 26.147196,
-    "type": 0
-  },
-  {
-    "id": 3353,
-    "name": "Radox",
-    "description": "Bd. Timisoara, Bucuresti",
-    "latitude": 44.424232,
-    "longitude": 26.006508,
-    "type": 0
-  },
-  {
-    "id": 3358,
-    "name": "Radox",
-    "description": "Bd. Timisoara, Bucuresti",
-    "latitude": 44.42424,
-    "longitude": 26.00606,
     "type": 0
   },
   {
@@ -27008,22 +26160,6 @@
     "type": 0
   },
   {
-    "id": 3171,
-    "name": "Reinvierii",
-    "description": "Str. Lizeanu, Bucuresti",
-    "latitude": 44.455048,
-    "longitude": 26.121202,
-    "type": 0
-  },
-  {
-    "id": 3599,
-    "name": "Reinvierii",
-    "description": "Str. Maica Domnului, Bucuresti",
-    "latitude": 44.455524,
-    "longitude": 26.121113,
-    "type": 0
-  },
-  {
     "id": 6697,
     "name": "Releului",
     "description": "Splaiul Unirii, Bucuresti",
@@ -27197,6 +26333,14 @@
     "description": "Str. Rezervelor, Ilfov",
     "latitude": 44.444946,
     "longitude": 25.987411,
+    "type": 0
+  },
+  {
+    "id": "PV19_1605",
+    "name": "Rezervelor 67",
+    "description": "",
+    "latitude": 44.445015,
+    "longitude": 25.987371,
     "type": 0
   },
   {
@@ -27416,6 +26560,22 @@
     "type": 0
   },
   {
+    "id": 12090,
+    "name": "Rossini",
+    "description": "Str. Barbu Vacarescu, Bucuresti",
+    "latitude": 44.460716,
+    "longitude": 26.107038,
+    "type": 0
+  },
+  {
+    "id": 12091,
+    "name": "Rossini",
+    "description": "Str. Barbu Vacarescu, Bucuresti",
+    "latitude": 44.460884,
+    "longitude": 26.107141,
+    "type": 0
+  },
+  {
     "id": 7490,
     "name": "Rossini",
     "description": "Str. Barbu Vacarescu, Bucuresti",
@@ -27459,8 +26619,8 @@
     "id": 12134,
     "name": "Rubinului",
     "description": "Str. Margelelor, Ilfov",
-    "latitude": 44.396492,
-    "longitude": 26.005133,
+    "latitude": 44.396484,
+    "longitude": 26.005117,
     "type": 0
   },
   {
@@ -27541,14 +26701,6 @@
     "description": "Str. Av.Radu Beller, Bucuresti",
     "latitude": 44.4652,
     "longitude": 26.095877,
-    "type": 0
-  },
-  {
-    "id": 661.1,
-    "name": "Sala Lucian Grigorescu",
-    "description": "",
-    "latitude": 44.464382,
-    "longitude": 26.095686,
     "type": 0
   },
   {
@@ -27760,22 +26912,6 @@
     "type": 0
   },
   {
-    "id": 5983,
-    "name": "Scoala",
-    "description": "Calea Giulesti, Bucuresti",
-    "latitude": 44.47016,
-    "longitude": 26.002304,
-    "type": 0
-  },
-  {
-    "id": 7551,
-    "name": "Scoala",
-    "description": "Calea Giulesti, Bucuresti",
-    "latitude": 44.469913,
-    "longitude": 26.003256,
-    "type": 0
-  },
-  {
     "id": 8500,
     "name": "Scoala",
     "description": "Sos. Bucuresti-Alexandria(DN6), Ilfov",
@@ -27984,22 +27120,6 @@
     "type": 0
   },
   {
-    "id": 3114,
-    "name": "Scoala Generala 81",
-    "description": "Str. Nerva Traian, Bucuresti",
-    "latitude": 44.4194,
-    "longitude": 26.115143,
-    "type": 0
-  },
-  {
-    "id": 3120,
-    "name": "Scoala Generala 81",
-    "description": "Str. Nerva Traian, Bucuresti",
-    "latitude": 44.419273,
-    "longitude": 26.115107,
-    "type": 0
-  },
-  {
     "id": 6512,
     "name": "Scoala Generala 81",
     "description": "Str. Nerva Traian, Bucuresti",
@@ -28112,19 +27232,43 @@
     "type": 0
   },
   {
-    "id": 8391,
+    "id": 3358.1,
     "name": "Scoala Ghermanesti",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.688496,
-    "longitude": 26.1466,
+    "description": "",
+    "latitude": 44.688488,
+    "longitude": 26.146603,
     "type": 0
   },
   {
-    "id": 8589,
+    "id": 3373.1,
     "name": "Scoala Ghermanesti",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.68829,
-    "longitude": 26.147108,
+    "description": "",
+    "latitude": 44.688313,
+    "longitude": 26.147135,
+    "type": 0
+  },
+  {
+    "id": 5983,
+    "name": "Scoala Gimnaziala 161",
+    "description": "Calea Giulesti, Bucuresti",
+    "latitude": 44.47016,
+    "longitude": 26.002304,
+    "type": 0
+  },
+  {
+    "id": 7551,
+    "name": "Scoala Gimnaziala 161",
+    "description": "Calea Giulesti, Bucuresti",
+    "latitude": 44.469913,
+    "longitude": 26.003256,
+    "type": 0
+  },
+  {
+    "id": 6050.2,
+    "name": "Scoala Gimnaziala Nr. 1",
+    "description": "",
+    "latitude": 44.378338,
+    "longitude": 26.006618,
     "type": 0
   },
   {
@@ -28176,19 +27320,11 @@
     "type": 0
   },
   {
-    "id": 12391,
-    "name": "Scoala Gimnaziala nr. 1",
-    "description": "Str. Gliei, Ilfov",
-    "latitude": 44.378338,
-    "longitude": 26.006618,
-    "type": 0
-  },
-  {
-    "id": 12397,
-    "name": "Scoala Gimnaziala nr. 1",
-    "description": "Str. Gliei, Ilfov",
-    "latitude": 44.378174,
-    "longitude": 26.00608,
+    "id": "PV19_5404",
+    "name": "Scoala Gimnaziala Petru Rares",
+    "description": "",
+    "latitude": 44.44955,
+    "longitude": 25.984526,
     "type": 0
   },
   {
@@ -28240,22 +27376,6 @@
     "type": 0
   },
   {
-    "id": 3272,
-    "name": "Scoala Iancului",
-    "description": "Bd. Pache Protopopescu, Bucuresti",
-    "latitude": 44.43946,
-    "longitude": 26.123713,
-    "type": 0
-  },
-  {
-    "id": 3589,
-    "name": "Scoala Iancului",
-    "description": "Bd. Pache Protopopescu, Bucuresti",
-    "latitude": 44.43952,
-    "longitude": 26.123877,
-    "type": 0
-  },
-  {
     "id": 3709,
     "name": "Scoala Iancului",
     "description": "Str. Matei Voievod, Bucuresti",
@@ -28304,19 +27424,19 @@
     "type": 0
   },
   {
-    "id": 10821,
+    "id": 3338.1,
     "name": "Scoala Micsunestii Mari",
-    "description": "DC 21A, Ilfov",
+    "description": "",
     "latitude": 44.69136,
-    "longitude": 26.353107,
+    "longitude": 26.35311,
     "type": 0
   },
   {
-    "id": 10828,
+    "id": 3393.1,
     "name": "Scoala Micsunestii Mari",
-    "description": "DC 21A, Ilfov",
+    "description": "",
     "latitude": 44.691723,
-    "longitude": 26.354404,
+    "longitude": 26.354406,
     "type": 0
   },
   {
@@ -28992,19 +28112,11 @@
     "type": 0
   },
   {
-    "id": 12401,
+    "id": 6064.2,
     "name": "Smardan 15",
-    "description": "Str. Smardan, Ilfov",
+    "description": "",
     "latitude": 44.38667,
     "longitude": 26.013008,
-    "type": 0
-  },
-  {
-    "id": 12443,
-    "name": "Smardan 6",
-    "description": "Str. Smardan, Ilfov",
-    "latitude": 44.38745,
-    "longitude": 26.012285,
     "type": 0
   },
   {
@@ -29016,11 +28128,11 @@
     "type": 0
   },
   {
-    "id": 8579,
+    "id": 3377.1,
     "name": "Snagov Centru",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.70489,
-    "longitude": 26.171682,
+    "description": "",
+    "latitude": 44.704895,
+    "longitude": 26.171658,
     "type": 0
   },
   {
@@ -29037,6 +28149,22 @@
     "description": "DN1, Ilfov",
     "latitude": 44.666557,
     "longitude": 26.07655,
+    "type": 0
+  },
+  {
+    "id": 3300.1,
+    "name": "Snagov Plaza",
+    "description": "",
+    "latitude": 44.666927,
+    "longitude": 26.076576,
+    "type": 0
+  },
+  {
+    "id": 3310.1,
+    "name": "Snagov Plaza",
+    "description": "",
+    "latitude": 44.667465,
+    "longitude": 26.076777,
     "type": 0
   },
   {
@@ -29200,22 +28328,6 @@
     "type": 0
   },
   {
-    "id": 1374.1,
-    "name": "Sos. Berceni 104",
-    "description": "",
-    "latitude": 44.349678,
-    "longitude": 26.15786,
-    "type": 0
-  },
-  {
-    "id": 1390.1,
-    "name": "Sos. Berceni 104",
-    "description": "",
-    "latitude": 44.349495,
-    "longitude": 26.157917,
-    "type": 0
-  },
-  {
     "id": 7503,
     "name": "Sos. Berceni 104 S",
     "description": "Sos. Berceni, Bucuresti",
@@ -29229,22 +28341,6 @@
     "description": "Sos. Berceni, Bucuresti",
     "latitude": 44.35155,
     "longitude": 26.156357,
-    "type": 0
-  },
-  {
-    "id": 1375.1,
-    "name": "Sos. Berceni 104 S",
-    "description": "",
-    "latitude": 44.35177,
-    "longitude": 26.156256,
-    "type": 0
-  },
-  {
-    "id": 1389.1,
-    "name": "Sos. Berceni 104 S",
-    "description": "",
-    "latitude": 44.351543,
-    "longitude": 26.156336,
     "type": 0
   },
   {
@@ -29528,6 +28624,14 @@
     "type": 0
   },
   {
+    "id": 10683,
+    "name": "Soseaua Colentina",
+    "description": "Sos. Colentina, Bucuresti",
+    "latitude": 44.462914,
+    "longitude": 26.13332,
+    "type": 0
+  },
+  {
     "id": 12009,
     "name": "Soseaua Colentina",
     "description": "Str. Gherghitei, Bucuresti",
@@ -29541,22 +28645,6 @@
     "description": "Str. Gherghitei, Bucuresti",
     "latitude": 44.469604,
     "longitude": 26.142147,
-    "type": 0
-  },
-  {
-    "id": 3343,
-    "name": "Soseaua Colentina",
-    "description": "Str. Ziduri Mosi, Bucuresti",
-    "latitude": 44.45319,
-    "longitude": 26.128052,
-    "type": 0
-  },
-  {
-    "id": 3502,
-    "name": "Soseaua Colentina",
-    "description": "Str. Turmelor, Bucuresti",
-    "latitude": 44.452995,
-    "longitude": 26.126293,
     "type": 0
   },
   {
@@ -29613,14 +28701,6 @@
     "description": "Sos. Garii Catelu, Bucuresti",
     "latitude": 44.44065,
     "longitude": 26.19203,
-    "type": 0
-  },
-  {
-    "id": 652.1,
-    "name": "Soseaua Fabrica De Glucoza",
-    "description": "",
-    "latitude": 44.474968,
-    "longitude": 26.10409,
     "type": 0
   },
   {
@@ -29720,22 +28800,6 @@
     "type": 0
   },
   {
-    "id": 3285,
-    "name": "Soseaua Iancului",
-    "description": "Sos. Pantelimon, Bucuresti",
-    "latitude": 44.4436,
-    "longitude": 26.149515,
-    "type": 0
-  },
-  {
-    "id": 3311,
-    "name": "Soseaua Iancului",
-    "description": "Sos. Pantelimon, Bucuresti",
-    "latitude": 44.443577,
-    "longitude": 26.149324,
-    "type": 0
-  },
-  {
     "id": 6728,
     "name": "Soseaua Iancului",
     "description": "Bd. Pierre de Coubertin, Bucuresti",
@@ -29800,27 +28864,11 @@
     "type": 0
   },
   {
-    "id": 3310,
-    "name": "Soseaua Mihai Bravu",
-    "description": "Bd. Ferdinand, Bucuresti",
-    "latitude": 44.44411,
-    "longitude": 26.13006,
-    "type": 0
-  },
-  {
     "id": 3361,
     "name": "Soseaua Mihai Bravu",
     "description": "Bd. Camil Ressu, Bucuresti",
     "latitude": 44.419918,
     "longitude": 26.137915,
-    "type": 0
-  },
-  {
-    "id": 3397,
-    "name": "Soseaua Mihai Bravu",
-    "description": "Bd. Ferdinand, Bucuresti",
-    "latitude": 44.443493,
-    "longitude": 26.128525,
     "type": 0
   },
   {
@@ -29853,14 +28901,6 @@
     "description": "Calea Vacaresti, Bucuresti",
     "latitude": 44.407936,
     "longitude": 26.120037,
-    "type": 0
-  },
-  {
-    "id": 3847,
-    "name": "Soseaua Mihai Bravu",
-    "description": "Bd. Ferdinand, Bucuresti",
-    "latitude": 44.44329,
-    "longitude": 26.128286,
     "type": 0
   },
   {
@@ -29904,14 +28944,6 @@
     "type": 0
   },
   {
-    "id": 7247,
-    "name": "Soseaua Mihai Bravu 88",
-    "description": "Sos. Mihai Bravu, Bucuresti",
-    "latitude": 44.445,
-    "longitude": 26.12743,
-    "type": 0
-  },
-  {
     "id": 3284,
     "name": "Soseaua Morarilor",
     "description": "Sos. Pantelimon, Bucuresti",
@@ -29920,27 +28952,11 @@
     "type": 0
   },
   {
-    "id": 6654,
-    "name": "Soseaua Morarilor",
-    "description": "Bd. Basarabia, Bucuresti",
-    "latitude": 44.4371,
-    "longitude": 26.169807,
-    "type": 0
-  },
-  {
     "id": 6735,
     "name": "Soseaua Morarilor",
     "description": "Sos. Pantelimon, Bucuresti",
     "latitude": 44.442307,
     "longitude": 26.167294,
-    "type": 0
-  },
-  {
-    "id": 5140.1,
-    "name": "Soseaua Morarilor",
-    "description": "",
-    "latitude": 44.437103,
-    "longitude": 26.169828,
     "type": 0
   },
   {
@@ -30040,14 +29056,6 @@
     "type": 0
   },
   {
-    "id": 3431,
-    "name": "Soseaua Pantelimon",
-    "description": "Bd. Ferdinand, Bucuresti",
-    "latitude": 44.445988,
-    "longitude": 26.134247,
-    "type": 0
-  },
-  {
     "id": 3848,
     "name": "Soseaua Pantelimon",
     "description": "Bd. Ferdinand, Bucuresti",
@@ -30141,6 +29149,22 @@
     "description": "",
     "latitude": 44.482346,
     "longitude": 26.124537,
+    "type": 0
+  },
+  {
+    "id": 12082,
+    "name": "Soseaua Pipera",
+    "description": "Str. Cpt. Serbanescu, Bucuresti",
+    "latitude": 44.480602,
+    "longitude": 26.10211,
+    "type": 0
+  },
+  {
+    "id": 12083,
+    "name": "Soseaua Pipera",
+    "description": "Str. Barbu Vacarescu, Bucuresti",
+    "latitude": 44.47986,
+    "longitude": 26.103043,
     "type": 0
   },
   {
@@ -30304,27 +29328,19 @@
     "type": 0
   },
   {
-    "id": 657.1,
-    "name": "Soseaua Stefan Cel Mare",
-    "description": "",
-    "latitude": 44.454678,
-    "longitude": 26.100693,
+    "id": 12093,
+    "name": "Soseaua Stefan cel Mare",
+    "description": "Str. Barbu Vacarescu, Bucuresti",
+    "latitude": 44.45395,
+    "longitude": 26.104904,
     "type": 0
   },
   {
-    "id": 3447,
+    "id": 12095,
     "name": "Soseaua Stefan cel Mare",
-    "description": "Str. Viitorului, Bucuresti",
-    "latitude": 44.451515,
-    "longitude": 26.11957,
-    "type": 0
-  },
-  {
-    "id": 3561,
-    "name": "Soseaua Stefan cel Mare",
-    "description": "Str. Viitorului, Bucuresti",
-    "latitude": 44.451656,
-    "longitude": 26.119736,
+    "description": "Str. Tunari, Bucuresti",
+    "latitude": 44.45375,
+    "longitude": 26.104921,
     "type": 0
   },
   {
@@ -30341,6 +29357,14 @@
     "description": "Str. Barbu Vacarescu, Bucuresti",
     "latitude": 44.453712,
     "longitude": 26.10482,
+    "type": 0
+  },
+  {
+    "id": 6338,
+    "name": "Soseaua Stefan cel Mare",
+    "description": "Str. Tunari, Bucuresti",
+    "latitude": 44.45266,
+    "longitude": 26.105213,
     "type": 0
   },
   {
@@ -30421,14 +29445,6 @@
     "description": "Sos. Oltenitei, Bucuresti",
     "latitude": 44.386272,
     "longitude": 26.13889,
-    "type": 0
-  },
-  {
-    "id": 6911,
-    "name": "Soseaua Vitan Barzesti",
-    "description": "Sos. Oltenitei, Bucuresti",
-    "latitude": 44.385456,
-    "longitude": 26.140608,
     "type": 0
   },
   {
@@ -30544,11 +29560,11 @@
     "type": 0
   },
   {
-    "id": 12402,
+    "id": 6065.2,
     "name": "Sperantei 38",
-    "description": "Str. Sperantei, Ilfov",
-    "latitude": 44.386692,
-    "longitude": 26.00766,
+    "description": "",
+    "latitude": 44.386753,
+    "longitude": 26.007631,
     "type": 0
   },
   {
@@ -30589,22 +29605,6 @@
     "description": "Sos. Berceni, Bucuresti",
     "latitude": 44.38663,
     "longitude": 26.12829,
-    "type": 0
-  },
-  {
-    "id": 6299.1,
-    "name": "Spitalul Bagdasar-arseni",
-    "description": "",
-    "latitude": 44.386623,
-    "longitude": 26.128334,
-    "type": 0
-  },
-  {
-    "id": 6300.1,
-    "name": "Spitalul Bagdasar-arseni",
-    "description": "",
-    "latitude": 44.38597,
-    "longitude": 26.128683,
     "type": 0
   },
   {
@@ -30701,22 +29701,6 @@
     "description": "Sos. Fundeni, Bucuresti",
     "latitude": 44.46332,
     "longitude": 26.15393,
-    "type": 0
-  },
-  {
-    "id": 621.1,
-    "name": "Spitalul Fundeni",
-    "description": "",
-    "latitude": 44.46332,
-    "longitude": 26.15393,
-    "type": 0
-  },
-  {
-    "id": 640.1,
-    "name": "Spitalul Fundeni",
-    "description": "",
-    "latitude": 44.463875,
-    "longitude": 26.152266,
     "type": 0
   },
   {
@@ -30984,27 +29968,11 @@
     "type": 0
   },
   {
-    "id": 6912,
-    "name": "Stadion",
-    "description": "Sos. Oltenitei, Bucuresti",
-    "latitude": 44.388565,
-    "longitude": 26.13317,
-    "type": 0
-  },
-  {
     "id": 7199,
     "name": "Stadion",
     "description": "Str. Ciutaci, Ilfov",
     "latitude": 44.404213,
     "longitude": 25.91084,
-    "type": 0
-  },
-  {
-    "id": 8610,
-    "name": "Stadion",
-    "description": "Sos. Oltenitei, Bucuresti",
-    "latitude": 44.389355,
-    "longitude": 26.131878,
     "type": 0
   },
   {
@@ -31104,19 +30072,19 @@
     "type": 0
   },
   {
-    "id": 8381,
+    "id": 3361.1,
     "name": "Stadionului",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.685932,
-    "longitude": 26.128479,
+    "description": "",
+    "latitude": 44.685944,
+    "longitude": 26.128468,
     "type": 0
   },
   {
-    "id": 8576,
+    "id": 3370.1,
     "name": "Stadionului",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.686066,
-    "longitude": 26.129318,
+    "description": "",
+    "latitude": 44.6861,
+    "longitude": 26.129313,
     "type": 0
   },
   {
@@ -31149,6 +30117,14 @@
     "description": "Sos. Iancului, Bucuresti",
     "latitude": 44.442425,
     "longitude": 26.143148,
+    "type": 0
+  },
+  {
+    "id": 3304.1,
+    "name": "Statia De Ambulanta",
+    "description": "",
+    "latitude": 44.61566,
+    "longitude": 26.06945,
     "type": 0
   },
   {
@@ -31424,7 +30400,7 @@
     "type": 0
   },
   {
-    "id": 684.9,
+    "id": 684.2,
     "name": "Stirbei Voda",
     "description": "",
     "latitude": 44.55855,
@@ -31720,14 +30696,6 @@
     "type": 0
   },
   {
-    "id": 12406,
-    "name": "Strada Cristalului",
-    "description": "Str. Cristalului, Ilfov",
-    "latitude": 44.390278,
-    "longitude": 26.008907,
-    "type": 0
-  },
-  {
     "id": 6053.2,
     "name": "Strada Cristalului",
     "description": "",
@@ -31816,11 +30784,11 @@
     "type": 0
   },
   {
-    "id": 12405,
+    "id": 6061.2,
     "name": "Strada Scolii",
-    "description": "Str. Scolii, Ilfov",
-    "latitude": 44.377747,
-    "longitude": 26.007801,
+    "description": "",
+    "latitude": 44.377758,
+    "longitude": 26.007828,
     "type": 0
   },
   {
@@ -32032,6 +31000,22 @@
     "type": 0
   },
   {
+    "id": 11069,
+    "name": "Sura Mare",
+    "description": "Str. Sura Mare, Bucuresti",
+    "latitude": 44.401257,
+    "longitude": 26.098135,
+    "type": 0
+  },
+  {
+    "id": 12196,
+    "name": "Sura Mare",
+    "description": "Str. Sura Mare, Bucuresti",
+    "latitude": 44.40119,
+    "longitude": 26.09815,
+    "type": 0
+  },
+  {
     "id": 6966,
     "name": "Sura Mare",
     "description": "Sos. Giurgiului, Bucuresti",
@@ -32045,22 +31029,6 @@
     "description": "Sos. Giurgiului, Bucuresti",
     "latitude": 44.40177,
     "longitude": 26.097466,
-    "type": 0
-  },
-  {
-    "id": 1757.1,
-    "name": "Sura Mare",
-    "description": "",
-    "latitude": 44.40179,
-    "longitude": 26.097448,
-    "type": 0
-  },
-  {
-    "id": 2353.1,
-    "name": "Sura Mare",
-    "description": "",
-    "latitude": 44.400883,
-    "longitude": 26.09713,
     "type": 0
   },
   {
@@ -32408,14 +31376,6 @@
     "type": 0
   },
   {
-    "id": 3559,
-    "name": "Teiul Doamnei",
-    "description": "Bd. Lacul Tei, Bucuresti",
-    "latitude": 44.464245,
-    "longitude": 26.125679,
-    "type": 0
-  },
-  {
     "id": 3908,
     "name": "Teiul Doamnei",
     "description": "Sos. Colentina, Bucuresti",
@@ -32544,22 +31504,6 @@
     "type": 0
   },
   {
-    "id": 5987,
-    "name": "Textila Militari",
-    "description": "Bd. Timisoara, Bucuresti",
-    "latitude": 44.42411,
-    "longitude": 26.005497,
-    "type": 0
-  },
-  {
-    "id": 6001,
-    "name": "Textila Militari",
-    "description": "Bd. Timisoara, Bucuresti",
-    "latitude": 44.424236,
-    "longitude": 26.005236,
-    "type": 0
-  },
-  {
     "id": 11120,
     "name": "Therme Bucuresti",
     "description": "Alee Therme, Ilfov",
@@ -32640,6 +31584,14 @@
     "type": 0
   },
   {
+    "id": "PV19_1607",
+    "name": "Tineretului",
+    "description": "",
+    "latitude": 44.44936,
+    "longitude": 25.98138,
+    "type": 0
+  },
+  {
     "id": 2795.1,
     "name": "Tineretului",
     "description": "",
@@ -32685,6 +31637,14 @@
     "description": "Str. Tineretului, Ilfov",
     "latitude": 44.44207,
     "longitude": 25.98401,
+    "type": 0
+  },
+  {
+    "id": "PV19_1599",
+    "name": "Tineretului 13",
+    "description": "",
+    "latitude": 44.442074,
+    "longitude": 25.983997,
     "type": 0
   },
   {
@@ -32744,14 +31704,6 @@
     "type": 0
   },
   {
-    "id": 3205,
-    "name": "Toamnei",
-    "description": "Str. Viitorului, Bucuresti",
-    "latitude": 44.44885,
-    "longitude": 26.116026,
-    "type": 0
-  },
-  {
     "id": 6326,
     "name": "Tobosari",
     "description": "Str. Teius, Bucuresti",
@@ -32789,22 +31741,6 @@
     "description": "Sos. Berceni, Bucuresti",
     "latitude": 44.38276,
     "longitude": 26.131987,
-    "type": 0
-  },
-  {
-    "id": 1989.1,
-    "name": "Tomesti",
-    "description": "",
-    "latitude": 44.38277,
-    "longitude": 26.131979,
-    "type": 0
-  },
-  {
-    "id": 2002.1,
-    "name": "Tomesti",
-    "description": "",
-    "latitude": 44.38259,
-    "longitude": 26.131891,
     "type": 0
   },
   {
@@ -32957,6 +31893,22 @@
     "description": "DJ 101C, Ilfov",
     "latitude": 44.71467,
     "longitude": 26.253428,
+    "type": 0
+  },
+  {
+    "id": 3344.1,
+    "name": "Trandafirilor",
+    "description": "",
+    "latitude": 44.714672,
+    "longitude": 26.25343,
+    "type": 0
+  },
+  {
+    "id": 3387.1,
+    "name": "Trandafirilor",
+    "description": "",
+    "latitude": 44.714634,
+    "longitude": 26.253942,
     "type": 0
   },
   {
@@ -33232,14 +32184,6 @@
     "type": 0
   },
   {
-    "id": 3247,
-    "name": "Turmelor",
-    "description": "Str. Turmelor, Bucuresti",
-    "latitude": 44.453144,
-    "longitude": 26.126022,
-    "type": 0
-  },
-  {
     "id": 3808,
     "name": "Turnu Magurele",
     "description": "Bd. Alex. Obregia, Bucuresti",
@@ -33349,6 +32293,38 @@
     "description": "DN1, Ilfov",
     "latitude": 44.60859,
     "longitude": 26.072327,
+    "type": 0
+  },
+  {
+    "id": 2652.1,
+    "name": "Unirii",
+    "description": "",
+    "latitude": 44.6078,
+    "longitude": 26.072048,
+    "type": 0
+  },
+  {
+    "id": 3305.1,
+    "name": "Unirii",
+    "description": "",
+    "latitude": 44.609867,
+    "longitude": 26.072435,
+    "type": 0
+  },
+  {
+    "id": 12193,
+    "name": "Unitatii",
+    "description": "DNCB",
+    "latitude": 44.33935,
+    "longitude": 26.155886,
+    "type": 0
+  },
+  {
+    "id": 12194,
+    "name": "Unitatii",
+    "description": "DNCB",
+    "latitude": 44.339508,
+    "longitude": 26.156763,
     "type": 0
   },
   {
@@ -33784,7 +32760,7 @@
     "type": 0
   },
   {
-    "id": 468.2,
+    "id": "PV19_468",
     "name": "Valea Cascadelor",
     "description": "",
     "latitude": 44.43392,
@@ -34125,14 +33101,6 @@
     "description": "Sos. Stefan cel Mare, Bucuresti",
     "latitude": 44.452736,
     "longitude": 26.112406,
-    "type": 0
-  },
-  {
-    "id": 7065,
-    "name": "Vasile Lascar",
-    "description": "Sos. Stefan cel Mare, Bucuresti",
-    "latitude": 44.452984,
-    "longitude": 26.11071,
     "type": 0
   },
   {
@@ -34512,19 +33480,19 @@
     "type": 0
   },
   {
-    "id": 8396,
+    "id": 3364.1,
     "name": "Vladiceasca Padure",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.669483,
-    "longitude": 26.093079,
+    "description": "",
+    "latitude": 44.66948,
+    "longitude": 26.09302,
     "type": 0
   },
   {
-    "id": 8573,
+    "id": 3367.1,
     "name": "Vladiceasca Padure",
-    "description": "DJ 101 B, Ilfov",
-    "latitude": 44.669514,
-    "longitude": 26.094131,
+    "description": "",
+    "latitude": 44.669506,
+    "longitude": 26.094126,
     "type": 0
   },
   {
@@ -34557,22 +33525,6 @@
     "description": "Sos. Berceni, Bucuresti",
     "latitude": 44.388676,
     "longitude": 26.126139,
-    "type": 0
-  },
-  {
-    "id": 4759.1,
-    "name": "Voila",
-    "description": "",
-    "latitude": 44.38959,
-    "longitude": 26.125526,
-    "type": 0
-  },
-  {
-    "id": 4760.1,
-    "name": "Voila",
-    "description": "",
-    "latitude": 44.388897,
-    "longitude": 26.125885,
     "type": 0
   },
   {

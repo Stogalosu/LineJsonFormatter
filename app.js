@@ -223,7 +223,7 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
             {
                 message: 'Enter the main line (that corresponds to all input files):',
                 required: true,
-                pattern: RegExp('[MN]*[1-9][0-9]*B*'),
+                pattern: RegExp('[MN]*[1-9][0-9]*[BO]*[1-9]*[0-9]*'),
                 patternError: 'Please enter a valid line!'
             }
         )
@@ -253,7 +253,7 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
             const line = await input({
                 message: `Enter line no ${j + 1}:`,
                 required: true,
-                pattern: RegExp('[MN]*[1-9][0-9]*B*'),
+                pattern: RegExp('[MN]*[1-9][0-9]*[BO]*[1-9]*[0-9]*'),
                 patternError: 'Please enter a valid line!'
             });
             for (let k = start; k <= end; k++) {
@@ -264,7 +264,7 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
         const line = await input({
             message: `Enter the line:`,
             required: true,
-            pattern: RegExp('[MN]*[1-9][0-9]*B*'),
+            pattern: RegExp('[MN]*[1-9][0-9]*[BO]*[1-9]*[0-9]*'),
             patternError: 'Please enter a valid line!'
         });
         for (let j = 0; j < i; j++) {
@@ -324,15 +324,15 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
             let skip = 0;
 
             // Correct mistakes
-            let modified = false;
+            let modified = 0;
             mistakes.forEach((mis) => {
-                if (!modified) {
+                if (modified < 2) {
                     if (mis.oldStop.id === startId) {
                         startId = mis.newStop.id;
-                        modified = true;
+                        modified++;
                     } else if (mis.oldStop.id === endId) {
                         endId = mis.newStop.id;
-                        modified = true;
+                        modified++;
                     }
                 }
             });
@@ -410,7 +410,7 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
     return finalJSON;
 }
 
-export const SubwayJSONFormatter = async (inputFile, stopJSONFile, returnStopJSON = false) => {
+export const SubwayJSONFormatter = async (inputFile, stopJSONFile, modifyDb = true, returnStopJSON = false) => {
 
     await initDatabase();
 
@@ -449,7 +449,7 @@ export const SubwayJSONFormatter = async (inputFile, stopJSONFile, returnStopJSO
             const path_lines_db = feature.properties.path_lines;
             const path_lines_JSON = feature.properties.path_lines.split("/");
             const path_direction = 10;
-            const path_length = geoJSONLength(feature, { units: 'meters' });
+            const path_length = geoJSONLength(feature, { units: 'meters' }).toFixed(3);
             let skip = 0;
             if(endId === 15102 || endId === 14708) skip = 1;
 
@@ -462,10 +462,12 @@ export const SubwayJSONFormatter = async (inputFile, stopJSONFile, returnStopJSO
             feature.properties.path_length = path_length;
             feature.properties.skip = skip;
 
-            const values = [0, path_order, startId, endId, path_lines_db, path_direction, path_length, skip];
-            db.query("INSERT INTO pathways (id, path_order, startId, endId, path_lines, path_direction, path_length, skip) VALUES (?)", [values], function (err, result) {
-                if (err) throw err;
-            });
+            if(modifyDb) {
+                const values = [0, path_order, startId, endId, path_lines_db, path_direction, path_length, skip];
+                db.query("INSERT INTO pathways (id, path_order, startId, endId, path_lines, path_direction, path_length, skip) VALUES (?)", [values], function (err, result) {
+                    if (err) throw err;
+                });
+            }
         }
     }
 

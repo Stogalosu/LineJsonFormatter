@@ -47,11 +47,12 @@ The function `LineJSONFormatter` has 2 parameters:
 
 The function `SubwayJSONFormatter` has 3 parameters:
 
-| **Argument** | **Type** | **Required**               | **Description**                                                      |
-| ------------ | -------- |----------------------------|----------------------------------------------------------------------|
-| inputFile | String | Yes                        | The file that contains the paths to be formatted                     |
-| stopJSONFile | String | Yes                        | The JSON file that contains formatted stops                          |
-| returnStopJSON | Boolean | No, default value is false | Whether the function should return the modified stopJSON file or not |
+| **Argument** | **Type** | **Required**                   | **Description**                                                      |
+| ------------ |----------|--------------------------------|----------------------------------------------------------------------|
+| inputFile | String   | Yes                            | The file that contains the paths to be formatted                     |
+| stopJSONFile | String   | Yes                            | The JSON file that contains formatted stops                          |
+|     modifyDb | Boolean  | No, default value is **true**  | Whether the function should add paths to database or not             |
+| returnStopJSON | Boolean  | No, default value is **false** | Whether the function should return the modified stopJSON file or not |
 
 The module also requires 3 environmental variables. **You must define these in your .env file!**
 | **Variable name** | **Description** |
