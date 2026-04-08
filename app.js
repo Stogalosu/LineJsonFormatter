@@ -484,3 +484,20 @@ export const SubwayJSONFormatter = async (inputFile, stopJSONFile, modifyDb = tr
     else
         return subwayJSON;
 }
+
+export const ReplaceLineIDs = (inputFile, fieldToReplace, linesFile, removeRange = (fieldToReplace) => { return false; }) => {
+
+    const inputJSON = JSON.parse(fs.readFileSync(inputFile, 'utf8'));
+    const linesJSON = JSON.parse(fs.readFileSync(linesFile, 'utf8'));
+
+    for(let entry of inputJSON) {
+        const replacement = linesJSON.find((element) => element.from === entry[fieldToReplace]);
+        entry[fieldToReplace] = replacement.to;
+    }
+    for(let i=-1; i<inputJSON.length-1; i++) {
+        while(removeRange(inputJSON[i+1][fieldToReplace].toString()))
+            inputJSON.splice(i+1, 1);
+    }
+
+    return inputJSON;
+}

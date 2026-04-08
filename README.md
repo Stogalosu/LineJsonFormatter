@@ -20,6 +20,10 @@ It takes a GeoJSON file with paths and stops corresponding to subway lines as in
 
 The paths are processed in the same way as the LineJSONFormatter function does. The only difference is the format of the input.
 
+<ins>**ReplaceLineIDs**</ins>
+
+It takes an ordinary JSON file as input and replaces the values of the indicated field with values from another JSON file.
+
 ## Why?
 I thought that instead of doing this task manually, it's faster to make a script. This way, I also practice JavaScript.
 
@@ -40,19 +44,30 @@ const formattedSubwayJSON = await SubwayJSONFormatter("input/Metrou 2.geojson", 
 
 ## Documentation
 The function `LineJSONFormatter` has 2 parameters:
-| **Argument** | **Type** | **Description** |
+| **Parameter** | **Type** | **Description** |
 | ------------ | -------- | --------------- |
 | inputPath    | String   | The path where input gpx files are situated |
 | stopJSONFile | String   | The JSON file that contains formatted stops |
 
-The function `SubwayJSONFormatter` has 3 parameters:
+The function `SubwayJSONFormatter` has 4 parameters:
 
-| **Argument** | **Type** | **Required**                   | **Description**                                                      |
-| ------------ |----------|--------------------------------|----------------------------------------------------------------------|
-| inputFile | String   | Yes                            | The file that contains the paths to be formatted                     |
-| stopJSONFile | String   | Yes                            | The JSON file that contains formatted stops                          |
-|     modifyDb | Boolean  | No, default value is **true**  | Whether the function should add paths to database or not             |
+| **Parameter**  | **Type** | **Required**                   | **Description**                                                      |
+|----------------|----------|--------------------------------|----------------------------------------------------------------------|
+| inputFile      | String   | Yes                            | The file that contains the paths to be formatted                     |
+| stopJSONFile   | String   | Yes                            | The JSON file that contains formatted stops                          |
+| modifyDb       | Boolean  | No, default value is **true**  | Whether the function should add paths to database or not             |
 | returnStopJSON | Boolean  | No, default value is **false** | Whether the function should return the modified stopJSON file or not |
+
+The function `ReplaceLineIDs` has 4 parameters:
+
+| **Parameter**  | **Type** | **Required**                   | **Description**                                                                          |
+|----------------| -------- |--------------------------------|------------------------------------------------------------------------------------------|
+| inputFile      | String | Yes                            | The JSON file that has the values that are to be replaced                                |
+| fieldToReplace | String | Yes                            | The field within the input JSON that is to be replaced                                   |
+| linesFile      | String | Yes                            | The JSON file that has the replacement lines                                             |
+| removeRange | Boolean | No, default value is **false** | Function that takes a line as input and returns whether the line shoud be removed or not |
+
+
 
 The module also requires 3 environmental variables. **You must define these in your .env file!**
 | **Variable name** | **Description** |
@@ -148,6 +163,12 @@ Example:
   ]
 }
 ```
+
+<ins>**Lines file format**</ins>
+
+The lines file has to be a JSON object containing objects with the following fields:
+- from - The value to be replaced
+- to - The replacement value
 
 ## AI Usage
 I used AI to help me with the closest distance algorithm.
