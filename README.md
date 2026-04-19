@@ -194,10 +194,18 @@ The lines file has to be a JSON object containing objects with the following fie
 I used AI to help me with the closest distance algorithm.
 
 ## Demo videos
-**LineJSONFormatter**
+**LineJSONFormatter (New)**
+
+[Screencast_20260419_163509.webm](https://github.com/user-attachments/assets/4cf70fcb-d824-4016-8801-75d85774d0f8)
+
+**LineJSONFormatter (Old)**
 
 [Screencast_20260322_232538.webm](https://github.com/user-attachments/assets/37a75bbc-a608-472f-8423-5155ba38299b)
 
 **SubwayJSONFormatter**
 
 [Screencast_20260329_213430.webm](https://github.com/user-attachments/assets/cc97e6ae-b287-4d69-a25d-1fc346d8c219)
+
+**ReplaceLineIDs**
+
+[Screencast_20260419_164218.webm](https://github.com/user-attachments/assets/c5831a8d-db15-4c4b-9cdb-a2fbe523be03)
