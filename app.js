@@ -299,6 +299,15 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile, linesJSONFile) 
                     linesStrings[k] = linesStrings[k] + "," + line;
                 }
             }
+
+            linesArrays = linesStrings.map(string => {
+                let array = string.split(',');
+                array = array.map(value => {
+                    if(Number.isNaN(Number(value))) return value;
+                    else return Number(value);
+                });
+                return array;
+            });
         }
     } else {
         const line = await input({
@@ -370,9 +379,11 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile, linesJSONFile) 
                     }
                 }
             }
-
-            linesArrays.forEach(array => array.sort(compareLines));
         }
+        linesArrays.forEach(array => array.sort(compareLines));
+
+        linesStrings = linesArrays.map(array => array.map(line => line.toString()));
+        linesStrings = linesStrings.map(array => array.join());
     }
 
     let lastStopId = 0;
@@ -393,13 +404,11 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile, linesJSONFile) 
             delete json1.features[0].properties.link;
             delete json1.features[0].properties.type;
 
-            const coords = json1.features[0].geometry.coordinates;
-
             const id = await getLastId() + 1;
             const path_order = await getNextOrderNumber(linesStrings[i]);
-            let startId = findClosestStop(coords[0][1], coords[0][0], stopJSONFile).obj.id;
-            let endId = findClosestStop(coords[coords.length - 1][1], coords[coords.length - 1][0], stopJSONFile).obj.id;
-            const path_lines_JSON = linesStrings[i].split(",");
+            let startId = tempPathJSON[i].startId;
+            let endId = tempPathJSON[i].endId;
+            const path_lines_JSON = linesArrays[i];
             const path_lines_db = linesStrings[i];
             const path_direction = getPathDirection(i, directions);
             const path_length = gpx1.tracks[0].distance.total.toFixed(3);

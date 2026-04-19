@@ -8,7 +8,7 @@ It's a weird tool that I made to help me with a specific task while creating my 
 
 It uses a database with all the stops in Bucharest to find the closest stops to the start and end of each path and saves the ids in the json's properties.
 
-The user is asked which lines use these paths and can choose to enter one or more.
+The user is asked whether they would like to use automatic detection of the lines that use the paths. They can also choose to input them manually.
 
 The user is also prompted to choose which paths are in which direction.
 
@@ -40,6 +40,13 @@ import { LineJSONFormatter, SubwayJSONFormatter } from "./app.js";
 
 const formattedJSON = await LineJSONFormatter("input/", "stops.json");
 const formattedSubwayJSON = await SubwayJSONFormatter("input/Metrou 2.geojson", "stb-stops.json", true);
+
+function removeRange(line) {
+    if(line === undefined) return false;
+    else return RegExp("4[0-9][0-9]B*").test(line)
+}
+
+const replacedJSON = ReplaceLineIDs('stop_times_4.json', 'line', 'routes_2.json', (line) => { return removeRange(line) });
 ```
 
 ## Documentation
@@ -48,6 +55,7 @@ The function `LineJSONFormatter` has 2 parameters:
 | ------------ | -------- | --------------- |
 | inputPath    | String   | The path where input gpx files are situated |
 | stopJSONFile | String   | The JSON file that contains formatted stops |
+| linesJSONFile | String  | The JSON file that contains information about other lines' paths |
 
 The function `SubwayJSONFormatter` has 4 parameters:
 
@@ -98,6 +106,18 @@ Example:
     "longitude": 25.878494
   }
 }
+```
+
+<ins>**LinesJSON format**</ins>
+
+The linesJSON file must contain an array of objects, each with the following properties: line, path_direction, startId. They represent each stop that every line stops at.
+
+Example:
+```
+[
+    {"line":5,"path_direction":1,"startId":12067,"path_order":0},
+    {"line":5,"path_direction":1,"startId":3617,"path_order":1}
+]
 ```
 
 <ins>**Subway GeoJSON format**</ins>
