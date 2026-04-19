@@ -47,7 +47,32 @@ async function getLastId() {
     return idQuery[0][0].id;
 }
 
-export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
+function compareLines(a, b) {
+    let values = [a, b];
+    if(Number.isInteger(a)) {
+        if(Number.isInteger(b)) {
+            return a-b;
+        } else {
+            return -1;
+        }
+    } else {
+        if(Number.isInteger(b)) {
+            return 1;
+        } else {
+            for(let q=0; q<=1; q++) {
+                if(values[q].includes('N'))
+                    values[q] = Number(values[q].split('N')[1]);
+                else if(values[q].includes('B'))
+                    values[q] = Number(values[q].split('B')[0]);
+                else if(values[q].includes('O'))
+                    values[q] = Number(values[q].split('O')[0]);
+            }
+            return compareLines(values[0], values[1]);
+        }
+    }
+}
+
+export const LineJSONFormatter = async (inputPath, stopJSONFile, linesJSONFile) => {
 
     const isFile = fileName => {
         return fs.lstatSync(fileName).isFile();
@@ -87,8 +112,10 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
 //Store paths and stops for console visualization
     let paths = [];
     let stops = [];
-    let i = 0;
-    for (const file of files) {
+    let tempPathJSON = [];
+    let i;
+    for (i=0; i<files.length; i++) {
+        const file = files[i];
         if(file.endsWith(".gpx")) {
             console.log("Processing file " + file);
             var gpx = new gpxParser();
@@ -117,7 +144,10 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
             if (!tempStops.includes(startStopObject.name)) stops.push(startStopObject);
             if (!tempStops.includes(endStopObject.name)) stops.push(endStopObject);
 
-            i++;
+            tempPathJSON[i] = {
+                startId: startStopObject.id,
+                endId: endStopObject.id,
+            }
         }
     }
 
@@ -137,8 +167,6 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
             }
         ]
     });
-
-    let mistakes = [];
 
 // Correct mistakes
     while (mistake) {
@@ -166,14 +194,11 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
             }))
         });
 
-        // Store mistake to correct them later
-        mistakes.push({
-            oldStop: stopToModify,
-            newStop: newStop
-        });
-        console.log(mistakes);
+        // Correct mistake in memory
+        tempPathJSON.find(element => element.startId === stopToModify.id).startId = newStop;
+        tempPathJSON.find(element => element.endId === stopToModify.id).endId = newStop;
 
-        // Correct mistake only in console output
+        // Correct mistake in console output
         paths = paths.map(path => path.replace(stopToModify.name, newStop.name))
         for (let stop of stops)
             stop.name = stop.name.replace(stopToModify.name, newStop.name);
@@ -196,8 +221,9 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
     }
 
 //Read lines and directions from keyboard
-    let lines = [];
-    let mainLine = "";
+    let linesStrings = [];
+    let linesArrays = [];
+    let automaticDetection = 0;
     const multipleLines = await select({
         message: 'Do these paths correspond to multiple lines?',
         choices: [
@@ -212,52 +238,66 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
         ]
     });
     if (multipleLines) {
-        const noLines = Number(await input(
-            {
-                message: 'Enter the number of lines:',
-                required: true,
-                pattern: RegExp('[2-9][0-9]*'),
-                patternError: 'Please enter any number other than 1!'
-            }));
-        const localMainLine = await input(
-            {
-                message: 'Enter the main line (that corresponds to all input files):',
-                required: true,
-                pattern: RegExp('[MN]*[1-9][0-9]*[BO]*[1-9]*[0-9]*'),
-                patternError: 'Please enter a valid line!'
+        automaticDetection = await select({
+            message: 'Do you want automatic line detection?',
+            choices: [
+                {
+                    name: 'Yes',
+                    value: 1
+                },
+                {
+                    name: 'No',
+                    value: 0
+                }
+            ]
+        });
+        if(!automaticDetection) {
+            const noLines = Number(await input(
+                {
+                    message: 'Enter the number of lines:',
+                    required: true,
+                    pattern: RegExp('[2-9][0-9]*'),
+                    patternError: 'Please enter any number other than 1!'
+                }));
+            const localMainLine = await input(
+                {
+                    message: 'Enter the main line (that corresponds to all input files):',
+                    required: true,
+                    pattern: RegExp('[MN]*[1-9][0-9]*[BO]*[1-9]*[0-9]*'),
+                    patternError: 'Please enter a valid line!'
+                }
+            )
+            for (let j = 0; j < i; j++) {
+                linesStrings[j] = localMainLine;
             }
-        )
-        mainLine = localMainLine;
-        for (let j = 0; j < i; j++) {
-            lines[j] = localMainLine;
-        }
-        for (let j = 0; j < noLines - 1; j++) {
-            const start = await select({
-                message: `Select the first path of range ${j + 1}`,
-                choices: paths.map((name, index) => ({
-                    name: name,
-                    value: index
-                })),
-                pageSize: 10,
-                required: true
-            });
-            const end = await select({
-                message: `Select the last path of range ${j + 1}`,
-                choices: paths.map((name, i) => ({
-                    name: name,
-                    value: i
-                })),
-                pageSize: 10,
-                required: true
-            });
-            const line = await input({
-                message: `Enter line no ${j + 1}:`,
-                required: true,
-                pattern: RegExp('[MN]*[1-9][0-9]*[BO]*[1-9]*[0-9]*'),
-                patternError: 'Please enter a valid line!'
-            });
-            for (let k = start; k <= end; k++) {
-                lines[k] = lines[k] + "," + line;
+            for (let j = 0; j < noLines - 1; j++) {
+                const start = await select({
+                    message: `Select the first path of range ${j + 1}`,
+                    choices: paths.map((name, index) => ({
+                        name: name,
+                        value: index
+                    })),
+                    pageSize: 10,
+                    required: true
+                });
+                const end = await select({
+                    message: `Select the last path of range ${j + 1}`,
+                    choices: paths.map((name, i) => ({
+                        name: name,
+                        value: i
+                    })),
+                    pageSize: 10,
+                    required: true
+                });
+                const line = await input({
+                    message: `Enter line no ${j + 1}:`,
+                    required: true,
+                    pattern: RegExp('[MN]*[1-9][0-9]*[BO]*[1-9]*[0-9]*'),
+                    patternError: 'Please enter a valid line!'
+                });
+                for (let k = start; k <= end; k++) {
+                    linesStrings[k] = linesStrings[k] + "," + line;
+                }
             }
         }
     } else {
@@ -268,7 +308,7 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
             patternError: 'Please enter a valid line!'
         });
         for (let j = 0; j < i; j++) {
-            lines[j] = line;
+            linesStrings[j] = line;
         }
     }
 
@@ -292,11 +332,53 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
         required: true
     });
 
+    if(automaticDetection) {
+        const linesJSON = JSON.parse(fs.readFileSync(linesJSONFile, 'utf8'));
+        const localMainLine = Number(await input({
+                message: 'Enter the main line (that corresponds to all input files):',
+                required: true,
+                pattern: RegExp('[MN]*[1-9][0-9]*[BO]*[1-9]*[0-9]*'),
+                patternError: 'Please enter a valid line!'
+        }));
+
+        for(let j=0; j < i; j++) {
+            const startStopIndex = linesJSON.findIndex(
+                element =>
+                    element.line === localMainLine &&
+                    element.startId === tempPathJSON[j].startId
+            );
+            const endStopIndex = linesJSON.findIndex(
+                element =>
+                    element.line === localMainLine &&
+                    element.startId === tempPathJSON[j].endId
+            );
+
+            linesArrays[j] = [];
+            if(endStopIndex - startStopIndex === 1) {
+                for (let k = 0; k < linesJSON.length - 1; k++) {
+                    if (tempPathJSON[j].startId === linesJSON[k].startId && tempPathJSON[j].endId === linesJSON[k + 1].startId)
+                        linesArrays[j].push(linesJSON[k].line);
+                }
+            } else if(linesJSON[startStopIndex].path_direction !== linesJSON[endStopIndex].path_direction) {
+                const terminusPaths = linesJSON.filter(entry => entry.startId === tempPathJSON[j].startId || entry.startId === tempPathJSON[j].endId);
+                let processedLines = [];
+                for(const entry of terminusPaths) {
+                    if(!processedLines.includes(entry.line)) {
+                        const temp = terminusPaths.filter(element => element.line === entry.line);
+                        if(temp.length === 2) linesArrays[j].push(entry.line);
+                        processedLines.push(entry.line);
+                    }
+                }
+            }
+
+            linesArrays.forEach(array => array.sort(compareLines));
+        }
+    }
 
     let lastStopId = 0;
     let finalJSON = {};
-    i = 0;
-    for (const file of files) {
+    for(let i=0; i<files.length; i++) {
+        const file = files[i];
         if(file.endsWith(".gpx")) {
             var gpx1 = new gpxParser();
             gpx1.parse(fs.readFileSync(file, 'utf8'));
@@ -314,28 +396,14 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
             const coords = json1.features[0].geometry.coordinates;
 
             const id = await getLastId() + 1;
-            const path_order = await getNextOrderNumber(lines[i]);
+            const path_order = await getNextOrderNumber(linesStrings[i]);
             let startId = findClosestStop(coords[0][1], coords[0][0], stopJSONFile).obj.id;
             let endId = findClosestStop(coords[coords.length - 1][1], coords[coords.length - 1][0], stopJSONFile).obj.id;
-            const path_lines_JSON = lines[i].split(",");
-            const path_lines_db = lines[i];
+            const path_lines_JSON = linesStrings[i].split(",");
+            const path_lines_db = linesStrings[i];
             const path_direction = getPathDirection(i, directions);
             const path_length = gpx1.tracks[0].distance.total.toFixed(3);
             let skip = 0;
-
-            // Correct mistakes
-            let modified = 0;
-            mistakes.forEach((mis) => {
-                if (modified < 2) {
-                    if (mis.oldStop.id === startId) {
-                        startId = mis.newStop.id;
-                        modified++;
-                    } else if (mis.oldStop.id === endId) {
-                        endId = mis.newStop.id;
-                        modified++;
-                    }
-                }
-            });
 
             // Make sure that consecutive paths that don't have corresponding stops are correct
             if (lastStopId !== 0 && lastStopId !== startId) {
@@ -395,7 +463,6 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile) => {
             }
 
             lastStopId = endId;
-            i++;
         }
     }
 

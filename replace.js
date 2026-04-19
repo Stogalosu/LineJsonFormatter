@@ -3,7 +3,7 @@ import fs from "node:fs";
 
 function removeRange(line) {
     if(line === undefined) return false;
-    else return RegExp("4[0-9]*[0-9]*B*").test(line)
+    else return RegExp("4[0-9][0-9]B*").test(line)
 }
 
 const replacedJSON = ReplaceLineIDs('stop_times_4.json', 'line', 'routes_2.json', (line) => { return removeRange(line) });
