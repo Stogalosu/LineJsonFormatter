@@ -1,7 +1,7 @@
 import {SubwayJSONFormatter} from "./app.js";
 import fs from "node:fs";
 
-const formattedSubwayJSON = await SubwayJSONFormatter("input/Metrou 2.geojson", "stb-stops.json", false, true);
+const formattedSubwayJSON = await SubwayJSONFormatter("input/Metrou 2.geojson", "stb-stops.json", true, true);
 const outputFile1 = "output/subway.geojson";
 const outputFile2 = "output/stb-stops-modified.json";
 

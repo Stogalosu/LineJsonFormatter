@@ -195,13 +195,18 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile, linesJSONFile) 
         });
 
         // Correct mistake in memory
-        tempPathJSON.find(element => element.startId === stopToModify.id).startId = newStop;
-        tempPathJSON.find(element => element.endId === stopToModify.id).endId = newStop;
+        let modifiedStop = tempPathJSON.find(element => element.startId === stopToModify.id);
+        if(modifiedStop) modifiedStop.startId = newStop.id;
+
+        modifiedStop = tempPathJSON.find(element => element.endId === stopToModify.id);
+        if(modifiedStop) modifiedStop.endId = newStop.id;
 
         // Correct mistake in console output
         paths = paths.map(path => path.replace(stopToModify.name, newStop.name))
-        for (let stop of stops)
+        for (let stop of stops) {
             stop.name = stop.name.replace(stopToModify.name, newStop.name);
+            if(stop.id === stopToModify.id) stop.id = newStop.id;
+        }
         console.log(paths);
 
         // Ask if there are still any mistakes
@@ -223,6 +228,7 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile, linesJSONFile) 
 //Read lines and directions from keyboard
     let linesStrings = [];
     let linesArrays = [];
+    let localMainLine;
     let automaticDetection = 0;
     const multipleLines = await select({
         message: 'Do these paths correspond to multiple lines?',
@@ -259,7 +265,7 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile, linesJSONFile) 
                     pattern: RegExp('[2-9][0-9]*'),
                     patternError: 'Please enter any number other than 1!'
                 }));
-            const localMainLine = await input(
+            localMainLine = await input(
                 {
                     message: 'Enter the main line (that corresponds to all input files):',
                     required: true,
@@ -343,7 +349,7 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile, linesJSONFile) 
 
     if(automaticDetection) {
         const linesJSON = JSON.parse(fs.readFileSync(linesJSONFile, 'utf8'));
-        const localMainLine = Number(await input({
+        localMainLine = Number(await input({
                 message: 'Enter the main line (that corresponds to all input files):',
                 required: true,
                 pattern: RegExp('[MN]*[1-9][0-9]*[BO]*[1-9]*[0-9]*'),
@@ -362,6 +368,13 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile, linesJSONFile) 
                     element.startId === tempPathJSON[j].endId
             );
 
+            if(startStopIndex === -1) {
+                console.log(`Couldn't match stop with id ${tempPathJSON[j].startId} to any of the line's stops... You should run the program again and modify the stop at the beginning. The endId is ${tempPathJSON[j].endId}`);
+            }
+            if(endStopIndex === -1) {
+                console.log(`Couldn't match stop with id ${tempPathJSON[j].endId} to any of the line's stops... You should run the program again and modify the stop at the beginning. The startId is ${tempPathJSON[j].startId}`);
+            }
+
             linesArrays[j] = [];
             if(endStopIndex - startStopIndex === 1) {
                 for (let k = 0; k < linesJSON.length - 1; k++) {
@@ -374,7 +387,12 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile, linesJSONFile) 
                 for(const entry of terminusPaths) {
                     if(!processedLines.includes(entry.line)) {
                         const temp = terminusPaths.filter(element => element.line === entry.line);
-                        if(temp.length === 2) linesArrays[j].push(entry.line);
+                        let check = [0, 0];
+                        temp.forEach(element => {
+                            if(element.startId === tempPathJSON[j].startId) check[0]=1;
+                            if(element.startId === tempPathJSON[j].endId) check[1]=1;
+                        });
+                        if(temp.length >= 2 && check[0] === 1 && check[1] === 1) linesArrays[j].push(entry.line);
                         processedLines.push(entry.line);
                     }
                 }
