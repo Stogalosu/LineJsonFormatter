@@ -1,8 +1,10 @@
 import {LineJSONFormatter} from "./app.js";
 import fs from 'node:fs';
 
-const formattedJSON = await LineJSONFormatter("input/", "stb-stops.json", "routes_3.json");
+const result = await LineJSONFormatter("input/", "stb-stops.json", "routes_3.json");
 
 console.log("Writing file that contains all paths...");
 const outputFile = "output/features.geojson";
-fs.writeFileSync(outputFile, JSON.stringify(formattedJSON));
+const stopFilterFile = "output/stopFilter.txt";
+fs.writeFileSync(outputFile, JSON.stringify(result[0]));
+fs.writeFileSync(stopFilterFile, JSON.stringify(result[1]));

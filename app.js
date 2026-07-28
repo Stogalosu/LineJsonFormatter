@@ -113,9 +113,7 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile, linesJSONFile) 
     let paths = [];
     let stops = [];
     let tempPathJSON = [];
-    let i;
-    for (i=0; i<files.length; i++) {
-        const file = files[i];
+    for (const file of files) {
         if(file.endsWith(".gpx")) {
             console.log("Processing file " + file);
             var gpx = new gpxParser();
@@ -138,16 +136,18 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile, linesJSONFile) 
                 latitude: endStop.latitude,
                 longitude: endStop.longitude
             };
-            paths[i] = `${i}: ${startStopObject.name} -> ${endStopObject.name}`;
+            paths.push(`${paths.length}: ${startStopObject.name} -> ${endStopObject.name}`);
 
             const tempStops = stops.map((stop) => (stop.name));
             if (!tempStops.includes(startStopObject.name)) stops.push(startStopObject);
             if (!tempStops.includes(endStopObject.name)) stops.push(endStopObject);
 
-            tempPathJSON[i] = {
-                startId: startStopObject.id,
-                endId: endStopObject.id,
-            }
+            tempPathJSON.push(
+                {
+                    startId: startStopObject.id,
+                    endId: endStopObject.id,
+                }
+            );
         }
     }
 
@@ -223,6 +223,19 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile, linesJSONFile) 
                 }
             ]
         });
+    }
+
+    let stopFilter = [];
+    stopFilter[0] = "any";
+
+    for(const stop of stops) {
+        stopFilter.push(
+            [
+                "==",
+                stop.id,
+                ["get", "id"]
+            ]
+        )
     }
 
 //Read lines and directions from keyboard
@@ -356,7 +369,7 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile, linesJSONFile) 
                 patternError: 'Please enter a valid line!'
         }));
 
-        for(let j=0; j < i; j++) {
+        for(let j=0; j < tempPathJSON.length; j++) {
             const startStopIndex = linesJSON.findIndex(
                 element =>
                     element.line === localMainLine &&
@@ -406,8 +419,8 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile, linesJSONFile) 
 
     let lastStopId = 0;
     let finalJSON = {};
-    for(let i=0; i<files.length; i++) {
-        const file = files[i];
+    let i = 0;
+    for(const file of files) {
         if(file.endsWith(".gpx")) {
             var gpx1 = new gpxParser();
             gpx1.parse(fs.readFileSync(file, 'utf8'));
@@ -490,6 +503,7 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile, linesJSONFile) 
             }
 
             lastStopId = endId;
+            i++;
         }
     }
 
@@ -501,7 +515,7 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile, linesJSONFile) 
         console.log('MySQL connection closed.');
     });
 
-    return finalJSON;
+    return [finalJSON, stopFilter];
 }
 
 export const SubwayJSONFormatter = async (inputFile, stopJSONFile, modifyDb = true, returnStopJSON = false) => {
