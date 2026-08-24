@@ -94,7 +94,7 @@ The module also requires 3 environmental variables. **You must define these in y
 | LJF_DB_PASSWORD | The database password |
 | LJF_DB_HOST | The ip address where the database is hosted (if hosted locally, should be 127.0.0.1) |
 
-** for Horizons**
+**for Horizons**
 
 There are also 3 more variables required only for GenerateMapboxStopFilters:
 | **Variable name** | **Description** |
@@ -229,4 +229,5 @@ I used AI to help me with the closest distance algorithm and debugging
 [Screencast_20260419_164218.webm](https://github.com/user-attachments/assets/c5831a8d-db15-4c4b-9cdb-a2fbe523be03)
 
 **GenerateMapboxStopFilters (for Horizons)**
+
 https://github.com/user-attachments/assets/d92f66c2-072b-451a-828c-8b0a11ffacef
