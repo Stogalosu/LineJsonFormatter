@@ -24,6 +24,11 @@ The paths are processed in the same way as the LineJSONFormatter function does. 
 
 It takes an ordinary JSON file as input and replaces the values of the indicated field with values from another JSON file.
 
+<ins>**GenerateMapboxStopFilters**</ins>
+
+It only uses the SQL database and generates formatted filters for Mapbox layers so that each layer contains the stop points of a line's direction. It uploads all layers to Mapbox.
+
+
 ## Why?
 I thought that instead of doing this task manually, it's faster to make a script. This way, I also practice JavaScript.
 
@@ -84,6 +89,12 @@ The module also requires 3 environmental variables. **You must define these in y
 | LJF_DB_PASSWORD | The database password |
 | LJF_DB_HOST | The ip address where the database is hosted (if hosted locally, should be 127.0.0.1) |
 
+There are also 3 more variables required only for GenerateMapboxStopFilters:
+| **Variable name** | **Description** |
+| ----------------- | --------------- |
+| MAPBOX_TOKEN | The private Mapbox token used for uploads (must have write permissions for your style) |
+| MAPBOX_USERNAME | Your Mapbox username |
+| MAPBOX_STYLE_ID | Your Mapbox style ID |
 
 
 <ins>**Stop JSON format**</ins>
@@ -191,7 +202,7 @@ The lines file has to be a JSON object containing objects with the following fie
 - to - The replacement value
 
 ## AI Usage
-I used AI to help me with the closest distance algorithm.
+I used AI to help me with the closest distance algorithm and debugging
 
 ## Demo videos
 **LineJSONFormatter (New)**
@@ -209,3 +220,6 @@ I used AI to help me with the closest distance algorithm.
 **ReplaceLineIDs**
 
 [Screencast_20260419_164218.webm](https://github.com/user-attachments/assets/c5831a8d-db15-4c4b-9cdb-a2fbe523be03)
+
+**GenerateMapboxStopFilters (for Horizons)**
+https://github.com/user-attachments/assets/d92f66c2-072b-451a-828c-8b0a11ffacef
