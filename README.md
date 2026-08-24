@@ -1,5 +1,8 @@
 # Line JSON Formatter
 
+## Disclosure for Horizons
+All changes since last submission are marked with "for Horizons".
+
 ## What is this?
 It's a weird tool that I made to help me with a specific task while creating my app, STB Logger. I'll use it to convert and format multiple GPX files that I created. They represent every path between two public transport stops in Bucharest. This tool helps me convert them into GeoJSON, add properties (lines, id, length) and save them all in a MySQL database.
 
@@ -23,6 +26,8 @@ The paths are processed in the same way as the LineJSONFormatter function does. 
 <ins>**ReplaceLineIDs**</ins>
 
 It takes an ordinary JSON file as input and replaces the values of the indicated field with values from another JSON file.
+
+**for Horizons**
 
 <ins>**GenerateMapboxStopFilters**</ins>
 
@@ -88,6 +93,8 @@ The module also requires 3 environmental variables. **You must define these in y
 | LJF_DB_USER | The MySQL database user |
 | LJF_DB_PASSWORD | The database password |
 | LJF_DB_HOST | The ip address where the database is hosted (if hosted locally, should be 127.0.0.1) |
+
+** for Horizons**
 
 There are also 3 more variables required only for GenerateMapboxStopFilters:
 | **Variable name** | **Description** |
