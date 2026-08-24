@@ -1,10 +1,9 @@
 import fs from 'node:fs';
 import path from "node:path";
 import gpxParser from 'gpxparser';
-import { loadEnvFile } from 'node:process';
+import {loadEnvFile} from 'node:process';
 import mysql from 'mysql2';
-import { input } from '@inquirer/prompts';
-import { select } from '@inquirer/prompts';
+import {input, select} from '@inquirer/prompts';
 import geoJSONLength from '@turf/length';
 
 let db;
@@ -24,8 +23,8 @@ async function initDatabase() {
 async function getNextOrderNumber(line) {
     const queryResult = await db.promise().query("SELECT MAX(path_order) as highest_path_order FROM pathways WHERE path_lines = ?", [line]);
 
-    if (queryResult[0][0].highest_path_order === undefined) return 1;
-    return queryResult[0][0].highest_path_order + 1;
+    if (queryresult[0].highest_path_order === undefined) return 1;
+    return queryresult[0].highest_path_order + 1;
 }
 
 function findClosestStop(targetLat, targetLon, stopJSONFile, subway = 0) {
@@ -223,19 +222,6 @@ export const LineJSONFormatter = async (inputPath, stopJSONFile, linesJSONFile) 
                 }
             ]
         });
-    }
-
-    let stopFilter = [];
-    stopFilter[0] = "any";
-
-    for(const stop of stops) {
-        stopFilter.push(
-            [
-                "==",
-                stop.id,
-                ["get", "id"]
-            ]
-        )
     }
 
 //Read lines and directions from keyboard
@@ -608,4 +594,265 @@ export const ReplaceLineIDs = (inputFile, fieldToReplace, linesFile, removeRange
     }
 
     return inputJSON;
+}
+
+export const GenerateMapboxStopFilters = async (lines) => {
+    await initDatabase();
+
+    const ACCESS_TOKEN = process.env.MAPBOX_TOKEN;
+    const USERNAME = process.env.MAPBOX_USERNAME;
+    const STYLE_ID = process.env.MAPBOX_STYLE_ID;
+
+    const API_URL = `https://api.mapbox.com/styles/v1/${USERNAME}/${STYLE_ID}/draft?access_token=${ACCESS_TOKEN}`;
+    let styleJson, temp;
+
+    try {
+        console.log("1. Fetching style configuration from Mapbox...");
+
+        const response = await fetch(API_URL, {
+            headers: {
+                'Origin': 'https://mapbox.com',
+                'User-Agent': 'Mozilla/5.0 (NodeScript)'
+            }
+        });
+
+        if (!response.ok)
+            throw new Error(`Fetch failed! HTTP Status: ${response.status} (${response.statusText})`);
+
+        // Unpack the stream into a workable JavaScript object
+        styleJson = await response.json();
+        temp = styleJson;
+    } catch (error) {
+        console.error(error);
+    }
+
+    for(let line of lines) {
+        line = line.toString();
+        const queryStr1 = `${line},%`;
+        const queryStr2 = `%,${line}`;
+        const queryStr3 = `%,${line},%`;
+
+        let stopFilter0 = [];
+        stopFilter0[0] = "any";
+
+        try {
+            // const result = await db.promise().query("SELECT startId, endId, path_direction FROM pathways WHERE path_direction = 0 AND (path_lines LIKE ? OR path_lines LIKE ? OR path_lines LIKE ? OR path_lines LIKE ?)", [queryStr1, queryStr2, queryStr3, line]);
+            let result = await db.promise().query("SELECT startId, endId, skip FROM pathways WHERE path_direction = 0 AND (path_lines LIKE ? OR path_lines LIKE ?)", [queryStr1, line]);
+            result = result[0];
+            let allLineStops = await db.promise().query("SELECT startId, endId, skip FROM pathways WHERE path_lines LIKE ? OR path_lines LIKE ? OR path_lines LIKE ? OR path_lines LIKE ?", [queryStr1, queryStr2, queryStr3, line]);
+            allLineStops = allLineStops[0];
+            // console.log(result);
+            // console.log(allLineStops);
+
+            for (const entry of result) {
+                if(entry.skip === 0)
+                    stopFilter0.push(
+                        [
+                            "==",
+                            entry.startId,
+                            ["get", "id"]
+                        ]
+                    )
+                else {
+                    let currentStop = entry;
+                    do {
+                        if(line === '69') console.log(currentStop.startId);
+                        if(!stopFilter0.find(filter => filter[1] === currentStop.startId))
+                            stopFilter0.push(
+                                [
+                                    "==",
+                                    currentStop.startId,
+                                    ["get", "id"]
+                                ]
+                            )
+                        if(!stopFilter0.find(filter => filter[1] === currentStop.endId))
+                            stopFilter0.push(
+                                [
+                                    "==",
+                                    currentStop.endId,
+                                    ["get", "id"]
+                                ]
+                            )
+                        currentStop = allLineStops.find(stop => stop.endId === currentStop.startId);
+                    } while(!result.find(stop => stop.startId === currentStop.startId/* && stop.path_direction === entry.path_direction*/));
+                    if(line === '69') console.log("asdadadasda");
+                }
+                if(result.indexOf(entry) === result.length-1)
+                    stopFilter0.push(
+                        [
+                            "==",
+                            entry.endId,
+                            ["get", "id"]
+                        ]
+                    )
+            }
+        } catch (error) {
+            console.error(error);
+        }
+
+        let stopFilter1 = [];
+        stopFilter1[0] = "any";
+
+        try {
+            let result = await db.promise().query("SELECT startId, endId, skip FROM pathways WHERE path_direction = 1 AND (path_lines LIKE ? OR path_lines LIKE ?)", [queryStr1, line]);
+            result = result[0];
+            let allLineStops = await db.promise().query("SELECT startId, endId, skip FROM pathways WHERE path_lines LIKE ? OR path_lines LIKE ? OR path_lines LIKE ? OR path_lines LIKE ?", [queryStr1, queryStr2, queryStr3, line]);
+            allLineStops = allLineStops[0];
+
+            for (const entry of result) {
+                if(entry.skip === 0)
+                    stopFilter1.push(
+                        [
+                            "==",
+                            entry.startId,
+                            ["get", "id"]
+                        ]
+                    )
+                else {
+                    let currentStop = entry;
+                    do {
+                        if(line === '69') {
+                            console.log("s");
+                            console.log(currentStop);
+                        }
+                        const previousStop = allLineStops.find(
+
+                            stop => stop.endId === currentStop.startId
+
+                        );
+
+                        if (!previousStop) {
+
+                            console.log("Couldn't find previous stop for:", currentStop);
+
+                            break;
+
+                        }
+
+                        currentStop = previousStop;
+                        if(!stopFilter1.find(filter => filter[1] === currentStop.startId))
+                            stopFilter1.push(
+                                [
+                                    "==",
+                                    currentStop.startId,
+                                    ["get", "id"]
+                                ]
+                            )
+                        if(!stopFilter1.find(filter => filter[1] === currentStop.endId))
+                            stopFilter1.push(
+                                [
+                                    "==",
+                                    currentStop.endId,
+                                    ["get", "id"]
+                                ]
+                            )
+                        if(line === '66') console.log("AFTER PUSH:", stopFilter0);
+                    } while(!result.find(stop => stop.startId === currentStop.startId));
+                }
+            }
+        } catch (error) {
+            console.error(error);
+        }
+
+        try {
+            console.log(`2. Modifying layer array contents for line ${line}...`);
+            // Modify your layers safely inside the array loop
+            // console.log(stopFilter0);
+
+            styleJson.layers.push(
+                {
+                    id: `${line}-stops-0`,
+                    type: 'circle',
+                    layout: {visibility: 'visible'},
+                    filter: stopFilter0,
+                    source: 'composite',
+                    'source-layer': 'STB'
+                }
+            );
+            styleJson.layers.push(
+                {
+                    id: `${line}-stops-1`,
+                    type: 'circle',
+                    layout: {visibility: 'visible'},
+                    filter: stopFilter1,
+                    source: 'composite',
+                    'source-layer': 'STB'
+                }
+            );
+            // styleJson.layers = styleJson.layers.map(layer => {
+            //     console.log(layer);
+            //
+            //     // {
+            //     //     layout: { visibility: 'none' },
+            //     //     metadata: { 'mapbox:group': '7c7590c2b7871543daa30758d144c13c' },
+            //     //     filter: [
+            //     //         'any',
+            //     //         [ 'in', '[44]', [Array] ],
+            //     //         [ 'in', '[44,', [Array] ],
+            //     //         [ 'in', ',44]', [Array] ],
+            //     //         [ 'in', ',44,', [Array] ]
+            //     //     ],
+            //     //         type: 'line',
+            //     //     source: 'composite',
+            //     //     id: '44',
+            //     //     paint: { 'line-color': 'rgb(218, 11, 53)', 'line-width': 2.5 },
+            //     //     'source-layer': 'STB'
+            //     // }
+            //
+            //
+            //     // OPTION A: Permanently hide a specific layer by ID
+            //     if (layer.id === '1') {
+            //         layer.layout = layer.layout || {};
+            //         layer.layout.visibility = 'visible';
+            //     }
+            //
+            //     return layer;
+            // });
+
+            // Clean up read-only tracking fields generated by Mapbox servers before sending back
+            delete styleJson.created;
+            delete styleJson.modified;
+            delete styleJson.owner;
+            delete styleJson.id;
+
+        } catch (error) {
+            console.error("Script Execution Error:", error.message);
+        }
+    }
+
+    try {
+        console.log("3. Uploading permanent layout updates back to Mapbox...");
+
+        const updateResponse = await fetch(API_URL, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                'Origin': 'https://mapbox.com',
+                'User-Agent': 'Mozilla/5.0 (NodeScript)'
+            },
+            body: JSON.stringify(styleJson)
+        });
+
+        if (updateResponse.ok) {
+            console.log("SUCCESS! Your Mapbox Studio layers have been permanently updated.");
+        } else {
+            const errorText = await updateResponse.text();
+            console.error("Mapbox API rejected the updates:", errorText);
+        }
+    } catch(error) {
+        console.error(error);
+    }
+
+    // console.log(styleJson);
+
+    db.end((error) => {
+        if (error) {
+            console.error('Error closing MySQL connection:', error);
+            return;
+        }
+        console.log('MySQL connection closed.');
+    });
+
+    // return {'0':stopFilter0, '1':stopFilter1};
+    return temp;
 }
