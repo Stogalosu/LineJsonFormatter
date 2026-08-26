@@ -42,7 +42,7 @@ I thought that instead of doing this task manually, it's faster to make a script
 ```
 npm intall --save line-json-formatter
 ```
-Link to npm module:
+Link to npm module: https://www.npmjs.com/package/line-json-formatter
 
 **Use in a node.js script**
 ```

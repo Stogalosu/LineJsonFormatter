@@ -1,6 +1,6 @@
 {
   "name": "line-json-formatter",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A weirdly specific tool designed to help me build my app.",
   "keywords": [
     "gpx",
@@ -23,7 +23,8 @@
   "scripts": {
     "lines": "node ./lines.js",
     "subway": "node ./subway.js",
-    "replace": "node ./replace.js"
+    "replace": "node ./replace.js",
+    "stopFilters": "node ./stopFilters.js"
   },
   "dependencies": {
     "@inquirer/prompts": "^8.3.0",
